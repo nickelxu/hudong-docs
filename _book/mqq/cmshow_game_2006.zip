@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui"> 
+    <meta name="Copyright" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <link rel="icon"  type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" href="http://auth-proxy.oa.com/css/common.css"/>
+    <link rel="stylesheet" href="http://auth-proxy.oa.com/css/apply_access.css"/>
+    <script src="http://captcha.qq.com/template/TCapIframeApi.js?aid=1600000411&rand=0.7595169853884727&clientype=2&apptype=1"></script>
+    <title>IT服务-申请临时访问</title>
+    <script type="text/javascript" src="http://auth-proxy.oa.com/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var isReachedTrigger = false;
+        $(function () {
+            var isMobile = {
+                Android: function () {
+                    return navigator.userAgent.match(/Android/i) ? true : false;
+                },
+                BlackBerry: function () {
+                    return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+                },
+                iOS: function () {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+                },
+                Windows: function () {
+                    return navigator.userAgent.match(/IEMobile/i) ? true : false;
+                },
+                any: function () {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+                }
+            };
+            if (isMobile.any()) {
+                //判断是否为android,BlackBerry,ios,windows
+                //要执行的代码
+                console.log("这是移动设备访问的！");
+                setActiveStyleSheet("style_mobile.css");
+                setActiveStyleSheet("apply_access_mobile.css");
+            }
+
+            if ($("#captchaWrap").is(":visible"))
+            {
+                isReachedTrigger = true;
+				$("#showButtonDiv").hide();
+            }
+
+            if ($("#showMessageDiv").is(":visible"))
+            {
+                $("#captchaWrap").hide();
+                $("#showButtonDiv").hide();
+            }
+           
+        });
+
+        // 判断完毕后加载样式
+        function setActiveStyleSheet(filename) { $("title").after("<link href=http://auth-proxy.oa.com/css/" + filename + " rel=stylesheet>"); }
+
+         function f_TempVisitSubmit() {
+            document.getElementById("btnDevTempVisit").click();
+        }
+
+        function f_TempVisitSubmit() {
+   
+                document.getElementById("showMessageDiv").style.display = "none";
+                document.getElementById("messsageDiv").style.display = "block";
+                var tmp = "正在处理，请稍候……";
+                document.getElementById("lbMsg").innerText = tmp;
+                setTimeout('document.getElementById("btnDevTempVisit").click()', 1000);
+        }
+
+        function showApplyButton()
+        {
+            if (isReachedTrigger) {
+                $("#captchaWrap").show();
+                $("#showButtonDiv").hide();
+
+            }
+            else {
+                $("#captchaWrap").hide();
+                $("#showButtonDiv").show();
+            }
+        }
+
+        
+
+    </script>
+</head>
+<body>
+
+
+   
+<div class="page_wrap">
+    <div class="header">
+        <div class="content_wrap clearfix">
+            <a href="#" class="logo"></a>
+        </div>
+    </div>
+
+    <div class="content_wrap clearfix wrap_apply_access">
+        <div class="main_apply_access">
+            <i class="bg_apply_access"></i>
+                 <h1 id="AuthSpan" class="main_title devolop_web" style="display:none;">
+                    您的电脑处于开发网, 已获得访问外网的权限 </h1>
+                     <h1 id="NoAuthSpan" class="main_title devolop_web" style="display:block;">
+                    您的电脑处于开发网, 访问外网请点击&quot;临时访问&quot; </h1>
+
+
+
+                         <div id="NoAuthIpDiv" style="display:block;">
+                              <p class="main_p p_apply_access">每次临时访问外网<em class="blue_color"></em>。超过有效期后, 请您再次申请。</p>
+                        </div>
+                        <div id="AuthIpDivClick" style="display:none;">
+                              <p class="main_p p_apply_access">访问外网时间剩余<em class="blue_color"></em>。</p>
+                        </div>
+                        <div id="AuthIpDiv" style="display:none">
+                                   <p class="main_p p_apply_access">访问外网时间剩余<em class="blue_color"></em>。</p>
+                         </div>
+                            <input name="txtPost" type="text" id="txtPost" style="display:none" />
+                      <form name="ctl00" method="post" action="DevNetTempVisit.aspx?__tencentip=10.65.94.61&amp;__tencentid=1&amp;__tencentrawurl=http%3a%2f%2f183.2.176.230%2fftn_handler%2fbf8dfa0418e079919b72984798be718d7c317b22d6d817bf7eebad680d2468a77d4ce450fcd3968657bf74f121c32228638503d6b717d276fb7158d251519f5d" id="ctl00">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg2MjAyNzAwOA8WBB4GcmF3dXJsBaEBaHR0cDovLzE4My4yLjE3Ni4yMzAvZnRuX2hhbmRsZXIvYmY4ZGZhMDQxOGUwNzk5MTliNzI5ODQ3OThiZTcxOGQ3YzMxN2IyMmQ2ZDgxN2JmN2VlYmFkNjgwZDI0NjhhNzdkNGNlNDUwZmNkMzk2ODY1N2JmNzRmMTIxYzMyMjI4NjM4NTAzZDZiNzE3ZDI3NmZiNzE1OGQyNTE1MTlmNWQeClNob3dEb21haW4FFGh0dHA6Ly8xODMuMi4xNzYuMjMwFhBmDxYCHgVzdHlsZQUNZGlzcGxheTpub25lO2QCAQ8WAh8CBQ5kaXNwbGF5OmJsb2NrO2QCAg8WAh8CBQ5kaXNwbGF5OmJsb2NrO2QCAw8WAh8CBQ1kaXNwbGF5Om5vbmU7ZAIGD2QWBAIBDxYCHgdWaXNpYmxlaGQCBQ8WAh8CBQ5kaXNwbGF5OmJsb2NrO2QCBw8WAh8CBRpoZWlnaHQ6MjAwcHg7ZGlzcGxheTpub25lO2QCCA8WAh8CBRpoZWlnaHQ6MjAwcHg7ZGlzcGxheTpub25lO2QCCQ8WAh8CBRpoZWlnaHQ6MjAwcHg7ZGlzcGxheTpub25lO2Rkp2EaIe7EOIi09v6wEankLQ2B6azCu2RUzpujXW180Rk=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="493F39DC" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwLUhdPUDgL3h8mdBwL24s6DDjZ6MrAPaI6W9cULk69epEf43qBVqLWeI9FRyLa8236R" />
+                         
+                      <br />
+                                <div style="display: none">
+                                    <input type="submit" name="btnDevTempVisit" value="" id="btnDevTempVisit" />
+                                </div>
+
+                          <div id="showButtonDiv" style="display:block;">
+                             <a href="javascript:f_TempVisitSubmit();" id="tempVisit" class="btn_close">临时访问</a>
+                          </div>
+
+                        </form>
+            <p class="p_warning p_ps">您的电脑处于开发运营网络，可访问公司的核心资产——服务器、代码等，这些都是专业黑客的攻击目标。
+    为了保障公司资产，同时兼顾研发效率，请您谨慎选择，防止木马连接外网传输敏感数据。</p>
+
+
+                              <div id="showMessageDiv" class="buttonDiv" style="height:200px;display:none;">
+                              <p class="p_warning p_ps" style="color:green">恭喜您，申请成功。您现在可以访问外网,也可点击<a class="red_color"  href="javascript:void(0)" onclick="showApplyButton();" >此处进行续期</a> 。</p>
+                            </div>
+                            <div id="showErrorDiv" class="buttonDiv" style="height:200px;display:none;">
+                               <p class="p_warning p_ps">申请失败，请联系8000</p>
+                            </div>
+                             <div id="showErrorCaptcha" class="buttonDiv" style="height:200px;display:none;">
+                               <p class="p_warning p_ps" style="color:red">验证码错误,请重新输入</p>
+                            </div>
+                           <div class="ShowMesssageDiv" style="display: none" id="messsageDiv">
+                                  <p class="p_warning p_ps">
+                            <img src="http://auth-proxy.oa.com/images/spinner.gif" border="0"/>&nbsp;<label id="lbMsg"
+                                class="ShowMesssageLabel"></label>
+                                      </p>
+                        </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="content_wrap clearfix">
+        <ul class="footer_tips p_ps">
+            <li>温馨提醒：</li>
+            <li>1、如果您的软件需要访问外网，请查看 <a class="blue_color" href="http://km.oa.com/group/kfywzw/articles/show/236418">如何为软件设置代理</a></li>
+            <li>2、如果您不明白为什么会看到这个页面（可能是电脑中了木马或病毒），请点击" <a class="red_color" href="https://8000.tencent.com/wfeedback.php">报警</a> ", 或RTX联系 <a href="#" class="link_footer">8000助手9(开发网推广)</a></li>
+            <li style="color:red">3、开发网临时申请6次以上需要输入验证码</li>
+        </ul>
+        <p class="copyright">Copyright &copy; 1998 - 2015 TENCENT. All Rights Reserved.</p>
+    </div>
+</div>
+  
+</body>
+
+        <script type="text/javascript">
+
+            //显示验证码
+            var capOption = {
+                callback: function (retJson) {
+                    if (retJson.ret == 0) {
+                        $("#txtRandstr").val(retJson.randstr);
+                        $("#txtTicket").val(retJson.ticket);
+                        // 用户验证成功
+                        f_TempVisitSubmit();
+                    }
+                    else {
+                        //用户关闭验证码页面，没有验
+                        capRefresh();
+                    }
+
+                },
+                type: "embed"
+            };
+            capInit(document.getElementById("cap_iframe"), capOption);
+            //回调函数：验证码页面关闭时回调
+
+
+        </script>
+</html>

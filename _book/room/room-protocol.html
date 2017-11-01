@@ -1,0 +1,1026 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.2 通信协议 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="room-item.html" />
+    
+    
+    <link rel="prev" href="room-flow.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduce/dev_info.html">
+            
+                <a href="../introduce/dev_info.html">
+            
+                    
+                    1.开发入门与概况
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduce/safari_debug.html">
+            
+                <a href="../introduce/safari_debug.html">
+            
+                    
+                    1.1 Safari远程调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../api/">
+            
+                <a href="../api/">
+            
+                    
+                    2.详细接口说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../api/BK.Script.html">
+            
+                <a href="../api/BK.Script.html">
+            
+                    
+                    2.1 BK.Script 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../api/BK.Director.html">
+            
+                <a href="../api/BK.Director.html">
+            
+                    
+                    2.2 BK.Director 导演类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../api/BK.Ticker.html">
+            
+                <a href="../api/BK.Ticker.html">
+            
+                    
+                    2.3 BK.Ticker 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../api/BK.Texture.html">
+            
+                <a href="../api/BK.Texture.html">
+            
+                    
+                    2.4 BK.Texture 纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../api/BK.Node.html">
+            
+                <a href="../api/BK.Node.html">
+            
+                    
+                    2.5 BK.Node 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../api/BK.Sprite.html">
+            
+                <a href="../api/BK.Sprite.html">
+            
+                    
+                    2.6 BK.Sprite 精灵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../api/BK.Button.html">
+            
+                <a href="../api/BK.Button.html">
+            
+                    
+                    2.7 BK.Button 按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../api/BK.Text.html">
+            
+                <a href="../api/BK.Text.html">
+            
+                    
+                    2.8 BK.Text 文字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../api/BK.TouchEvent.html">
+            
+                <a href="../api/BK.TouchEvent.html">
+            
+                    
+                    2.9 BK.TouchEvent 触摸事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../api/BK.SkeletonAnimation.html">
+            
+                <a href="../api/BK.SkeletonAnimation.html">
+            
+                    
+                    2.10 BK.SkeletonAnimation 骨骼动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../api/BK.Mesh.html">
+            
+                <a href="../api/BK.Mesh.html">
+            
+                    
+                    2.11 BK.Mesh 网格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../api/BK.Physics.html">
+            
+                <a href="../api/BK.Physics.html">
+            
+                    
+                    2.12 BK.Physics 物理引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../api/BK.Render.html">
+            
+                <a href="../api/BK.Render.html">
+            
+                    
+                    2.13 BK.Render 渲染器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../api/BK.Time.html">
+            
+                <a href="../api/BK.Time.html">
+            
+                    
+                    2.14 BK.Time 时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../api/BK.Audio.html">
+            
+                <a href="../api/BK.Audio.html">
+            
+                    
+                    2.15 BK.Audio 音频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../api/BK.FileUtil.html">
+            
+                <a href="../api/BK.FileUtil.html">
+            
+                    
+                    2.16 BK.FileUtil 文件工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../api/BK.Room.html">
+            
+                <a href="../api/BK.Room.html">
+            
+                    
+                    2.17 BK.Room 房间管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../api/BK.QQ.html">
+            
+                <a href="../api/BK.QQ.html">
+            
+                    
+                    2.18 BK.QQ 房间手Q消息管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../api/BK.Buffer.html">
+            
+                <a href="../api/BK.Buffer.html">
+            
+                    
+                    2.19 BK.Buffer 缓冲器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../api/BK.MQQ.html">
+            
+                <a href="../api/BK.MQQ.html">
+            
+                    
+                    2.20 BK.MQQ 手Q相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.20.1" data-path="../api/BK.MQQ.ErrorCode.html">
+            
+                <a href="../api/BK.MQQ.ErrorCode.html">
+            
+                    
+                    2.20.1 错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../api/BK.SpriteSheetCache.html">
+            
+                <a href="../api/BK.SpriteSheetCache.html">
+            
+                    
+                    2.21 BK.SpriteSheetCache 图集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../api/BK.AnimatedSprite.html">
+            
+                <a href="../api/BK.AnimatedSprite.html">
+            
+                    
+                    2.22 BK.AnimatedSprite 帧动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../api/BK.ClipNode.html">
+            
+                <a href="../api/BK.ClipNode.html">
+            
+                    
+                    2.23 BK.ClipNode 蒙版节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../api/BK.ClipRectNode.html">
+            
+                <a href="../api/BK.ClipRectNode.html">
+            
+                    
+                    2.24 BK.ClipRectNode 裁剪节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../api/dev-q&a.html">
+            
+                <a href="../api/dev-q&a.html">
+            
+                    
+                    2.25 Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ui/ui.html">
+            
+                <a href="../ui/ui.html">
+            
+                    
+                    3.UI系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ui/ui-touch.html">
+            
+                <a href="../ui/ui-touch.html">
+            
+                    
+                    3.1 触摸事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ui/ui-iphonex.html">
+            
+                <a href="../ui/ui-iphonex.html">
+            
+                    
+                    3.2 iPhoneX适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="room.html">
+            
+                <a href="room.html">
+            
+                    
+                    4.房间管理简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="room-flow.html">
+            
+                <a href="room-flow.html">
+            
+                    
+                    4.1 房间流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="room-protocol.html">
+            
+                <a href="room-protocol.html">
+            
+                    
+                    4.2 通信协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="room-item.html">
+            
+                <a href="room-item.html">
+            
+                    
+                    4.3 道具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="room-q&a.html">
+            
+                <a href="room-q&a.html">
+            
+                    
+                    4.4 Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../mqq/mqq-intro.html">
+            
+                <a href="../mqq/mqq-intro.html">
+            
+                    
+                    5.手机QQ接入流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../mqq/package-main.html">
+            
+                <a href="../mqq/package-main.html">
+            
+                    
+                    5.1 文件打包与运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../mqq/package.html">
+            
+                <a href="../mqq/package.html">
+            
+                    
+                    5.1.1 文件打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../mqq/png-press.html">
+            
+                <a href="../mqq/png-press.html">
+            
+                    
+                    5.1.2 png图片压缩
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../mqq/result-upload.html">
+            
+                <a href="../mqq/result-upload.html">
+            
+                    
+                    5.2 成绩上报与查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../mqq/pubAccount.html">
+            
+                <a href="../mqq/pubAccount.html">
+            
+                    
+                    5.3 公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../mqq/cmshow-dress.html">
+            
+                <a href="../mqq/cmshow-dress.html">
+            
+                    
+                    5.4 获取厘米秀形象数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../mqq/share-invite.html">
+            
+                <a href="../mqq/share-invite.html">
+            
+                    
+                    5.5 分享与邀请
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../mqq/shop.html">
+            
+                <a href="../mqq/shop.html">
+            
+                    
+                    5.6 道具商城和游戏首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../mqq/other.html">
+            
+                <a href="../mqq/other.html">
+            
+                    
+                    5.7 其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.2 通信协议</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="32-&#x901A;&#x4FE1;&#x534F;&#x8BAE;">3.2 &#x901A;&#x4FE1;&#x534F;&#x8BAE;</h1>
+<p>&#x8FDB;&#x884C;&#x623F;&#x95F4;&#x903B;&#x8F91;&#x5F00;&#x53D1;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;protocol.js&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x623F;&#x95F4;&#x521B;&#x5EFA;&#x3001;&#x5F00;&#x59CB;&#x3001;&#x7ED3;&#x675F;&#x3002;&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x3002;</p>
+<h2 id="&#x5E27;&#x540C;&#x6B65;&#x4E0E;&#x6D88;&#x606F;&#x540C;&#x6B65;">&#x5E27;&#x540C;&#x6B65;&#x4E0E;&#x6D88;&#x606F;&#x540C;&#x6B65;</h2>
+<p>&#x5F15;&#x64CE;&#x4E3A;&#x5F00;&#x53D1;&#x63D0;&#x4F9B;&#x5E27;&#x540C;&#x6B65;&#x4E0E;&#x6D88;&#x606F;&#x540C;&#x6B65;&#x4E24;&#x5957;&#x540C;&#x6B65;&#x534F;&#x8BAE;&#x3002;&#x540C;&#x4E00;&#x6B3E;&#x6E38;&#x620F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E24;&#x79CD;&#x534F;&#x8BAE;&#x3002;</p>
+<h3 id="&#x6D88;&#x606F;&#x540C;&#x6B65;">&#x6D88;&#x606F;&#x540C;&#x6B65;</h3>
+<blockquote>
+<p>&#x5411;&#x623F;&#x95F4;&#x5185;&#x6240;&#x6709;&#x73A9;&#x5BB6;&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#x3002;</p>
+</blockquote>
+<p>&#x8BE5;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x70B9;</p>
+<ul>
+<li>&#x73A9;&#x5BB6;&#x52A0;&#x5165;&#x6E38;&#x620F;&#x540E;&#x5373;&#x53EF;&#x53D1;&#x9001;</li>
+<li>&#x6D88;&#x606F;&#x4E0D;&#x4FDD;&#x5B58;</li>
+<li>&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4E22;&#x5305;&#x3002;&#x57FA;&#x4E8E;udp</li>
+</ul>
+<h4 id="&#x7528;&#x9014;">&#x7528;&#x9014;</h4>
+<p>&#x56E0;&#x73A9;&#x5BB6;&#x52A0;&#x5165;&#x6E38;&#x620F;&#x540E;&#x4FBF;&#x53EF;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x6E38;&#x620F;&#x5F00;&#x59CB;&#x524D;&#x540C;&#x6B65;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x7528;&#x4E8E;&#x4F5C;&#x4E3A;&#x6E38;&#x620F;&#x4E3B;&#x534F;&#x8BAE;</p>
+<h4 id="&#x63A5;&#x53E3;">&#x63A5;&#x53E3;</h4>
+<p>&#x53D1;&#x9001;&#xFF1A;</p>
+<p>BK.Room.sendBroadcastData(buffer)</p>
+<p>&#x76D1;&#x542C;&#xFF1A;</p>
+<p>BK.Room.setBroadcastDataCallBack(broadcastCallback)</p>
+<h4 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h4>
+<pre><code>function sendBroadcastData(game) {
+    //&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;
+    let req = &apos;{&quot;s&quot;:&quot;12345678901234567890AB&quot;,&quot;m&quot;:&quot;map&quot;,&quot;d&quot;:&quot;2&quot;}&apos;;
+
+    BK.Script.log(0,0,&quot;sendBroadcastData :&quot;+ req.length);
+    var data = new BK.Buffer(req.length);
+    data.writeStringBuffer(req);
+    game.sendBroadcastData(data);
+}
+
+function broadcastCallback(fromId,buff)
+{
+     var data = buff.readStringBuffer()
+     BK.Script.log(0,0,&quot;broadcastCallback :&quot;+ buff.bufferLength());
+     BK.Script.log(0,0,&quot;broadcastCallback str:&quot;+ data);
+}
+
+var game = new BK.Room();
+
+//&#x521B;&#x5EFA;&#x6216;&#x52A0;&#x5165;&#x623F;&#x95F4;&#x540E;
+....
+
+
+//&#x8BBE;&#x7F6E;&#x5E7F;&#x64AD;&#x56DE;&#x8C03;&#x76D1;&#x542C;      
+game.setBroadcastDataCallBack(broadcastCallback);
+//&#x53D1;&#x9001;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;
+sendBroadcastData(game);
+</code></pre><h4 id="&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</h4>
+<p>&#x52A0;&#x5165;&#x6E38;&#x620F;&#x540E;&#xFF0C;&#x76F4;&#x6E38;&#x620F;&#x7ED3;&#x675F;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;</p>
+<h3 id="&#x5E27;&#x540C;&#x6B65;">&#x5E27;&#x540C;&#x6B65;</h3>
+<blockquote>
+<p>&#x5411;&#x623F;&#x95F4;&#x5185;&#x6240;&#x6709;&#x73A9;&#x5BB6;&#x53D1;&#x9001;&#x5E27;&#x540C;&#x6B65;&#x6D88;&#x606F;&#x3002;</p>
+</blockquote>
+<p>&#x8BE5;&#x6D88;&#x606F;&#x534F;&#x8BAE;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x70B9;</p>
+<ul>
+<li>&#x623F;&#x4E3B;&#x8C03;&#x7528;startgame&#x540E;&#xFF0C;&#x624D;&#x53EF;&#x4F7F;&#x7528;</li>
+<li>&#x6D88;&#x606F;&#x53EF;&#x56DE;&#x6EAF;</li>
+</ul>
+<h4 id="&#x63A5;&#x53E3;">&#x63A5;&#x53E3;</h4>
+<pre><code>function frameSyncCallback(frameDataArray){
+    BK.Script.log(0,0,&quot;&#x6536;&#x5230;&#x5E27;&#x540C;&#x6B65;&#x6570;&#x636E;&quot;);
+
+    var frameCount = frameDataArray.length;
+    for (var index = 0; index &lt; frameDataArray.length; index++) {
+
+        var players  =frameDataArray[index];
+        BK.Script.log(0,0,&quot;&#x5E27;&#x540C;&#x6B65;&#x5E27;&#x5E8F;&#x5217;&#x53F7; = &quot; +players.frameSeq);
+
+        BK.Script.log(1,1,&quot;players count :&quot; + players.length);      
+        if(players){
+            for (var i = 0; i &lt; players.length; i++) {
+                var player = players[i];
+                BK.Script.log(0,0,&quot;sync !!!!!!!!!!!! openid :&quot;+player.openId);
+                BK.Script.log(0,0,&quot;sync !!!!!!!!!!!! itemId :&quot;+player.itemId);
+                var cmd = player.dataBuffer.readStringBuffer();
+                BK.Script.log(1,1,&quot;sync !!!!!!!!!!!! cmd len=&quot;+player.dataBuffer.bufferLength());
+                BK.Script.log(1,1,&quot;sync !!!!!!!!!!!! cmd=&quot;+cmd);
+            }
+        }
+    }
+}
+
+function sendFrameSyncCmd(game,cmd)
+{
+    //&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;
+    var opt = new BK.Buffer(1,1);
+    opt.writeUint8Buffer(cmd);
+
+    BK.Script.log(1,1,&quot;sync !!!!!send frame 1&quot;);
+
+    var status = new BK.Buffer(1,1);
+    status.writeUint8Buffer(0);
+
+    //&#x9884;&#x7559;&#x5B57;&#x6BB5;
+    var extend = new BK.Buffer(1,1);
+    extend.writeUint8Buffer(0);
+
+    //send 
+    game.syncOpt(status,opt,extend,undefined,function(){
+        BK.Script.log(1,1,&quot;sync !!!!!recv ack= &quot;+game.ackSeq);
+    });
+}
+
+var game = new BK.Room();
+
+//&#x6536;&#x5230;startgame&#x56DE;&#x8C03;&#x540E;
+....
+
+//&#x76D1;&#x542C;&#x5E27;&#x540C;&#x6B65;
+game.setFrameSyncListener(frameSyncCallback);
+sendFrameSyncCmd(game);
+</code></pre><h3 id="&#x6570;&#x636E;&#x8BFB;&#x5199;">&#x6570;&#x636E;&#x8BFB;&#x5199;</h3>
+<p>&#x5E27;&#x540C;&#x6B65;&#x3001;&#x6D88;&#x606F;&#x540C;&#x6B65;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x5199;&#x9700;&#x8981;&#x4E00;&#x4E00;&#x5339;&#x914D;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>&#x4F7F;&#x7528;writeStringBuffer&#x5C06;&quot;Hello&quot;&#x5B57;&#x7B26;&#x4E32;&#x5199;&#x5165;BK.Buffer&#x5E76;&#x4E14;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x540C;&#x6B65;</p>
+<pre><code>//&#x53D1;&#x9001;&#x7AEF;
+ var str = &quot;Hello&quot;;
+ var data = new BK.Buffer(str.length);
+ data.writeStringBuffer(req);
+ game.sendBroadcastData(data);
+</code></pre><p>&#x63A5;&#x6536;&#x7AEF;&#xFF0C;&#x9700;&#x7528;writeStringBuffer&#x5BF9;&#x5E94;&#x7684;&#x8BFB;&#x53D6;&#x51FD;&#x6570;readAsString&#x5C06;&#x5F97;&#x5230;&#x7684;BK.Buffer&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x8BFB;&#x53D6;&#x51FA;&#x6765;</p>
+<pre><code>var data = buff.readStringBuffer()
+</code></pre><h4 id="&#x591A;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x8BFB;&#x5199;">&#x591A;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x8BFB;&#x5199;</h4>
+<p>&#x6B64;&#x5904;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;writeAsString&#x51FD;&#x6570;&#x4E0E;readAsString&#x51FD;&#x6570;&#x662F;&#x5C06;&#x6574;&#x4E2A;BK.Buffer&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x90FD;&#x770B;&#x505A;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x5F53;BK.Buffer&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x6574;&#x4F53;&#x7684;&#x8BFB;&#x5199;&#x3002;</p>
+<p>&#x56E0;BK.Buffer&#x652F;&#x6301;&#x591A;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x683C;&#x5F0F;&#x5199;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x5199;&#x5165;&#x4E00;&#x4E2A;unit8&#xFF0C;&#x5199;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x518D;&#x5199;&#x5165;&#x4E00;&#x4E2A;uint32&#x4F4D;&#x7684;&#x6570;&#x636E;&#x3002;&#x5F15;&#x64CE;&#x5C06;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x4EE5;&#x5B57;&#x7B26;&#x504F;&#x79FB;&#x7684;&#x5F62;&#x5F0F;&#x5199;&#x5165;&#x5230;BK.Buffer&#x4E2D;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x5199;&#x5165;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x5B58;&#x5728;&#x5B57;&#x7B26;&#x65F6;&#x9700;&#x591A;&#x7533;&#x8BF7;3&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x5B57;&#x7B26;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>//&#x53D1;&#x9001;&#x65F6;&#x5199;&#x5165;&#x4E00;&#x4E2A;unit8&#xFF0C;&#x5199;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x518D;&#x5199;&#x5165;&#x4E00;&#x4E2A;uint32&#x4F4D;&#x7684;&#x6570;&#x636E;
+&#x5219;&#x9700;&#x7533;&#x8BF7; 1 + &#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;+3 + 4 &#x4E2A;&#x5B57;&#x8282;&#x7684;&#x957F;&#x5EA6;BK.Buffer&#x3002;&#x5982;&#x4E0B;&#x4F8B;&#x5B50;&#xFF0C;&#x5B57;&#x7B26;&#x4E3A;&#x201C;hello&#x201D;&#x65F6;&#xFF0C;&#x9700;&#x7533;&#x8BF7;1+3+3+4 = 11&#x5B57;&#x8282;&#x7684;&#x957F;&#x5EA6;&#x7684;buffer&#x3002;</p>
+<pre><code>var str = &quot;hello&quot;
+var buff = new BK.Buffer(str.length + 3 + 1 + 4);
+
+var numUint8 = 1;
+var numUint32 = 2;
+buff.writeUint8Buffer(numUint8);
+buff.writeStringBuffer(str);
+buff.writeUint32Buffer(numUint32);
+</code></pre><p>&#x4F9D;&#x6B21;&#x5199;&#x5165;&#x540E;buffer&#x7ED3;&#x6784;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;
+<img src="img/write&amp;read-buff.png" alt=""></p>
+<p>&#x7EC8;&#x7AEF;&#x63A5;&#x6536;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;&#x63A8;&#x9001;&#x65F6;&#xFF0C;&#x8BFB;&#x53D6;&#x4E5F;&#x5E94;&#x8BE5;&#x6309;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#x3002;&#x8FD9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x8BFB;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#x9700;&#x4F7F;&#x7528;&#x548C;writeStringBuffer&#x5339;&#x914D;&#x7684;&#x8BFB;&#x53D6;&#x51FD;&#x6570;readStringBuffer&#xFF0C;&#x4E0D;&#x53EF;&#x4F7F;&#x7528;writeAsString&#x3002;writeAsString&#x662F;&#x5C06;&#x6574;&#x6BB5;buffer&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x5E76;&#x65E0;&#x8003;&#x8651;&#x5B57;&#x7B26;&#x6807;&#x8BC6;&#x957F;&#x5EA6;&#x3002;</p>
+<pre><code>//&#x63A5;&#x6536;&#x7AEF;
+BK.Script.log(0,0,buff.readUint8Buffer());
+BK.Script.log(0,0,buff.readStringBuffer());
+BK.Script.log(0,0,buff.readUint32Buffer());
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="room-flow.html" class="navigation navigation-prev " aria-label="Previous page: 4.1 房间流程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="room-item.html" class="navigation navigation-next " aria-label="Next page: 4.3 道具">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.2 通信协议","level":"1.5.2","depth":2,"next":{"title":"4.3 道具","level":"1.5.3","depth":2,"path":"room/room-item.md","ref":"room/room-item.md","articles":[]},"previous":{"title":"4.1 房间流程","level":"1.5.1","depth":2,"path":"room/room-flow.md","ref":"room/room-flow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"room/room-protocol.md","mtime":"2017-10-24T10:36:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-01T03:14:46.588Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
