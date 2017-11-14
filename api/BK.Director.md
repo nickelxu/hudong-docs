@@ -9,6 +9,7 @@ renderSize | Object | 屏幕逻辑大小 |
 screenPixelSize | Object | 屏幕实际像素大小 | 
 root | Object | 根节点 | 
 fps | number | 游戏实时帧率 | 
+screenMode | number | 横竖屏模式 |1（默认，竖屏）2.横屏（home键在左边）3.横屏 （home键在右边）
 
 
 例子：

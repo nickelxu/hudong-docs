@@ -91,6 +91,7 @@ callback | function |回调函数|
 返回值：无
 
 例子
+
 ```
 BK.QQ.checkPubAccountState(pubAccountId ,function(errCode, cmd, data) {
       BK.Script.log(0,0," callback errCode = "+errCode+ " cmd = "+ cmd + " data = "+ data);
@@ -111,3 +112,26 @@ puin | string | 公众号id |
 
 
 返回值：无
+
+
+#### reqCustomLogic(data,callback)
+>开放api
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+data | json | 用户数据 | 
+callback |function| 回调函数|
+
+返回值：无
+
+例子
+
+	BK.Script.loadlib('GameRes://script/core/net/protocol.js');
+	var data ={"gameid":2003, "data" : {"cmd" : "addex", "itemid" : 2025, "num" : 4}};
+	BK.QQ.reqCustomLogic(data,function(errCode,cmd,data)
+	{
+	BK.Script.log(0, 0, "BK.QQ.reqCustomLogic errCode = " + errCode + " cmd = " + cmd + " data = " + JSON.stringify(data));
+	
+	})

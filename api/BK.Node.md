@@ -7,8 +7,8 @@
 ------------- | ------------- | -------------| -------------
 id | number | 标识 | 无
 name | string | 名称 | 无
-position | Object | 位置 | 无
-scale | Object | 比例 | 无
+position | Object | 位置 | 结构为 {x:0,y:0,z:0}
+scale | Object | 缩放比例 | 结构为 {x:0,y:0} 分别标识x方向和y方向上的缩放系数
 rotation | Object | 旋转 | 结构为 {x:0,y:0,z:0} 绕x,y,z轴逆时针旋转
 vertexColor | Object | 顶点颜色 | 格式为 {r:1,g:1,b:1,a:1}。分别代表当前节点渲染顶点的红、绿、蓝、透明值。可以用此改变渲染颜色或透明值
 transform | Object | 矩阵变换 | 无

@@ -44,6 +44,11 @@ vWrap | number | v轴重复方式 |  （可选，默认为1） 0镜像重复，1
 ```
 var tex  =new BK.Texture('GameRes://texture/test.png');
 
+//平铺效果示例
+var backTex  =new BK.Texture('GameRes://texture/plane_blue.png',6,1,1,2,2);
+var sp =new BK.Sprite(1000,1000,backTex,0,1,0,0);
+BK.Director.root.addChild(sp);
+
 ```
 
 	

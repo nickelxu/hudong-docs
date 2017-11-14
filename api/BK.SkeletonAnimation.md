@@ -569,6 +569,50 @@ ani.hittestAccessory('TopSuit',{x:x,y:y})
 ```
 
 
+### restoreAnimationState()
+> 将spine动画重置到setup状态
+> 
+> 使用场景：spine在多个动画进行切换时，由于动画设计的不同，可能会出现上一个动作的残留。此情况下可以使用本接口，将spine切换到初始的setup状态以清除所有的动作残留。
+
+```
+ani.restoreAnimationState()
+```
+
+参数：无
+
+返回值：无
+
+
+### restoreSlotsSetupPos()
+> 将spine的slot重置到setup状态
+> 
+
+
+参数：无
+
+返回值：无
+```
+ani.restoreSlotsSetupPos()
+```
+
+
+
+### restoreBonesSetupPos()
+> 将spine的bone重置到setup状态
+> 
+
+参数：无
+
+返回值：无
+
+```
+ani.restoreBonesSetupPos()
+```
+
+参数：无
+
+返回值：无
+
 ##Q&A
 ###Q:accessory是什么？
 A:厘米秀装扮部件。厘米秀的小人由骨骼+7件装扮组合而成。7件装扮分别为'FaceSuit'脸, 'BackSuit'背饰, 'BottomSuit'下装, 'FaceOrnament'脸饰, 'TopSuit'上装, 'HairType'发饰七种装扮。开发者可以使用BK.SkeletonAnimation.accessoryTypes获取所有的装扮类型名称

@@ -396,7 +396,43 @@ callBack | function | 回调函数 | 形如 function func(statusCode)
 这里是在加入匹配队列后去轮询,回调函数里面的timeout如果为1代表匹配超时了，应该取消轮询，如果没有超时则判断game.roomId的值，这个值为0则继续轮询，如果大于0则进入查询房间的正常流程
 
 例子：
-同matchGame的例子
+	同matchGame的例子
+
+
+
+
+#### quitMatchGame(gameId,openId,callBack)
+>退出匹配
+>
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+gameId | int | 游戏id 
+openId | String | 玩家id 
+callBack | function | 回调函数 | 形如 function func(statusCode)
+
+这里是在玩家加入加入游戏匹配后，退出匹配时通知给服务器。需要注意退出后，玩家需要通过queryRoom接口查询获取是否有玩家退出匹配。
+
+例子：
+
+	game2.quitMatchGame(gameId,masterOpenId,function(status)
+    {
+    	if (status == 0)
+        	BK.Script.log(0,0," quit math success");
+    });
+    //获取有无玩家退出或退出玩家数量
+	game2.queryRoom(gameId,roomId,masterOpenId,function(status,roominfo)
+	{
+		if (status ==0) {
+		    BK.Script.log(0,0," game2.queryRoom  "+ + "  退出人数:"+roominfo.ext_num);
+		}
+		else
+		{
+		    BK.Script.log(0,0," game2.queryRoom  "+status );
+		}
+	})
 
 
 

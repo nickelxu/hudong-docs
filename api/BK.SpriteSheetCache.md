@@ -4,7 +4,7 @@
 >调用前请主动加载spriteSheetCache.js
 
 ### 方法 
-#### loadSheet(jsonPath,pngPath)
+#### loadSheet(jsonPath,pngPath,format, minFilter, magFilter, uWrap, vWrap)
 
 > 加载图集
 
@@ -12,6 +12,12 @@
 ------------- | ------------- | -------------| -------------
 jsonPath | string | 图集json文件路径 | 
 pngPath | string | 图集png文件路径 | 
+format | number | 资源格式  |  （可选，默认为RGBA8888）6代表RGBA8888,4代表RGBA4444
+minFilter | number | 缩小采样方式  |  （可选，默认为1） 0最近采样 1线性采样
+magFilter | number | 放大采样方式 | （可选，默认为1）0最近采样 1线性采样 
+uWrap | number | u轴重复方式 | （可选，默认为1） 0镜像重复，1重复至边缘，2重复
+vWrap | number | v轴重复方式 |  （可选，默认为1） 0镜像重复，1重复至边缘，2重复
+
 
 例子：
 
@@ -20,6 +26,8 @@ pngPath | string | 图集png文件路径 |
 var texPath = "GameRes://texture/spritesheet/test.png";
 var jsonPath = "GameRes://texture/spritesheet/test.json";
 BK.SpriteSheetCache.loadSheet(jsonPath,texPath);
+//
+//BK.SpriteSheetCache.loadSheet(jsonPath,texPath,format, minFilter, magFilter, uWrap, vWrap);
 ```
 
 #### removeSheet(jsonPath,pngPath)
