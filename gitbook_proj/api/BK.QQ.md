@@ -135,3 +135,36 @@ callback |function| 回调函数|
 	BK.Script.log(0, 0, "BK.QQ.reqCustomLogic errCode = " + errCode + " cmd = " + cmd + " data = " + JSON.stringify(data));
 	
 	})
+	
+
+#### uploadData(actionName,enter,result,param1,param2,pram3)
+
+> 数据上报
+> 
+
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+action | string | 操作id，用来定义操作 |
+enter | number | 定义操作场景 |
+result | number | 定义操作结果 |
+param1 | string | 拓展字段 |
+param2 | string | 拓展字段 |
+param2 | string | 拓展字段 |
+
+返回值：无
+
+例子：
+
+```
+BK.Script.loadlib("GameRes://protocol.js")
+var actionName = "actionname"
+var enter = 1;
+var result = 1;
+var param1 = "param111"
+var param2 = "param222"
+var param3 = "param333"
+BK.QQ.uploadData(actionName,enter,result,param1,param2,param3);
+```
