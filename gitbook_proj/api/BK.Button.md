@@ -21,10 +21,13 @@ normalTexPath | string | 默认态纹理路径 |
 callbackFunc | function | 点击回调 |
 
 例子：
-	
-	var btn = new BK.Button(100,50,'GameRes://texture/rl_btn_confirm_normal.png',function () {
-                        log("button click!")
-                    });
+
+```
+//callbackFunc中的参数为BK.Button对象
+var btn = new BK.Button(100,50,'GameRes://texture/rl_btn_confirm_normal.png',function (btn) {
+                    BK.Script.log("button click!");
+                });
+```
 
 #### setPressTexturePath
 > 设置点击态图片
