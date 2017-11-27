@@ -1,6 +1,19 @@
 # 2.12 BK.Physics 物理引擎
 Bricks使用的物理引擎基于
 
+### BK.Physics.setSwitch(sw)
+>打开包围盒
+>
+>仅在xcode工程下可用，手Q工程下不可用
+>
+
+例子：
+
+```
+//打开测试包围盒
+BK.Physics.setSwitch(true);
+```
+
 ### BK.Physics.Space
 >物理空间
 
