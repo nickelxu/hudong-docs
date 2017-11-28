@@ -25,7 +25,7 @@
          }
     });
 
-    BK.MQQ.SsoRequest.send(data,cmd);
+    BK.MQQ.SsoRequest.send(data,"apollo_aio_game.get_room_info_3rd");
 ```
 
 ## 1. 成绩上报

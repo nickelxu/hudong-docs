@@ -8,13 +8,16 @@
 
 ### send(data,cmd)
 >向手机QQ发送请求
+> 
+> 
+>cmd 参数需要以字面量标识，不可使用变量
 
 参数：
 
 参数  | 类型 |名称 | 备注
 ------------- | ------------- | -------------| -------------
 data | object |请求的参数|  
-cmd | string |请求的命令字|  
+cmd | string |请求的命令字|  参数需要以字面量标识，不可使用变量
 
 
 返回值：无
@@ -28,7 +31,10 @@ cmd | string |请求的命令字|
 	        "xx": "123",
 	        "gameId":3
 	  }
-	  BK.MQQ.SsoRequest.send(data,cmd);
+		//正确用法
+	  BK.MQQ.SsoRequest.send(data,"xxxxx.xxxx");
+		//错误用法
+	  //BK.MQQ.SsoRequest.send(data,cmd);
 
 
 ### addListener(cmd,target,callback)

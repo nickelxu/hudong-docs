@@ -37,7 +37,7 @@
             }
         }
     });
-    BK.MQQ.SsoRequest.send(data,cmd);
+    BK.MQQ.SsoRequest.send(data,"apollo_aio_game.get_game_itemList");
 ```
 
 
@@ -76,7 +76,7 @@
 	        }
 	    }
 	});
-	BK.MQQ.SsoRequest.send(data,cmd);
+	BK.MQQ.SsoRequest.send(data,"apollo_aio_game.get_user_game_items");
 ```
 
 ## 购买道具
@@ -138,7 +138,7 @@
             }
         }
     });
-    BK.MQQ.SsoRequest.send(data,cmd);
+    BK.MQQ.SsoRequest.send(data,"apollo_aio_game.buy_game_items");
 
 ```
 道具相关错误码请查阅 2.20.1 错误码

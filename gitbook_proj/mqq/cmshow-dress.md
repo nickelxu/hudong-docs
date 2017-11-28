@@ -27,5 +27,5 @@ var openId = GameStatusInfo.openId
 var data = {
 "openId": openId
 }
-BK.MQQ.SsoRequest.send(data,cmd);
+BK.MQQ.SsoRequest.send(data,"cs.get_dress_path.local");
 ```

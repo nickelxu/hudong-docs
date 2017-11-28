@@ -40,5 +40,5 @@ var data = {
    openId: GameStatusInfo.openId,        //openId
    cmd: cmd,
 };
-BK.MQQ.SsoRequest.send(data, cmd);
+BK.MQQ.SsoRequest.send(data, "cs.share_game_result.local");
 ```
