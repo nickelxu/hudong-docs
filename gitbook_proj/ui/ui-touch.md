@@ -1,6 +1,6 @@
 # 3.1 触摸事件
 
-## 触摸事件原理
+## 简单触摸事件原理
 用户点屏幕后，将引擎将生成触摸数据（支持多点触控），并存放到引擎的触摸数据缓存中，通过调用`BK.TouchEvent.getTouchEvent()`获取触摸数据，当调用`BK.TouchEvent.updateTouchStatus()`时清空触摸数据缓存，进入下一次的触摸事件中。
 
 大体流程如下图
@@ -32,6 +32,37 @@ BK.Director.ticker.add(function(ts,du)
     BK.TouchEvent.updateTouchStatus();
 });
 ```
+
+## 复杂的触控事件原理
+如需要对触控事件更细粒度的处理，上面说到简单的触控事件可能便无法满足。
+通过设置`BK.Script.getTouchModeAll = 1`后便可以获取所有的点击历史记录。
+第一维为每次点击的历史记录。第二唯为某次点击的事件。
+
+```
+var moveCount = 0;
+BK.Script.getTouchModeAll = 1;
+BK.Director.ticker.add(function (ts,duration) {
+    var touchArr = BK.TouchEvent.getAllTouchEvent();
+        if (touchArr == undefined){
+            return;
+        }
+        for(var i = 0; i < touchArr.length; i++) {
+            for(var j = 0;j < touchArr[i].length; j++){
+                if(touchArr[i][j].status == 2 ){
+                }
+                if(touchArr[i][j].status == 3 ){
+                    moveCount++;
+                    txt.content = moveCount;
+                }
+            
+                if(touchArr[i][j].status == 1){
+                }
+            }
+        }
+})
+
+```
+
 ## 简单的点击、移动、抬起事件封装
 引擎封装了简单的点击、移动、抬起事件。若需使用需预先引用script/core/ui/ui_event.js文件。
 
