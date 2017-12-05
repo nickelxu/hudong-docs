@@ -28,7 +28,6 @@ BK.QQ.inviteFriend(wording)
 其中游戏侧自己提供跳转链接detailUrl、icon图片链接picUrl。
 
 ```
-var cmd = "cs.share_game_result.local";
 var data = {
    title: "小游戏战绩",  //标题
    summary: "我在本次好友PK比赛中取得第一名，快来挑战我吧", //文案
@@ -40,5 +39,5 @@ var data = {
    openId: GameStatusInfo.openId,        //openId
    cmd: cmd,
 };
-BK.MQQ.SsoRequest.send(data, "cs.share_game_result.local");
+BK.QQ.shareToMQQ(data);
 ```

@@ -1,33 +1,6 @@
 # 5.2 成绩上报与查询
 游戏成绩数据上报与查询 （例子代码sso_demo.js）
 
-游戏内成绩的上报、查询，统一使用以下接口进行上报。
-`BK.MQQ.SsoRequest.send(data,cmd)`
-
-使用以下接口进行回调的监听
-`BK.MQQ.SsoRequest.addListener`
-
-例如:
-
-```
-	//请求数据
-    var cmd = "apollo_aio_game.get_room_info_3rd";
-    var data = {
-        "cmd" : cmd,
-        "XXX1" : 1111,
-        "XXX2" : 2222,
-    };
-
-    BK.MQQ.SsoRequest.addListener(cmd,undefined,function(errCode,cmd,data){
-	    //回包数据
-         if(data.data){
-           	
-         }
-    });
-
-    BK.MQQ.SsoRequest.send(data,"apollo_aio_game.get_room_info_3rd");
-```
-
 ## 1. 成绩上报
 为防止游戏数据造假，开发进行游戏成绩上报时，需上报游戏内所有人的游戏成绩。
 
@@ -41,9 +14,7 @@
 
 
 ```
-var cmd = "apollo_aio_game.report_user_score_3rd" 
 var data = {
-    "cmd" : "apollo_aio_game.report_user_score_3rd",
     "from" : "ios",       //描述###请求来源或场景 h5.xxx.yyy/ios.xxx.yyy/android.xxx.yyy 用于后台统计
     "openId":"4558665DATRGFGFS455",   //上报用户的openId
     "gameId":1,           //游戏ID
@@ -83,26 +54,41 @@ var data = {
 　　     },
     ]
 };
-```
-###回包:
 
-```
-errCode ，0表示成功其他为异常
-data = {}
+BK.QQ.scoreUpload(data,function(err,cmd,data){
+//errCode ，0表示成功其他为异常
+//data = {}
+});
 ```
 
 ## 2. 获取房间内的用户成绩数据
 ###请求:
 
 ```
-var cmd = "apollo_aio_game.get_room_info_3rd" 
-var data = {
-    "cmd" : "apollo_aio_game.get_room_info_3rd",
-    "from" : "xxxxx",     //描述###请求来源或场景 h5.xxx.yyy/ios.xxx.yyy/android.xxx.yyy 用于后台统计
-    "gameId":1,           //游戏ID
-    "version":"2.0",      //游戏版本
-    "roomId": 123,        //房间ID
-};
+ var data = {
+        "from" : "xxxxx",       //描述请求来源或场景 h5.xxx.yyy/ios.xxx.yyy/android.xxx.yyy 用于后台统计
+        "gameId":1,           //游戏ID
+    　　 "version":"2.0",      //游戏版本
+        "roomId": 123,      //房间ID
+    };
+
+    BK.QQ.getRoomUserScoreInfo(data,function(errCode,cmd,data){
+         if(data.data){
+            var userRank = data.data.userRank;
+            for (var idx = 0; idx < userRank.length; idx++) {
+                var singleUserRank = userRank[idx];
+                var openId = singleUserRank.openId;
+                var score  = singleUserRank.score;
+                var rank   = singleUserRank.rank;
+                //可选
+                // var a1 = singleUserRank.a1;
+                // var a2 = singleUserRank.a2;
+                // ...
+                //
+            }
+         }
+    });
+
 ```
 
 ###回包
@@ -131,19 +117,20 @@ data =
 ###请求:
 
 ```
-var cmd = "apollo_aio_game.get_user_gameinfo_3rd" 
 var data = {
-        "cmd" : "apollo_aio_game.get_user_gameinfo_3rd",
         "from" : "xxxxx",     //描述###请求来源或场景 h5.xxx.yyy/ios.xxx.yyy/android.xxx.yyy 用于后台统计
         "gameId":1,           //游戏ID
     　　 "toOpenId":"123",     //需要查询的openId（如果是查自己的数据，则不用传， 注意此参数仅在游戏当天有用）
     　　 "version":"2.0",      //游戏版本
         "cycleNum":0           //周期序号 【0-本周期， 1-上一周期， 2-上两周期】 目前后台会保存三个周期的游戏数据，例如若一个周期为1星期，则0代表本星期的数据。
     }; 
+BK.QQ.getUserGameinfo(data,function(err,cmd,data){
+	//回包数据
+}); 
 
 ```
 
-###回包
+###回包数据
 
 ```
 errCode ，0表示成功其他为异常
@@ -161,12 +148,14 @@ data = {
 
 
 ```
-var cmd = "apollo_aio_game.get_user_gameinfo_3rd" 
 var data = {
-    "cmd" : "apollo_aio_game.get_user_curreInfo",
     "from" : "xxxxx",       //描述###请求来源或场景 h5.xxx.yyy/ios.xxx.yyy/android.xxx.yyy
-　　"mask":1                         //mask取值如下
+　　"mask":1                 //mask取值如下
 }
+BK.QQ.getRoomUserScoreInfo(data,function(err,cmd,data){
+	//回包数据
+}); 
+
 ```
 其中mask的取值如下
 
@@ -195,26 +184,3 @@ curreType取值含义
 ```
 3- 游戏点券
 ```
-
-
-## 数据上报
-
-用于上报数据
-
-###请求：
-```
-var cmd = "cs.report_data_2_compass.local" 
-var data = { 
-	actionName:"",
-	enter:"",
-	result:"",
-	r2:"",
-	r3:"",
-	r4:"",
-	r5:""
-}
-```
-
-###回包
-
-无
