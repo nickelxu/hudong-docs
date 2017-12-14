@@ -141,41 +141,18 @@ filename | string | 图集文件中小图的名字 |
 例子：
 
 
+#### createSheetSprite(filename,width,height)
+> 根据图集文件中小图名称，创建一个图集精灵对象
+
+
+ 参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+filename | string | 图集文件中小图的名字 | 
+width | number | 宽（选填，不填时为小图的图片大小） | 
+height | number | 宽（选填，不填时为小图的图片大小） | 
+
+
+
 ### 例子
 查看 script/demo/render/spriteSheetCache_demo.js
 
-
-##打包方法
-引擎中使用TexturePacker作为打包工具
-### 1.添加图片文件
-将帧图片拖拽到TexturePacker中
-![](img/texturepacker1.png)
-### 2.输出文件
-此处需要说明的是Data Format必须选择JSON Array
-![](img/texturepacker2.png)
-然后点选Public sprite sheet输出文件
-### 3.调用加载
-```
-BK.Script.loadlib('GameRes://script/core/render/animatedSprite.js');
-
-//DEMO
-var texPath = "GameRes://texture/spritesheet/hello.png";
-var jsonPath = "GameRes://texture/spritesheet/hello.json";
-BK.SpriteSheetCache.loadSheet(jsonPath, texPath);
-var textureInfoArr = new Array();
-for (var i = 0; i < 35; i++) {
-    var  name = i+'.png';
-    var textureInfo = BK.SpriteSheetCache.getTextureFrameInfoByFileName(name);
-    textureInfoArr.push(textureInfo);
-}
-var aniSp = new BK.AnimatedSprite(textureInfoArr);
-aniSp.anchor = { x: 0.5, y: 0.5 };
-aniSp.size = { width: 200 * 2, height: 214 * 2 };
-var scrSize = BK.Director.screenPixelSize;
-aniSp.position = { x: scrSize.width / 2.0, y: scrSize.height / 2.0 };
-BK.Director.root.addChild(aniSp);
-
-aniSp.delayUnits = 0.5;//设置每一帧持续时间，以秒为单位。默认1/30秒
-// aniSp.paused = true;
-aniSp.play(); //
-```

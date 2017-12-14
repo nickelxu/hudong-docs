@@ -54,8 +54,9 @@ PS:本例子可在publicbrickengine/QQPackage进行查阅
 
 ![](./img/android_package.png)
 
-###iPhone版手Q替换方法 
-
+### iPhone版手Q替换方法 
+#### 1.安装手Q后，因需初始依赖一个cdn拉下来的一个版本配置，需先点击开始游戏，下载一个线上的游戏包
+#### 2.将打包好的游戏包发送至聊天窗，并替换文件夹
 点击气泡后，下载至本地后，点击“移动至游戏文件夹”
 
 ![](./img/mqq1.png)
