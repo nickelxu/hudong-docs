@@ -1,0 +1,15 @@
+{
+    "root": "./",
+    "title": "厘米游戏接入指南",
+    "language": "zh-hans",
+    "description": "接入指南文档",
+    "plugins": [
+        "-sharing",
+        "-fontsettings",
+        "-theme-default",
+        "search",
+        "lunr",
+        "toggle-chapters",
+        "theme-hudong"
+    ]
+}

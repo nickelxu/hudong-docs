@@ -1,0 +1,2003 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.17 BK.Room 房间管理类 · 厘米游戏接入指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BK.QQ.html" />
+    
+    
+    <link rel="prev" href="BK.FileUtil.html" />
+    
+
+    </head>
+    <body>
+        
+
+<section class="nav">
+    <div class="top">
+        <div class="logo"></div>
+        <ul class="tab">
+            <li class="active"><a href="/">首页 </a></li>
+            <li><a href="/game/game-list">游戏管理</a></li>
+            <li><a href="/data-center/game-item-data">数据中心</a></li>
+            <li><a href="/documentation">接入指南</a></li>
+        </ul>
+        <div class="user-center">
+            <div style="display:none;" class="no-login"><a href="#">
+                <div class="qq-w"></div>登录</a>
+            </div>
+            <div class="login" style="display: none">
+                <a href="#" class="user-img"><img src="gitbook/images/case1-hreo.png"/></a>
+                <div class="login-out">
+                    <a href="#">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="book with-summary">
+
+    <div class="action-list">
+        <a href="//hudong.qq.com/docs/access" class="btn">接入流程</a>
+        <a href="//hudong.qq.com/docs/engine" class="btn primary">引擎文档</a>
+        <a href="//hudong.qq.com/docs/actsandbox" class="btn">活动脚本化</a>
+    </div>
+
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduce/dev_info.html">
+            
+                <a href="../introduce/dev_info.html">
+            
+                    
+                    1.开发入门与概况
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduce/safari_debug.html">
+            
+                <a href="../introduce/safari_debug.html">
+            
+                    
+                    1.1 Safari远程调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.详细接口说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="BK.Script.html">
+            
+                <a href="BK.Script.html">
+            
+                    
+                    2.1 BK.Script 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="BK.Director.html">
+            
+                <a href="BK.Director.html">
+            
+                    
+                    2.2 BK.Director 导演类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="BK.Ticker.html">
+            
+                <a href="BK.Ticker.html">
+            
+                    
+                    2.3 BK.Ticker 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="BK.Texture.html">
+            
+                <a href="BK.Texture.html">
+            
+                    
+                    2.4 BK.Texture 纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="BK.Node.html">
+            
+                <a href="BK.Node.html">
+            
+                    
+                    2.5 BK.Node 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="BK.Sprite.html">
+            
+                <a href="BK.Sprite.html">
+            
+                    
+                    2.6 BK.Sprite 精灵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="BK.Button.html">
+            
+                <a href="BK.Button.html">
+            
+                    
+                    2.7 BK.Button 按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="BK.Text.html">
+            
+                <a href="BK.Text.html">
+            
+                    
+                    2.8 BK.Text 文字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="BK.TouchEvent.html">
+            
+                <a href="BK.TouchEvent.html">
+            
+                    
+                    2.9 BK.TouchEvent 触摸事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="BK.SkeletonAnimation.html">
+            
+                <a href="BK.SkeletonAnimation.html">
+            
+                    
+                    2.10 BK.SkeletonAnimation 骨骼动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="BK.Mesh.html">
+            
+                <a href="BK.Mesh.html">
+            
+                    
+                    2.11 BK.Mesh 网格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="BK.Physics.html">
+            
+                <a href="BK.Physics.html">
+            
+                    
+                    2.12 BK.Physics 物理引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="BK.Render.html">
+            
+                <a href="BK.Render.html">
+            
+                    
+                    2.13 BK.Render 渲染器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="BK.Time.html">
+            
+                <a href="BK.Time.html">
+            
+                    
+                    2.14 BK.Time 时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="BK.Audio.html">
+            
+                <a href="BK.Audio.html">
+            
+                    
+                    2.15 BK.Audio 音频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="BK.FileUtil.html">
+            
+                <a href="BK.FileUtil.html">
+            
+                    
+                    2.16 BK.FileUtil 文件工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.17" data-path="BK.Room.html">
+            
+                <a href="BK.Room.html">
+            
+                    
+                    2.17 BK.Room 房间管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="BK.QQ.html">
+            
+                <a href="BK.QQ.html">
+            
+                    
+                    2.18 BK.QQ 房间手Q消息管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="BK.Buffer.html">
+            
+                <a href="BK.Buffer.html">
+            
+                    
+                    2.19 BK.Buffer 缓冲器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="BK.MQQ.html">
+            
+                <a href="BK.MQQ.html">
+            
+                    
+                    2.20 BK.MQQ 手Q相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.20.1" data-path="BK.MQQ.ErrorCode.html">
+            
+                <a href="BK.MQQ.ErrorCode.html">
+            
+                    
+                    2.20.1 错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="BK.SpriteSheetCache.html">
+            
+                <a href="BK.SpriteSheetCache.html">
+            
+                    
+                    2.21 BK.SpriteSheetCache 图集管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="BK.SpriteSheetCache.html">
+            
+                <a href="BK.SpriteSheetCache.html">
+            
+                    
+                    2.21 BK.SpriteSheetCache 图集管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="BK.AnimatedSprite.html">
+            
+                <a href="BK.AnimatedSprite.html">
+            
+                    
+                    2.22 BK.AnimatedSprite 帧动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="BK.ClipNode.html">
+            
+                <a href="BK.ClipNode.html">
+            
+                    
+                    2.23 BK.ClipNode 蒙版节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="BK.ClipRectNode.html">
+            
+                <a href="BK.ClipRectNode.html">
+            
+                    
+                    2.24 BK.ClipRectNode 裁剪节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.26" data-path="BK.ImageSelector.html">
+            
+                <a href="BK.ImageSelector.html">
+            
+                    
+                    2.25 BK.ImageSelector 图片选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.27" data-path="BK.Shader.html">
+            
+                <a href="BK.Shader.html">
+            
+                    
+                    2.26 BK.Shader 着色器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="BK.QQAVManager.md">
+            
+                <span>
+            
+                    
+                    2.27 BK.QQAVManager 多人音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.29" data-path="dev-q&a.html">
+            
+                <a href="dev-q&a.html">
+            
+                    
+                    2.28 Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ui/ui.html">
+            
+                <a href="../ui/ui.html">
+            
+                    
+                    3.UI系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ui/ui-spritesheet.md">
+            
+                <span>
+            
+                    
+                    3.1 图集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ui/ui-touch.html">
+            
+                <a href="../ui/ui-touch.html">
+            
+                    
+                    3.2 触摸事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ui/ui-iphonex.html">
+            
+                <a href="../ui/ui-iphonex.html">
+            
+                    
+                    3.3 iPhoneX适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../room/room.html">
+            
+                <a href="../room/room.html">
+            
+                    
+                    4.房间管理简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../room/room-flow.html">
+            
+                <a href="../room/room-flow.html">
+            
+                    
+                    4.1 房间流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../room/room-protocol.html">
+            
+                <a href="../room/room-protocol.html">
+            
+                    
+                    4.2 通信协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../room/room-item.html">
+            
+                <a href="../room/room-item.html">
+            
+                    
+                    4.3 道具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../room/room-q&a.html">
+            
+                <a href="../room/room-q&a.html">
+            
+                    
+                    4.4 Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../mqq/mqq-intro.html">
+            
+                <a href="../mqq/mqq-intro.html">
+            
+                    
+                    5.手机QQ接入流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../mqq/package-main.html">
+            
+                <a href="../mqq/package-main.html">
+            
+                    
+                    5.1 文件打包与运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../mqq/package.html">
+            
+                <a href="../mqq/package.html">
+            
+                    
+                    5.1.1 文件打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../mqq/png-press.html">
+            
+                <a href="../mqq/png-press.html">
+            
+                    
+                    5.1.2 png图片压缩
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../mqq/result-upload.html">
+            
+                <a href="../mqq/result-upload.html">
+            
+                    
+                    5.2 成绩上报与查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../mqq/pubAccount.html">
+            
+                <a href="../mqq/pubAccount.html">
+            
+                    
+                    5.3 公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../mqq/cmshow-dress.html">
+            
+                <a href="../mqq/cmshow-dress.html">
+            
+                    
+                    5.4 获取厘米秀形象数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../mqq/share-invite.html">
+            
+                <a href="../mqq/share-invite.html">
+            
+                    
+                    5.5 分享与邀请
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../mqq/shop.html">
+            
+                <a href="../mqq/shop.html">
+            
+                    
+                    5.6 道具商城和游戏首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../mqq/other.html">
+            
+                <a href="../mqq/other.html">
+            
+                    
+                    5.7 其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <!-- <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li> -->
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.17 BK.Room 房间管理类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="bkroom">BK.Room</h2>
+<blockquote>
+<p>&#x6E38;&#x620F;&#x7BA1;&#x7406;&#x7C7B;</p>
+</blockquote>
+<h3 id="&#x6210;&#x5458;&#x53D8;&#x91CF;">&#x6210;&#x5458;&#x53D8;&#x91CF;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53D8;&#x91CF;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>number</td>
+<td>&#x6E38;&#x620F;id</td>
+<td></td>
+</tr>
+<tr>
+<td>roomId</td>
+<td>number</td>
+<td>&#x623F;&#x95F4;id</td>
+<td></td>
+</tr>
+<tr>
+<td>mId</td>
+<td>string</td>
+<td>&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;openId</td>
+<td></td>
+</tr>
+<tr>
+<td>ownerId</td>
+<td>string</td>
+<td>&#x623F;&#x4E3B;&#x7684;openId</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td>number</td>
+<td>&#x623F;&#x95F4;&#x72B6;&#x6001;</td>
+<td>1 &#x5DF2;&#x521B;&#x5EFA;&#x623F;&#x95F4;,2 &#x6E38;&#x620F;&#x4E2D;&#x623F;&#x95F4;</td>
+</tr>
+<tr>
+<td>environment</td>
+<td>number</td>
+<td>&#x7F51;&#x7EDC;&#x73AF;&#x5883;</td>
+<td>NETWORK_ENVIRONMENT_QQ_RELEASE /0 &#x624B;Q&#x73AF;&#x5883;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#x3001;NETWORK_ENVIRONMENT_QQ_DEBUG /1 &#x624B;Q&#x73AF;&#x5883;&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#x3001;NETWORK_ENVIRONMENT_DEMO_DEV/2 demo&#x5DE5;&#x7A0B;&#x5F00;&#x53D1;&#x73AF;&#x5883;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6210;&#x5458;&#x65B9;&#x6CD5;">&#x6210;&#x5458;&#x65B9;&#x6CD5;</h3>
+<h4 id="createandjoinroomgameidmasteropenidcallback">createAndJoinRoom(gameId,masterOpenId,callback)</h4>
+<blockquote>
+<p>&#x623F;&#x4E3B;&#x521B;&#x5EFA;&#x5E76;&#x52A0;&#x5165;&#x623F;&#x95F4;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>number</td>
+<td>&#x6E38;&#x620F;id</td>
+<td></td>
+</tr>
+<tr>
+<td>masterOpenId</td>
+<td>string</td>
+<td>&#x521B;&#x5EFA;&#x8005;openid</td>
+<td></td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>function (statusCode,room) &#x5176;&#x4E2D;statusCode  &#x53C2;&#x8003;&#x6587;&#x6863;&#x6700;&#x4E0B;&#x65B9;&#x9519;&#x8BEF;&#x7801;&#x8868;&#x3002;room&#x4E3A;BK.Room&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>var game = new BK.Room();
+BK.Director.ticker.add(function(ts,duration){
+    game.updateSocket();
+});
+game.createAndJoinRoom(gameId,masterOpenId,function (statusCode,room) {
+if(statusCode == 0){
+    BK.Script.log(0,0,&quot;&#x52A0;&#x5165;&#x623F;&#x95F4;&#x6210;&#x529F;&quot;);
+    BK.Script.log(0,0,&quot;&#x5F53;&#x524D;&#x73A9;&#x5BB6;&#xFF1A;&quot;);
+    room.currentPlayers.forEach(function(player) {
+        BK.Script.log(1,1,&quot;recvJoinRoom opeid:&quot;+player[&quot;openId&quot;] ); //openid
+        BK.Script.log(1,1,&quot;recvJoinRoom joinTs:&quot;+player[&quot;joinTs&quot;] );//&#x52A0;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x6233;
+        BK.Script.log(1,1,&quot;recvJoinRoom status:&quot;+player[&quot;status&quot;] );//&#x73A9;&#x5BB6;&#x72B6;&#x6001; 1&#x7528;&#x6237;&#x5728;&#x6E38;&#x620F;&#x4E2D; 2 &#x7528;&#x6237;&#x52A0;&#x5165;&#x540E;&#x79BB;&#x5F00; 3 &#x7528;&#x6237;&#x7B49;&#x5F85;&#x52A0;&#x5165;
+    }, this);
+}); 
+</code></pre><h4 id="createandjoinfixedroomgameidmasteropenidfixedroomidcallback">createAndJoinFixedRoom(gameId,masterOpenId,fixedRoomId,callback)</h4>
+<blockquote>
+<p>&#x623F;&#x4E3B;&#x4F7F;&#x7528;&#x56FA;&#x5B9A;&#x623F;&#x95F4;&#x53F7;&#x521B;&#x5EFA;&#x623F;&#x95F4;&#x3002;
+environment&#x5C5E;&#x6027;&#x9700;&#x8BBE;&#x7F6E;&#x4E3A; NETWORK_ENVIRONMENT_DEMO_DEV &#x624D;&#x53EF;&#x4F7F;&#x7528;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>number</td>
+<td>&#x6E38;&#x620F;id</td>
+<td></td>
+</tr>
+<tr>
+<td>masterOpenId</td>
+<td>string</td>
+<td>&#x623F;&#x4E3B;openid</td>
+<td></td>
+</tr>
+<tr>
+<td>fixedRoomId</td>
+<td>number</td>
+<td>&#x623F;&#x95F4;&#x53F7;</td>
+<td></td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x8BF7;&#x6C42;&#x56DE;&#x8C03;</td>
+<td>&#x6BCF;&#x6B21;&#x6709;&#x4EBA;&#x52A0;&#x5165;&#x65F6;&#x90FD;&#x4F1A;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A; &#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>var game = new BK.Room();
+game.isDebug = true;
+//&#x6DFB;&#x52A0;&#x5230;ticker&#x4E2D;&#x8FDB;&#x884C;&#x5B9A;&#x65F6;&#x5237;&#x65B0;
+BK.Director.ticker.add(function(ts,duration){
+    game.updateSocket();
+});
+var fixedRoomId = 231;
+game.createAndJoinFixedRoom(gameId,masterOpenId,fixedRoomId,function (statusCode,room) {
+    if(statusCode == 0){
+        BK.Script.log(0,0,&quot;&#x56FA;&#x5B9A;&#x623F;&#x95F4;&#x53F7;-&#x52A0;&#x5165;&#x623F;&#x95F4;&#x6210;&#x529F;&quot;);
+        BK.Script.log(0,0,&quot;&#x5F53;&#x524D;&#x73A9;&#x5BB6;&#xFF1A;&quot;);
+        room.currentPlayers.forEach(function(player) {
+            BK.Script.log(1,1,&quot;recvJoinRoom opeid:&quot;+player[&quot;openId&quot;] );
+            BK.Script.log(1,1,&quot;recvJoinRoom joinTs:&quot;+player[&quot;joinTs&quot;] );
+            BK.Script.log(1,1,&quot;recvJoinRoom status:&quot;+player[&quot;status&quot;] );
+        }, this);
+})
+</code></pre><h4 id="queryandjoinroomgameidroomidjoineropenidcallback">queryAndJoinRoom(gameId,roomId,joinerOpenId,callback)</h4>
+<blockquote>
+<p>&#x53C2;&#x52A0;&#x8005;&#x52A0;&#x5165;&#x623F;&#x95F4;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>number</td>
+<td>&#x6E38;&#x620F;id</td>
+<td></td>
+</tr>
+<tr>
+<td>roomId</td>
+<td>number</td>
+<td>&#x623F;&#x95F4;&#x53F7;</td>
+<td>&#x624B;Q&#x73AF;&#x5883;&#x4E2D;&#x4ECE;GameStatusInfo.roomId&#x83B7;&#x53D6;</td>
+</tr>
+<tr>
+<td>joinerOpenId</td>
+<td>string</td>
+<td>&#x53C2;&#x52A0;&#x8005;openid</td>
+<td></td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x8BF7;&#x6C42;&#x56DE;&#x8C03;</td>
+<td>&#x6BCF;&#x6B21;&#x6709;&#x4EBA;&#x52A0;&#x5165;&#x65F6;&#x90FD;&#x4F1A;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A; &#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code> var game2 = new BK.Room();
+ game2.isDebug = true;
+ var roomId =  255235804494484; //
+ //&#x6DFB;&#x52A0;&#x5230;ticker&#x4E2D;&#x8FDB;&#x884C;&#x5B9A;&#x65F6;&#x5237;&#x65B0;
+ BK.Director.ticker.add(function(ts,duration){
+     game2.updateSocket();
+ });
+
+ //PS:. &#x623F;&#x4E3B;&#x5728;&#x53C2;&#x52A0;&#x8005;&#x52A0;&#x5165;&#x623F;&#x524D; &#xFF0C;&#x4E0D;&#x80FD;startGame,&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x52A0;&#x5165;&#x623F;&#x95F4;
+ game2.queryAndJoinRoom(gameId,roomId,joinerOpenId,function(statusCode,room){
+     if(statusCode == 0){
+         BK.Script.log(0,0,&quot;queryAndJoinRoom statusCode:&quot;+ statusCode);
+        BK.Script.log(0,0,&quot;&#x5F53;&#x524D;&#x73A9;&#x5BB6;&#xFF1A;&quot;);
+        room.currentPlayers.forEach(function(player) {
+                                    BK.Script.log(1,1,&quot;recvJoinRoom opeid:&quot;+player[&quot;openId&quot;] );
+                                    BK.Script.log(1,1,&quot;recvJoinRoom joinTs:&quot;+player[&quot;joinTs&quot;] );
+                                    BK.Script.log(1,1,&quot;recvJoinRoom status:&quot;+player[&quot;status&quot;] );
+                                }, this);
+     }else{
+         BK.Script.log(0,0,&quot;&#x52A0;&#x5165;&#x623F;&#x95F4;&#x5931;&#x8D25;&#x3002;statusCode:&quot;+statusCode);
+     }
+ });
+</code></pre><h4 id="startgamecallback">startGame(callback)</h4>
+<blockquote>
+<p>&#x5F00;&#x59CB;&#x6E38;&#x620F;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>function (statusCode)statusCode  &#x53C2;&#x8003;&#x6587;&#x6863;&#x6700;&#x4E0B;&#x65B9;&#x9519;&#x8BEF;&#x7801;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code> game.startGame(function (statusCode) {
+  BK.Script.log(0,0,&quot;&#x5F00;&#x59CB;&#x6E38;&#x620F;&#xFF01;statusCode:&quot;+statusCode);
+};
+</code></pre><h4 id="setstartgamecallbackcallback">setStartGameCallback(callback)</h4>
+<blockquote>
+<p>&#x76D1;&#x542C;&#x5F00;&#x59CB;&#x6E38;&#x620F;&#x4E8B;&#x4EF6;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>function (statusCode)statusCode  &#x53C2;&#x8003;&#x6587;&#x6863;&#x6700;&#x4E0B;&#x65B9;&#x9519;&#x8BEF;&#x7801;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code> game.setStartGameCallback(function (statusCode) {
+  BK.Script.log(0,0,&quot;&#x5F00;&#x59CB;&#x6E38;&#x620F;&#xFF01;statusCode:&quot;+statusCode);
+};    
+</code></pre><h4 id="leaveroomcallback">leaveRoom(callback)</h4>
+<blockquote>
+<p>&#x79BB;&#x5F00;&#x6E38;&#x620F;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>&#x5F62;&#x5982; function (statusCode&#xFF0C;leaveInfo) &#x5176;&#x4E2D;statusCode  &#x53C2;&#x8003;&#x6587;&#x6863;&#x6700;&#x4E0B;&#x65B9;&#x9519;&#x8BEF;&#x7801;&#x8868;&#x3002;leaveInfo &#x4E3A;Object&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x6709;logOutId&#x5C5E;&#x6027;&#xFF0C;&#x4E3A;&#x79BB;&#x5F00;&#x8005;openid</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code> game.leaveRoom(function (statusCode, leaveInfo) {
+  BK.Script.log(0,0,&quot;&#x79BB;&#x5F00;&#x6E38;&#x620F;&#xFF01;statusCode:&quot;+statusCode);
+};
+</code></pre><h4 id="syncoptstatusbufoptbufextendbufitemlistbufcallback">syncOpt(statusBuf,optBuf,extendBuf,itemListBuf,callback)</h4>
+<blockquote>
+<p> &#x53D1;&#x9001;&#x5E27;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x547D;&#x4EE4;</p>
+</blockquote>
+<p> &#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusBuf</td>
+<td>BK.Buffer</td>
+<td>&#x9884;&#x7559;buffer</td>
+<td></td>
+</tr>
+<tr>
+<td>opt</td>
+<td>BK.Buffer</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;</td>
+<td>&#x7528;&#x6237;&#x9700;&#x8981;&#x540C;&#x6B65;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x3002;&#x53D1;&#x9001;&#x540E;&#x53EF;&#x5728;&#x5E27;&#x540C;&#x6B65;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x4E2D;&#x83B7;&#x53D6;</td>
+</tr>
+<tr>
+<td>extendBuf</td>
+<td>BK.Buffer</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;</td>
+<td>&#x6269;&#x5C55;&#x9884;&#x7559;buffer</td>
+</tr>
+<tr>
+<td>itemListBuf</td>
+<td>BK.Buffer</td>
+<td>&#x9053;&#x5177;buffer</td>
+<td></td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code> //&#x9884;&#x7559;&#x5B57;&#x6BB5;&#xFF0C;&#x6682;&#x65F6;&#x586B;0
+var status = new BK.Buffer(1,1);
+status.writeUint8Buffer(0);
+
+//&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;
+var str = &quot;ABC&quot;;
+//&#x5F80;buffer&#x4E2D;&#x5199;&#x5165;string&#x65F6;&#xFF0C;&#x9700;&#x591A;&#x7533;&#x8BF7;3&#x4E2A;&#x5B57;&#x8282;&#x5927;&#x5C0F;
+var opt = new BK.Buffer(str.length+3,1);
+opt.writeStringBuffer(str);
+
+BK.Script.log(1,1,&quot;sync !!!!!send frame  1&quot;);
+//&#x9884;&#x7559;&#x5B57;&#x6BB5;
+var extend = new BK.Buffer(1,1);
+extend.writeUint8Buffer(0);
+
+//send 
+game.syncOpt(status,opt,extend,undefined,function(ackSeq){
+    BK.Script.log(1,1,&quot;sync !!!!!&#x540E;&#x53F0;&#x786E;&#x8BA4;&#x53F7;recv ack= &quot;+ackSeq);
+});    
+</code></pre><h4 id="setframesynclistenerlistener">setFrameSyncListener(listener)</h4>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x5E27;&#x540C;&#x6B65;&#x76D1;&#x542C;&#x51FD;&#x6570;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>listener</td>
+<td>function</td>
+<td>&#x76D1;&#x542C;&#x51FD;&#x6570;</td>
+<td>&#x5F62;&#x5982; function func(frameDataArray)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5176;&#x4E2D;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x4E2D;frameDataArray&#x4E3A;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x3002;
+&#x7B2C;&#x4E00;&#x7EF4; &#x4EE3;&#x8868;&#x5F53;&#x524D;&#x63A8;&#x9001;&#x6709;n&#x5E27;
+&#x7B2C;&#x4E8C;&#x7EF4; &#x4EE3;&#x8868;&#x5F53;&#x524D;&#x5E27;&#x4E2D;&#x6709;m&#x4E2A;&#x7528;&#x6237;&#x7684;&#x64CD;&#x4F5C;</p>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>game.setFrameSyncListener(function (frameDataArray) {
+    var frameCount = frameDataArray.length;
+    for (var index = 0; index &lt; frameDataArray.length; index++) {
+        var playersOpt  =frameDataArray[index];
+
+        if(playersOpt){
+            for (var i = 0; i &lt; playersOpt.length; i++) {
+                var player = playersOpt[i];
+                   var openId = player.openId;   //&#x7528;&#x6237;openid
+                    var itemId = player.itemId;   // &#x7528;&#x6237;&#x4F7F;&#x7528;&#x7684;&#x9053;&#x5177;id
+                    var buff =  player.dataBuffer.;// BK.Buffer&#x5BF9;&#x8C61;&#x3002;&#x7528;&#x6237;&#x53D1;&#x9001;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;.
+
+                    //&#x6B64;&#x5904;&#x7684;dataBuffer&#x5373;&#x662F; sendSyncOpt&#x4F8B;&#x5B50;&#x4E2D;&#x6240;&#x8BF4;&#x7684; ope&#x3002;&#x6B64;&#x5904;&#x4F7F;&#x7528;readUint8Buffer&#x540E;&#xFF0C;&#x53D6;&#x51FA;&#x7684;&#x503C;&#x4FBF;&#x662F; 1111
+                     var  cmd = player.dataBuffer.readUint8Buffer();
+            }
+        }
+    }
+};
+</code></pre><h4 id="sendbroadcastdatabuff">sendBroadcastData(buff)</h4>
+<blockquote>
+<p>&#x5411;&#x623F;&#x95F4;&#x5185;&#x6240;&#x6709;&#x73A9;&#x5BB6;&#x53D1;&#x9001;&#x5E7F;&#x64AD;&#x6D88;&#x606F;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buff</td>
+<td>BK.Buffer</td>
+<td>&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code> var req = &apos;This is a message!&apos;;
+ //&#x5F53;BK.Buffer&#x4F5C;&#x4E3A;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x8F7D;&#x4F53;&#xFF0C;&#x4E14;&#x53EF;&#x80FD;&#x6DF7;&#x6742;&#x591A;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x989D;&#x5916;&#x5206;&#x914D;3&#x4E2A;&#x81EA;&#x5DF1;
+var data = new BK.Buffer(req.length+3);
+data.writeStringBuffer(req);
+game.sendBroadcastData(data);
+</code></pre><h4 id="setbroadcastdatacallbackcallback">setBroadcastDataCallBack(callback)</h4>
+<blockquote>
+<p>&#x76D1;&#x542C;&#x5E7F;&#x64AD;&#x6D88;&#x606F;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code>game.setBroadcastDataCallBack(function (fromId,))
+</code></pre><h4 id="setuserdatabuffcallback">setUserData(buff,callback)</h4>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x6E38;&#x620F;&#x4E91;&#x7AEF;&#x5B58;&#x50A8;</p>
+<p>&#x76EE;&#x524D;&#x4E3A;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x6BCF;&#x4E2A;&#x6E38;&#x620F;&#x53EF;&#x5B58;&#x50A8;&#x7684;&#x5927;&#x5C0F;&#x4E3A;64K&#x7A7A;&#x95F4;&#x3002;&#x5982;&#x9700;&#x6269;&#x5BB9;&#xFF0C;&#x9700;&#x8054;&#x7CFB;&#x817E;&#x8BAF;&#x540E;&#x53F0;&#x5F00;&#x53D1;&#x4EBA;&#x5458;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buff</td>
+<td>BK.Buffer</td>
+<td>&#x8BBE;&#x7F6E;&#x7684;&#x7684;&#x6570;&#x636E;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code> game.setUserData(userDataBuf,function(retCode){
+        BK.Script.log(1,1,&quot;&#x8BBE;&#x7F6E;&#x4E91;&#x7AEF;&#x5B58;&#x50A8; &#x8FD4;&#x56DE; = &quot;+retCode );
+});
+</code></pre><h4 id="getuserdataroomidcallback">getUserData(roomId,callback)</h4>
+<blockquote>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6E38;&#x620F;&#x4E91;&#x7AEF;&#x5B58;&#x50A8;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>roomId</td>
+<td>number</td>
+<td>&#x623F;&#x95F4;id</td>
+<td>&#x6B64;&#x5904;&#x4F20;&#x5165;roomid&#x662F;&#x7528;&#x4E8E;&#x540E;&#x53F0;&#x6807;&#x8BC6;&#xFF0C;&#x540E;&#x53F0;&#x5B58;&#x50A8;&#x7684;&#x8FD8;&#x662F;&#x4EE5;&#x6E38;&#x620F;&#x4E3A;&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x7801;&#x67E5;&#x770B;&#x540E;&#x9762;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code>//&#x83B7;&#x53D6;&#x4E91;&#x7AEF;&#x5B58;&#x50A8;&#x6570;&#x636E;
+game.getUserData(room.roomId,function (retCode,buf) {
+    BK.Script.log(1,1,&quot;&#x8BBE;&#x7F6E;&#x4E91;&#x7AEF;&#x5B58;&#x50A8; &#x8FD4;&#x56DE; = &quot;+retCode );
+});
+</code></pre><h4 id="matchgamegameidopenidcallback">matchGame(gameId,OpenId,callBack)</h4>
+<blockquote>
+<p>&#x5F00;&#x59CB;&#x964C;&#x751F;&#x4EBA;&#x5339;&#x914D;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>int</td>
+<td>&#x6E38;&#x620F;id </td>
+</tr>
+<tr>
+<td>openId</td>
+<td>String</td>
+<td>&#x73A9;&#x5BB6;id </td>
+</tr>
+<tr>
+<td>callBack</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>&#x5F62;&#x5982; function func(statusCode)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD9;&#x91CC;&#x7684;callback&#x662F;&#x5339;&#x914D;&#x4E4B;&#x540E;&#x540E;&#x53F0;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x52A0;&#x5165;&#x5339;&#x914D;&#x961F;&#x5217;&#x6210;&#x529F;&#xFF0C;&#x771F;&#x6B63;&#x5339;&#x914D;&#x6210;&#x529F;&#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x63A5;&#x53E3;&#x505A;&#x8F6E;&#x8BE2;</p>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;(&#x7ED3;&#x5408;&#x67E5;&#x8BE2;&#x63A5;&#x53E3;)&#xFF1A;</p>
+<pre><code>var isMatchGame = 3;//GameStatusInfo.gameMode;  &#x8FD9;&#x91CC;&#x7684;gameMode=3&#x8868;&#x793A;&#x6E38;&#x620F;&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#x662F;&#x964C;&#x751F;&#x4EBA;&#x5339;&#x914D;
+var shouldQueryMatch = false;
+var tickerCount = 0;
+
+if(isMatchGame == 3){
+    game.matchGame(GameStatusInfo.gameId,GameStatusInfo.openId,function(statusCode){
+        if(statusCode == 0){
+            shouldQueryMatch = true;
+            BK.Script.log(1,1,&quot;matchGame callBack&quot;);
+        }
+
+    });
+}
+//&#x6DFB;&#x52A0;&#x5230;ticker&#x4E2D;&#x8FDB;&#x884C;&#x5B9A;&#x65F6;&#x5237;&#x65B0;
+BK.Director.ticker.add(function(ts,duration){
+    tickerCount++;
+    if(shouldQueryMatch &amp;&amp; tickerCount%180 == 0){
+        game.queryMatchGame(GameStatusInfo.gameId,GameStatusInfo.openId,function(statusCode){
+            if(statusCode == 2011){
+                shouldQueryMatch = false;
+                BK.Script.log(1,1,&quot;queryMatchGame callBack fail----timeout&quot;);
+                return;
+            }
+            if(game.roomId &gt; 0){  //&#x6BCF;180&#x5E27;&#x53BB;&#x8F6E;&#x8BE2;&#x4E00;&#x628A;  &#x5982;&#x679C;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x623F;&#x95F4;&#x53F7;&#x4F1A;&#x76F4;&#x63A5;&#x5199;&#x5165;game.roomId&#xFF0C;&#x518D;&#x62FF;&#x8FD9;&#x4E2A;roomId&#x8D70;&#x6B63;&#x5E38;&#x67E5;&#x8BE2;&#x623F;&#x95F4;&#x6D41;&#x7A0B;
+                shouldQueryMatch = false;
+                BK.Script.log(1,1,&quot;queryMatchGame callBack succ&quot;);
+            } else{
+                BK.Script.log(1,1,&quot;queryMatchGame callBack fail&quot;);
+            }
+        });
+    }
+    game.updateSocket();
+});
+</code></pre><h4 id="querymatchgamegameidopenidcallback">queryMatchGame(gameId,openId,callBack)</h4>
+<blockquote>
+<p>&#x67E5;&#x8BE2;&#x5339;&#x914D;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>int</td>
+<td>&#x6E38;&#x620F;id </td>
+</tr>
+<tr>
+<td>openId</td>
+<td>String</td>
+<td>&#x73A9;&#x5BB6;id </td>
+</tr>
+<tr>
+<td>callBack</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>&#x5F62;&#x5982; function func(statusCode)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x5728;&#x52A0;&#x5165;&#x5339;&#x914D;&#x961F;&#x5217;&#x540E;&#x53BB;&#x8F6E;&#x8BE2;,&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x7684;timeout&#x5982;&#x679C;&#x4E3A;1&#x4EE3;&#x8868;&#x5339;&#x914D;&#x8D85;&#x65F6;&#x4E86;&#xFF0C;&#x5E94;&#x8BE5;&#x53D6;&#x6D88;&#x8F6E;&#x8BE2;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8D85;&#x65F6;&#x5219;&#x5224;&#x65AD;game.roomId&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x4E3A;0&#x5219;&#x7EE7;&#x7EED;&#x8F6E;&#x8BE2;&#xFF0C;&#x5982;&#x679C;&#x5927;&#x4E8E;0&#x5219;&#x8FDB;&#x5165;&#x67E5;&#x8BE2;&#x623F;&#x95F4;&#x7684;&#x6B63;&#x5E38;&#x6D41;&#x7A0B;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;
+    &#x540C;matchGame&#x7684;&#x4F8B;&#x5B50;</p>
+<h4 id="quitmatchgamegameidopenidcallback">quitMatchGame(gameId,openId,callBack)</h4>
+<blockquote>
+<p>&#x9000;&#x51FA;&#x5339;&#x914D;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gameId</td>
+<td>int</td>
+<td>&#x6E38;&#x620F;id </td>
+</tr>
+<tr>
+<td>openId</td>
+<td>String</td>
+<td>&#x73A9;&#x5BB6;id </td>
+</tr>
+<tr>
+<td>callBack</td>
+<td>function</td>
+<td>&#x56DE;&#x8C03;&#x51FD;&#x6570;</td>
+<td>&#x5F62;&#x5982; function func(statusCode)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD9;&#x91CC;&#x662F;&#x5728;&#x73A9;&#x5BB6;&#x52A0;&#x5165;&#x52A0;&#x5165;&#x6E38;&#x620F;&#x5339;&#x914D;&#x540E;&#xFF0C;&#x9000;&#x51FA;&#x5339;&#x914D;&#x65F6;&#x901A;&#x77E5;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x9000;&#x51FA;&#x540E;&#xFF0C;&#x73A9;&#x5BB6;&#x9700;&#x8981;&#x901A;&#x8FC7;queryRoom&#x63A5;&#x53E3;&#x67E5;&#x8BE2;&#x83B7;&#x53D6;&#x662F;&#x5426;&#x6709;&#x73A9;&#x5BB6;&#x9000;&#x51FA;&#x5339;&#x914D;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>game2.quitMatchGame(gameId,masterOpenId,function(status)
+{
+    if (status == 0)
+        BK.Script.log(0,0,&quot; quit math success&quot;);
+});
+//&#x83B7;&#x53D6;&#x6709;&#x65E0;&#x73A9;&#x5BB6;&#x9000;&#x51FA;&#x6216;&#x9000;&#x51FA;&#x73A9;&#x5BB6;&#x6570;&#x91CF;
+game2.queryRoom(gameId,roomId,masterOpenId,function(status,roominfo)
+{
+    if (status ==0) {
+        BK.Script.log(0,0,&quot; game2.queryRoom  &quot;+ + &quot;  &#x9000;&#x51FA;&#x4EBA;&#x6570;:&quot;+roominfo.ext_num);
+    }
+    else
+    {
+        BK.Script.log(0,0,&quot; game2.queryRoom  &quot;+status );
+    }
+})
+</code></pre><h4 id="sendkeepalive">sendKeepAlive()</h4>
+<blockquote>
+<p>&#x53D1;&#x9001;&#x5FC3;&#x8DF3;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x65E0;
+&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<h4 id="setdisconnectnetcallbackcallback">setDisconnectNetCallBack(callback)</h4>
+<blockquote>
+<p>&#x76D1;&#x542C;&#x7F51;&#x7EDC;&#x65AD;&#x7EBF;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x65AD;&#x7EBF;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;
+&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>var room = new BK.Room();
+...
+
+room.setDisconnectNetCallBack(function(){
+    //&#x65AD;&#x7EBF;&#x903B;&#x8F91;
+});
+</code></pre><h4 id="reconnectandjoinroom">reConnectAndJoinRoom()</h4>
+<blockquote>
+<p>&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x623F;&#x95F4;</p>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;&#x7F51;&#x7EDC;&#x65AD;&#x7EBF;&#x540E;&#xFF0C;&#x8BF7;&#x6C42;&#x91CD;&#x8FDE;&#x623F;&#x95F4;&#x7684;&#x64CD;&#x4F5C;&#x7531;&#x6E38;&#x620F;&#x4FA7;&#x53BB;&#x7BA1;&#x7406;&#x3002;&#x6E38;&#x620F;&#x4FA7;&#x9700;&#x8981;&#x63A7;&#x5236;&#x8BF7;&#x6C42;&#x7684;&#x9891;&#x7387;&#x3002;
+&#x800C;&#x9891;&#x7387;&#x4E0D;&#x53EF;&#x8FC7;&#x4E8E;&#x9891;&#x7E41;&#xFF0C;&#x5982;1&#x79D2;&#x949F;&#x53D1;&#x8D77;1000&#x6B21;&#x91CD;&#x8FDE;&#x8BF7;&#x6C42;&#x3002;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;
+&#x65E0;</p>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;
+&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>
+var room = new BK.Room();
+...
+
+room.setDisconnectNetCallBack(function(){
+    //&#x8BF7;&#x6C42;&#x91CD;&#x8FDE;&#x3002;&#x5207;&#x8BB0;&#x8BF7;&#x6C42;&#x91CD;&#x8FDE;&#x9891;&#x7387;&#x4E0D;&#x53EF;&#x4EE5;&#x8FC7;&#x4E8E;&#x9891;&#x7E41;
+    room.reConnectAndJoinRoom()
+});
+</code></pre><h4 id="setrejoinroomcallbackcallback">setReJoinRoomCallBack(callback)</h4>
+<blockquote>
+<p>&#x76D1;&#x542C;&#x91CD;&#x8FDE;&#x7ED3;&#x679C;</p>
+<p>&#x8C03;&#x7528;BK.Room.reConnectAndJoinRoom()&#x540E;&#xFF0C;&#x91CD;&#x8FDE;&#x7ED3;&#x679C;&#x56DE;&#x8C03;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x91CD;&#x8FDE;&#x6210;&#x529F;&#x56DE;&#x8C03;</td>
+<td>&#x5177;&#x4F53;function&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#x4F8B;&#x5B50;&#x3002;statueCode&#x4E3A;number&#x7C7B;&#x578B;&#xFF0C;&#x5177;&#x4F53;&#x9519;&#x8BEF;&#x7801;&#x5728;&#x672C;&#x9875;&#x6700;&#x4E0B;&#x65B9;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;
+&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>var room = new BK.Room();
+...
+room.setReJoinRoomCallBack(function(statueCode){
+    //&#x65AD;&#x7EBF;&#x91CD;&#x8FDE;&#x7ED3;&#x679C;
+});
+room.setDisconnectNetCallBack(function(){
+    //&#x8BF7;&#x6C42;&#x91CD;&#x8FDE;&#x3002;&#x5207;&#x8BB0;&#x8BF7;&#x6C42;&#x91CD;&#x8FDE;&#x9891;&#x7387;&#x4E0D;&#x53EF;&#x4EE5;&#x8FC7;&#x4E8E;&#x9891;&#x7E41;
+    room.reConnectAndJoinRoom()
+});
+</code></pre><h2 id="&#x540E;&#x53F0;&#x9519;&#x8BEF;&#x7801;">&#x540E;&#x53F0;&#x9519;&#x8BEF;&#x7801;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x9519;&#x8BEF;&#x7801;</th>
+<th>&#x8BF4;&#x660E; </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&#x6210;&#x529F;</td>
+<td></td>
+</tr>
+<tr>
+<td>1000</td>
+<td>&#x5305;&#x4F53;&#x957F;&#x5EA6;&#x68C0;&#x67E5;&#x975E;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>1001</td>
+<td>&#x9B54;&#x672F;&#x5B57;&#x975E;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>1002</td>
+<td>&#x524D;&#x7AEF;&#x547D;&#x4EE4;&#x5B57;&#x975E;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>1003</td>
+<td>&#x540E;&#x7AEF;&#x547D;&#x4EE4;&#x5B57;&#x975E;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>1004</td>
+<td>&#x540E;&#x7AEF;&#x547D;&#x4EE4;&#x6765;&#x6E90;&#x975E;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>1005</td>
+<td>FromId&#x975E;&#x6CD5;</td>
+<td></td>
+</tr>
+<tr>
+<td>1006</td>
+<td>ST&#x89E3;&#x5BC6;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>1007</td>
+<td>&#x4F7F;&#x7528;STKEY&#x754C;&#x9762;&#x8BF7;&#x6C42;&#x5305;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>1008</td>
+<td>ST&#x8FC7;&#x671F;</td>
+<td></td>
+</tr>
+<tr>
+<td>1009</td>
+<td>&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;</td>
+<td></td>
+</tr>
+<tr>
+<td>1010</td>
+<td>&#x7248;&#x672C;&#x592A;&#x4F4E;</td>
+<td></td>
+</tr>
+<tr>
+<td>1011</td>
+<td>&#x8BF7;&#x6C42;&#x9891;&#x7387;&#x9650;&#x5236;</td>
+<td></td>
+</tr>
+<tr>
+<td>1012</td>
+<td>&#x83B7;&#x53D6;l5&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>2001</td>
+<td>&#x521D;&#x59CB;&#x5316;&#x8BBF;&#x95EE;&#x5B58;&#x50A8;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>2002</td>
+<td>&#x67E5;&#x8BE2;&#x5B58;&#x50A8;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>2003</td>
+<td>&#x66F4;&#x65B0;&#x5B58;&#x50A8;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>2004</td>
+<td>&#x5220;&#x9664;&#x5B58;&#x50A8;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>2005</td>
+<td>&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x914D;&#x7F6E;&#x9519;&#x8BEF;</td>
+<td></td>
+</tr>
+<tr>
+<td>2006</td>
+<td>&#x901A;&#x77E5;&#x6E38;&#x620F;&#x7F51;&#x5173;&#x521B;&#x5EFA;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>2007</td>
+<td>&#x83B7;&#x53D6;&#x623F;&#x95F4;ID&#x5931;&#x8D25; &#x6216;&#x8005; &#x6307;&#x5B9A;&#x7684;&#x623F;&#x95F4;ID&#x4E0D;&#x53EF;&#x7528;</td>
+<td></td>
+</tr>
+<tr>
+<td>2008</td>
+<td>&#x975E;&#x6CD5;&#x547D;&#x4EE4;</td>
+<td></td>
+</tr>
+<tr>
+<td>2009</td>
+<td>&#x623F;&#x95F4;id&#x4E0D;&#x5B58;&#x5728;</td>
+<td></td>
+</tr>
+<tr>
+<td>2010</td>
+<td>&#x5728;&#x9ED1;&#x540D;&#x5355;</td>
+<td></td>
+</tr>
+<tr>
+<td>2011</td>
+<td>&#x964C;&#x751F;&#x4EBA;&#x5339;&#x914D;&#x8D85;&#x65F6;</td>
+<td></td>
+</tr>
+<tr>
+<td>3000</td>
+<td>&#x67E5;&#x8BE2;&#x623F;&#x95F4;&#x4FE1;&#x606F;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>3001</td>
+<td>&#x623F;&#x95F4;&#x72B6;&#x6001;&#x5F02;&#x5E38;</td>
+<td></td>
+</tr>
+<tr>
+<td>3002</td>
+<td>&#x8BF7;&#x6C42;&#x5F00;&#x59CB;&#x6E38;&#x620F;&#x7684;&#x7528;&#x6237;&#x5E76;&#x975E;&#x623F;&#x4E3B;</td>
+<td></td>
+</tr>
+<tr>
+<td>3003</td>
+<td>&#x7528;&#x6237;&#x672A;&#x5728;&#x623F;&#x95F4;&#x5185;</td>
+<td></td>
+</tr>
+<tr>
+<td>3004</td>
+<td>&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x6233;&#x5F02;&#x5E38;</td>
+<td></td>
+</tr>
+<tr>
+<td>3005</td>
+<td>&#x8BF7;&#x6C42;&#x767B;&#x51FA;LOGOUTID&#x4E0E;fromid&#x4E0D;&#x4E00;&#x81F4;</td>
+<td></td>
+</tr>
+<tr>
+<td>3006</td>
+<td>&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x5904;&#x4E8E;&#x4E0D;&#x53EF;&#x670D;&#x52A1;&#x72B6;&#x6001;</td>
+<td></td>
+</tr>
+<tr>
+<td>3007</td>
+<td>&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x6D3B;&#x8DC3;&#x7528;&#x6237;&#x6570;&#x8D85;&#x8FC7;&#x9650;&#x5236;</td>
+<td></td>
+</tr>
+<tr>
+<td>3008</td>
+<td>&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x6D3B;&#x8DC3;&#x623F;&#x95F4;&#x6570;&#x8D85;&#x8FC7;&#x9650;&#x5236;</td>
+<td></td>
+</tr>
+<tr>
+<td>3009</td>
+<td>&#x623F;&#x95F4;ID&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E0D;&#x80FD;&#x518D;&#x521B;&#x5EFA;</td>
+<td></td>
+</tr>
+<tr>
+<td>3010</td>
+<td>&#x7528;&#x6237;&#x79BB;&#x5F00;&#x623F;&#x95F4;&#x5904;&#x7406;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>3011</td>
+<td>&#x7528;&#x6237;&#x52A0;&#x5165;&#x623F;&#x95F4;&#x53D1;&#x751F;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;</td>
+<td></td>
+</tr>
+<tr>
+<td>3012</td>
+<td>&#x7528;&#x6237;&#x91CD;&#x590D;&#x52A0;&#x5165;&#x623F;&#x95F4;</td>
+<td></td>
+</tr>
+<tr>
+<td>3013</td>
+<td>&#x623F;&#x95F4;&#x5DF2;&#x6EE1;&#x5458;</td>
+<td></td>
+</tr>
+<tr>
+<td>3014</td>
+<td>&#x521B;&#x5EFA;&#x623F;&#x95F4;&#x5931;&#x8D25;&#xFF0C;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;</td>
+<td></td>
+</tr>
+<tr>
+<td>3015</td>
+<td>&#x73A9;&#x5BB6;&#x5DF2;&#x7ECF;&#x52A0;&#x5165;&#x623F;&#x95F4;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x6311;&#x6218;&#x5F71;&#x5B50;</td>
+<td></td>
+</tr>
+<tr>
+<td>4000</td>
+<td>&#x4E0B;&#x884C;&#x6D88;&#x606F;&#x8F6C;&#x53D1;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+<tr>
+<td>4001</td>
+<td>&#x4E0A;&#x884C;&#x6D88;&#x606F;&#x8F6C;&#x53D1;&#x5931;&#x8D25;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h2>
+<p>&#x4F4D;&#x7F6E;&#xFF1A;script/Demo/net/frameSync_demo.js</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.17 BK.Room 房间管理类","level":"1.3.17","depth":2,"next":{"title":"2.18 BK.QQ 房间手Q消息管理类","level":"1.3.18","depth":2,"path":"api/BK.QQ.md","ref":"api/BK.QQ.md","articles":[]},"previous":{"title":"2.16 BK.FileUtil 文件工具类","level":"1.3.16","depth":2,"path":"api/BK.FileUtil.md","ref":"api/BK.FileUtil.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"highlight":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"api/BK.Room.md","mtime":"2017-12-14T18:48:06.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-15T11:55:34.906Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+<div class="footer">
+    <div class="center-block">
+        <div class="left">Copyright © 1998-2017 Tencent. All Rights Reserved.腾讯公司 版权所有</div>
+        <div class="right">
+            <ul>
+                <li><a href="/agreement">开发者协议</a></li>
+                <li><a href="mailto:hudong@tencent.com">联系我们</a></li>
+                <li><a href="https://www.tencent.com/zh-cn/index.html" target="_blank">联系腾讯</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1156 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.22 BK.AnimatedSprite 帧动画 · 厘米游戏接入指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BK.ClipNode.html" />
+    
+    
+    <link rel="prev" href="BK.SpriteSheetCache.html" />
+    
+
+    </head>
+    <body>
+        
+
+<section class="nav">
+    <div class="top">
+        <div class="logo"></div>
+        <ul class="tab">
+            <li class="active"><a href="/">首页 </a></li>
+            <li><a href="/game/game-list">游戏管理</a></li>
+            <li><a href="/data-center/game-item-data">数据中心</a></li>
+            <li><a href="/documentation">接入指南</a></li>
+        </ul>
+        <div class="user-center">
+            <div style="display:none;" class="no-login"><a href="#">
+                <div class="qq-w"></div>登录</a>
+            </div>
+            <div class="login" style="display: none">
+                <a href="#" class="user-img"><img src="gitbook/images/case1-hreo.png"/></a>
+                <div class="login-out">
+                    <a href="#">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="book with-summary">
+
+    <div class="action-list">
+        <a href="//hudong.qq.com/docs/access" class="btn">接入流程</a>
+        <a href="//hudong.qq.com/docs/engine" class="btn primary">引擎文档</a>
+        <a href="//hudong.qq.com/docs/actsandbox" class="btn">活动脚本化</a>
+    </div>
+
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduce/dev_info.html">
+            
+                <a href="../introduce/dev_info.html">
+            
+                    
+                    1.开发入门与概况
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduce/safari_debug.html">
+            
+                <a href="../introduce/safari_debug.html">
+            
+                    
+                    1.1 Safari远程调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2.详细接口说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="BK.Script.html">
+            
+                <a href="BK.Script.html">
+            
+                    
+                    2.1 BK.Script 工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="BK.Director.html">
+            
+                <a href="BK.Director.html">
+            
+                    
+                    2.2 BK.Director 导演类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="BK.Ticker.html">
+            
+                <a href="BK.Ticker.html">
+            
+                    
+                    2.3 BK.Ticker 定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="BK.Texture.html">
+            
+                <a href="BK.Texture.html">
+            
+                    
+                    2.4 BK.Texture 纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="BK.Node.html">
+            
+                <a href="BK.Node.html">
+            
+                    
+                    2.5 BK.Node 节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="BK.Sprite.html">
+            
+                <a href="BK.Sprite.html">
+            
+                    
+                    2.6 BK.Sprite 精灵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="BK.Button.html">
+            
+                <a href="BK.Button.html">
+            
+                    
+                    2.7 BK.Button 按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="BK.Text.html">
+            
+                <a href="BK.Text.html">
+            
+                    
+                    2.8 BK.Text 文字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="BK.TouchEvent.html">
+            
+                <a href="BK.TouchEvent.html">
+            
+                    
+                    2.9 BK.TouchEvent 触摸事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="BK.SkeletonAnimation.html">
+            
+                <a href="BK.SkeletonAnimation.html">
+            
+                    
+                    2.10 BK.SkeletonAnimation 骨骼动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="BK.Mesh.html">
+            
+                <a href="BK.Mesh.html">
+            
+                    
+                    2.11 BK.Mesh 网格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="BK.Physics.html">
+            
+                <a href="BK.Physics.html">
+            
+                    
+                    2.12 BK.Physics 物理引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="BK.Render.html">
+            
+                <a href="BK.Render.html">
+            
+                    
+                    2.13 BK.Render 渲染器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="BK.Time.html">
+            
+                <a href="BK.Time.html">
+            
+                    
+                    2.14 BK.Time 时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="BK.Audio.html">
+            
+                <a href="BK.Audio.html">
+            
+                    
+                    2.15 BK.Audio 音频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="BK.FileUtil.html">
+            
+                <a href="BK.FileUtil.html">
+            
+                    
+                    2.16 BK.FileUtil 文件工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="BK.Room.html">
+            
+                <a href="BK.Room.html">
+            
+                    
+                    2.17 BK.Room 房间管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="BK.QQ.html">
+            
+                <a href="BK.QQ.html">
+            
+                    
+                    2.18 BK.QQ 房间手Q消息管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="BK.Buffer.html">
+            
+                <a href="BK.Buffer.html">
+            
+                    
+                    2.19 BK.Buffer 缓冲器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="BK.MQQ.html">
+            
+                <a href="BK.MQQ.html">
+            
+                    
+                    2.20 BK.MQQ 手Q相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.20.1" data-path="BK.MQQ.ErrorCode.html">
+            
+                <a href="BK.MQQ.ErrorCode.html">
+            
+                    
+                    2.20.1 错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="BK.SpriteSheetCache.html">
+            
+                <a href="BK.SpriteSheetCache.html">
+            
+                    
+                    2.21 BK.SpriteSheetCache 图集管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="BK.SpriteSheetCache.html">
+            
+                <a href="BK.SpriteSheetCache.html">
+            
+                    
+                    2.21 BK.SpriteSheetCache 图集管理类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.23" data-path="BK.AnimatedSprite.html">
+            
+                <a href="BK.AnimatedSprite.html">
+            
+                    
+                    2.22 BK.AnimatedSprite 帧动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="BK.ClipNode.html">
+            
+                <a href="BK.ClipNode.html">
+            
+                    
+                    2.23 BK.ClipNode 蒙版节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="BK.ClipRectNode.html">
+            
+                <a href="BK.ClipRectNode.html">
+            
+                    
+                    2.24 BK.ClipRectNode 裁剪节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.26" data-path="BK.ImageSelector.html">
+            
+                <a href="BK.ImageSelector.html">
+            
+                    
+                    2.25 BK.ImageSelector 图片选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.27" data-path="BK.Shader.html">
+            
+                <a href="BK.Shader.html">
+            
+                    
+                    2.26 BK.Shader 着色器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="BK.QQAVManager.md">
+            
+                <span>
+            
+                    
+                    2.27 BK.QQAVManager 多人音视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.29" data-path="dev-q&a.html">
+            
+                <a href="dev-q&a.html">
+            
+                    
+                    2.28 Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ui/ui.html">
+            
+                <a href="../ui/ui.html">
+            
+                    
+                    3.UI系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ui/ui-spritesheet.md">
+            
+                <span>
+            
+                    
+                    3.1 图集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ui/ui-touch.html">
+            
+                <a href="../ui/ui-touch.html">
+            
+                    
+                    3.2 触摸事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ui/ui-iphonex.html">
+            
+                <a href="../ui/ui-iphonex.html">
+            
+                    
+                    3.3 iPhoneX适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../room/room.html">
+            
+                <a href="../room/room.html">
+            
+                    
+                    4.房间管理简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../room/room-flow.html">
+            
+                <a href="../room/room-flow.html">
+            
+                    
+                    4.1 房间流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../room/room-protocol.html">
+            
+                <a href="../room/room-protocol.html">
+            
+                    
+                    4.2 通信协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../room/room-item.html">
+            
+                <a href="../room/room-item.html">
+            
+                    
+                    4.3 道具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../room/room-q&a.html">
+            
+                <a href="../room/room-q&a.html">
+            
+                    
+                    4.4 Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../mqq/mqq-intro.html">
+            
+                <a href="../mqq/mqq-intro.html">
+            
+                    
+                    5.手机QQ接入流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../mqq/package-main.html">
+            
+                <a href="../mqq/package-main.html">
+            
+                    
+                    5.1 文件打包与运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../mqq/package.html">
+            
+                <a href="../mqq/package.html">
+            
+                    
+                    5.1.1 文件打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../mqq/png-press.html">
+            
+                <a href="../mqq/png-press.html">
+            
+                    
+                    5.1.2 png图片压缩
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../mqq/result-upload.html">
+            
+                <a href="../mqq/result-upload.html">
+            
+                    
+                    5.2 成绩上报与查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../mqq/pubAccount.html">
+            
+                <a href="../mqq/pubAccount.html">
+            
+                    
+                    5.3 公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../mqq/cmshow-dress.html">
+            
+                <a href="../mqq/cmshow-dress.html">
+            
+                    
+                    5.4 获取厘米秀形象数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../mqq/share-invite.html">
+            
+                <a href="../mqq/share-invite.html">
+            
+                    
+                    5.5 分享与邀请
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../mqq/shop.html">
+            
+                <a href="../mqq/shop.html">
+            
+                    
+                    5.6 道具商城和游戏首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../mqq/other.html">
+            
+                <a href="../mqq/other.html">
+            
+                    
+                    5.7 其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <!-- <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li> -->
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.22 BK.AnimatedSprite 帧动画</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="222-bkanimatedsprite">2.22 BK.AnimatedSprite</h1>
+<h4 id="&#x7236;&#x7C7B;&#xFF1A;bksprite">&#x7236;&#x7C7B;&#xFF1A;BK.Sprite</h4>
+<blockquote>
+<p>&#x5E27;&#x52A8;&#x753B;</p>
+</blockquote>
+<h3 id="&#x6210;&#x5458;&#x53D8;&#x91CF;">&#x6210;&#x5458;&#x53D8;&#x91CF;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x53D8;&#x91CF;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delayUnits</td>
+<td>number</td>
+<td>&#x6BCF;&#x4E00;&#x5E27;&#x6301;&#x7EED;&#x65F6;&#x95F4;</td>
+<td>&#x6BCF;&#x4E00;&#x5E27;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x3002;&#x9ED8;&#x8BA4;1/30&#x79D2;</td>
+</tr>
+<tr>
+<td>paused</td>
+<td>boolean</td>
+<td>&#x6682;&#x505C;</td>
+<td>true&#x6682;&#x505C;&#xFF0C;false&#x8FD0;&#x884C;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
+<h4 id="&#x6784;&#x9020;&#x51FD;&#x6570;-new-bkanimatedspritetextureinfoarr">&#x6784;&#x9020;&#x51FD;&#x6570; new BK.AnimatedSprite(textureInfoArr)</h4>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>textureInfoArr</td>
+<td>Array</td>
+<td>&#x7EB9;&#x7406;&#x5BF9;&#x8C61;&#x4FE1;&#x606F;&#x6570;&#x7EC4;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>var texPath = &quot;GameRes://texture/spritesheet/fighter.png&quot;;
+var jsonPath = &quot;GameRes://texture/spritesheet/fighter.json&quot;;
+BK.SpriteSheetCache.loadSheet(jsonPath, texPath);
+var textureInfoArr = new Array();
+for (var i = 0; i &lt; 30; i++) {
+    var val = i &lt; 10 ? &apos;0&apos; + i : i;
+    var textureInfo = BK.SpriteSheetCache.getTextureFrameInfoByFileName(&apos;rollSequence00&apos; + val + &apos;.png&apos;);
+    textureInfoArr.push(textureInfo);
+}
+var aniSp = new BK.AnimatedSprite(textureInfoArr);
+</code></pre><h4 id="playbeginframeidxrepeatcount">play(beginFrameIdx,repeatCount)</h4>
+<blockquote>
+<p>&#x5F00;&#x59CB;&#x64AD;&#x653E;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beginFrameIdx</td>
+<td>number</td>
+<td>&#x5F00;&#x59CB;&#x64AD;&#x653E;&#x7684;&#x5E27;&#x6570;&#xFF08;&#x9009;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF09;</td>
+<td></td>
+</tr>
+<tr>
+<td>repeatCount</td>
+<td>number</td>
+<td>&#x64AD;&#x653E;&#x6B21;&#x6570;&#xFF08;&#x9009;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;-1&#xFF0C;&#x4EE3;&#x8868;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65E0;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;&#x65E0;</p>
+<h4 id="stopframeidx">stop(frameIdx)</h4>
+<blockquote>
+<p>&#x7ED3;&#x675F;&#x64AD;&#x653E;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>frameIdx</td>
+<td>number</td>
+<td>&#x505C;&#x6B62;&#x65F6;&#x663E;&#x793A;&#x7684;&#x5E27;&#xFF08;&#x9009;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;-1&#xFF0C;&#x968F;&#x673A;&#x9009;&#x53D6;&#x4E00;&#x5E27;&#x6700;&#x540E;&#x663E;&#x793A;&#xFF09;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5B50;&#xFF1A;&#x65E0;</p>
+<h4 id="setcompletecallbackcallback">setCompleteCallback(callback)</h4>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x6BCF;&#x6B21;&#x64AD;&#x653E;&#x5B8C;&#x6BD5;&#x7684;&#x56DE;&#x8C03;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x6BCF;&#x64AD;&#x5B8C;&#x4E00;&#x6B21;&#x7684;&#x56DE;&#x8C03;</td>
+<td>&#x5177;&#x4F53;&#x53C2;&#x6570;&#x5982;&#x4F8B;&#x5B50;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>//&#x64AD;&#x653E;&#x5B8C;&#x4E00;&#x6B21;&#x7684;&#x56DE;&#x8C03;&#x3002;&#x5176;&#x4E2D;ani&#x4E3A;BK.AnimatedSprite&#x5BF9;&#x8C61;&#xFF0C;count&#x4E3A;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x7684;&#x6B21;&#x6570;
+aniSp.setCompleteCallback(function (ani,count) {
+    BK.Script.log(0,0,&quot;setCompleteCallback count:&quot;+count);
+    // aniSp.paused = true;
+});
+</code></pre><h4 id="setendcallbackcallback">setEndCallback(callback)</h4>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x5168;&#x90E8;&#x64AD;&#x653E;&#x5B8C;&#x7684;&#x56DE;&#x8C03;</p>
+</blockquote>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>&#x5168;&#x90E8;&#x64AD;&#x653E;&#x5B8C;&#x7684;&#x56DE;&#x8C03;</td>
+<td>&#x5177;&#x4F53;&#x53C2;&#x6570;&#x5982;&#x4F8B;&#x5B50;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>//&#x5168;&#x90E8;&#x64AD;&#x653E;&#x5B8C;&#x7684;&#x56DE;&#x8C03;&#x3002;&#x5176;&#x4E2D;ani&#x4E3A;BK.AnimatedSprite&#x5BF9;&#x8C61;&#xFF0C;count&#x4E3A;&#x5F53;&#x524D;&#x64AD;&#x653E;&#x7684;&#x6B21;&#x6570;
+aniSp.setEndCallback(function (ani,count) {
+    BK.Script.log(0,0,&quot;setEndCallback count:&quot;+count);
+});
+</code></pre><h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<p>&#x67E5;&#x770B; script/demo/render/animatedSprite_demo.js</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.22 BK.AnimatedSprite 帧动画","level":"1.3.23","depth":2,"next":{"title":"2.23 BK.ClipNode 蒙版节点","level":"1.3.24","depth":2,"path":"api/BK.ClipNode.md","ref":"api/BK.ClipNode.md","articles":[]},"previous":{"title":"2.21 BK.SpriteSheetCache 图集管理类","level":"1.3.22","depth":2,"path":"api/BK.SpriteSheetCache.md","ref":"api/BK.SpriteSheetCache.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"highlight":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"api/BK.AnimatedSprite.md","mtime":"2017-12-14T18:48:06.396Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-15T11:55:34.906Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+<div class="footer">
+    <div class="center-block">
+        <div class="left">Copyright © 1998-2017 Tencent. All Rights Reserved.腾讯公司 版权所有</div>
+        <div class="right">
+            <ul>
+                <li><a href="/agreement">开发者协议</a></li>
+                <li><a href="mailto:hudong@tencent.com">联系我们</a></li>
+                <li><a href="https://www.tencent.com/zh-cn/index.html" target="_blank">联系腾讯</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+
+    </body>
+</html>
+

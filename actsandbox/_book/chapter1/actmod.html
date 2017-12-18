@@ -1,0 +1,620 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>活动开发模式 · 厘米游戏游戏脚本化指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="emuenv.html" />
+    
+    
+    <link rel="prev" href="actflow.html" />
+    
+
+    </head>
+    <body>
+        
+
+<section class="nav">
+    <div class="top">
+        <div class="logo"></div>
+        <ul class="tab">
+            <li class="active"><a href="/">首页 </a></li>
+            <li><a href="/game/game-list">游戏管理</a></li>
+            <li><a href="/data-center/game-item-data">数据中心</a></li>
+            <li><a href="/documentation">接入指南</a></li>
+        </ul>
+        <div class="user-center">
+            <div style="display:none;" class="no-login"><a href="#">
+                <div class="qq-w"></div>登录</a>
+            </div>
+            <div class="login" style="display: none">
+                <a href="#" class="user-img"><img src="gitbook/images/case1-hreo.png"/></a>
+                <div class="login-out">
+                    <a href="#">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="book">
+    <div class="action-list">
+        <a href="//hudong.qq.com/docs/access" class="btn">接入流程</a>
+        <a href="//hudong.qq.com/docs/engine" class="btn">引擎文档</a>
+        <a href="//hudong.qq.com/docs/actsandbox" class="primary btn">活动脚本化</a>
+    </div>
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    开发入门与概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="actflow.html">
+            
+                <a href="actflow.html">
+            
+                    
+                    活动开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="actmod.html">
+            
+                <a href="actmod.html">
+            
+                    
+                    活动开发模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="emuenv.html">
+            
+                <a href="emuenv.html">
+            
+                    
+                    活动模拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="testandofcenv.html">
+            
+                <a href="testandofcenv.html">
+            
+                    
+                    活动测试环境和正式环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/introduction.html">
+            
+                <a href="../chapter2/introduction.html">
+            
+                    
+                    页面开发接口说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/frontendinterface.html">
+            
+                <a href="../chapter2/frontendinterface.html">
+            
+                    
+                    前端SDK接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/frontentfunction.html">
+            
+                <a href="../chapter2/frontentfunction.html">
+            
+                    
+                    前端提供的功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/filezip.html">
+            
+                <a href="../chapter2/filezip.html">
+            
+                    
+                    从模拟器到上线活动的流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/frontendnotes.html">
+            
+                <a href="../chapter2/frontendnotes.html">
+            
+                    
+                    活动平台注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/frontentDebug.html">
+            
+                <a href="../chapter2/frontentDebug.html">
+            
+                    
+                    测试环境问题定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/introduction.html">
+            
+                <a href="../chapter3/introduction.html">
+            
+                    
+                    后台开发说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/backenddev.html">
+            
+                <a href="../chapter3/backenddev.html">
+            
+                    
+                    活动后台概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/backendcfg.html">
+            
+                <a href="../chapter3/backendcfg.html">
+            
+                    
+                    活动配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/backendlogic.html">
+            
+                <a href="../chapter3/backendlogic.html">
+            
+                    
+                    活动逻辑脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/backendcb.html">
+            
+                <a href="../chapter3/backendcb.html">
+            
+                    
+                    活动命令字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/backendglb.html">
+            
+                <a href="../chapter3/backendglb.html">
+            
+                    
+                    活动支撑接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../chapter3/api/actconf.html">
+            
+                <a href="../chapter3/api/actconf.html">
+            
+                    
+                    活动配置查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../chapter3/api/usrrecord.html">
+            
+                <a href="../chapter3/api/usrrecord.html">
+            
+                    
+                    用户上报数据查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../chapter3/api/usrfollow.html">
+            
+                <a href="../chapter3/api/usrfollow.html">
+            
+                    
+                    查询用户关注关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../chapter3/api/actusrdata.html">
+            
+                <a href="../chapter3/api/actusrdata.html">
+            
+                    
+                    用户活动数据接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../chapter3/api/usritem.html">
+            
+                <a href="../chapter3/api/usritem.html">
+            
+                    
+                    用户道具接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../chapter3/api/usrscore.html">
+            
+                <a href="../chapter3/api/usrscore.html">
+            
+                    
+                    用户积分接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../chapter3/api/usrlock.html">
+            
+                <a href="../chapter3/api/usrlock.html">
+            
+                    
+                    用户加锁接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="../chapter3/api/helper.html">
+            
+                <a href="../chapter3/api/helper.html">
+            
+                    
+                    辅助操作接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <!-- <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li> -->
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >活动开发模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6D3B;&#x52A8;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;">&#x6D3B;&#x52A8;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;</h1>
+<h3 id="&#x6D3B;&#x52A8;&#x5E73;&#x53F0;&#x7684;&#x67B6;&#x6784;">&#x6D3B;&#x52A8;&#x5E73;&#x53F0;&#x7684;&#x67B6;&#x6784;</h3>
+<p>&#x6D3B;&#x52A8;&#x5E73;&#x53F0;&#x7531;&#x5F00;&#x53D1;&#x8005;&#x5E73;&#x53F0;&#x548C;&#x6E38;&#x620F;&#x6D3B;&#x52A8;&#x540E;&#x53F0;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#x3002;</p>
+<p>&#x5F00;&#x53D1;&#x8005;&#x57FA;&#x4E8E;&#x6A21;&#x62DF;&#x5668;&#x5F00;&#x53D1;&#x7684;&#x6D3B;&#x52A8;&#x9875;&#x9762;&#x8D44;&#x6E90;&#x3001;&#x6D3B;&#x52A8;&#x903B;&#x8F91;&#x811A;&#x672C;&#x548C;&#x6D3B;&#x52A8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#xFF0C;&#x901A;&#x8FC7;&#x5F00;&#x53D1;&#x8005;&#x5E73;&#x53F0;&#x4E0A;&#x4F20;&#xFF0C;&#x5E76;&#x90E8;&#x7F72;&#x5230;&#x6E38;&#x620F;&#x6D3B;&#x52A8;&#x540E;&#x53F0;&#x3002;</p>
+<p>&#x5F00;&#x53D1;&#x8005;&#x4EE5;&#x53CA;&#x7528;&#x6237;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5916;&#x7F51;&#x7684;CDN&#x62C9;&#x53D6;&#x6D3B;&#x52A8;&#x9996;&#x9875;&#xFF0C;&#x5E76;&#x8C03;&#x7528;&#x6D3B;&#x52A8;&#x903B;&#x8F91;&#x63A5;&#x53E3;&#x53C2;&#x4E0E;&#x6D3B;&#x52A8;&#x3002;</p>
+<p>&#x6D3B;&#x52A8;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x63A5;&#x53E3;&#x8BBF;&#x95EE;&#x6D3B;&#x52A8;&#x914D;&#x7F6E;&#x4EE5;&#x53CA;&#x7528;&#x6237;&#x7684;&#x6E38;&#x620F;&#x4FE1;&#x606F;&#xFF0C;&#x5B8C;&#x6210;&#x6D3B;&#x52A8;&#x529F;&#x80FD;&#x7684;&#x5F00;&#x53D1;&#x3002;</p>
+<p><img src="actplat.png" alt="Alt text"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"活动开发模式","level":"1.2.2","depth":2,"next":{"title":"活动模拟环境","level":"1.2.3","depth":2,"path":"chapter1/emuenv.md","ref":"chapter1/emuenv.md","articles":[]},"previous":{"title":"活动开发流程","level":"1.2.1","depth":2,"path":"chapter1/actflow.md","ref":"chapter1/actflow.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","search","lunr","toggle-chapters","theme-hudong","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"livereload":{},"highlight":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏游戏脚本化指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"chapter1/actmod.md","mtime":"2017-12-15T08:44:25.885Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-15T10:06:34.902Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+<div class="footer">
+    <div class="center-block">
+        <div class="left">Copyright © 1998-2017 Tencent. All Rights Reserved.腾讯公司 版权所有</div>
+        <div class="right">
+            <ul>
+                <li><a href="/agreement">开发者协议</a></li>
+                <li><a href="mailto:hudong@tencent.com">联系我们</a></li>
+                <li><a href="https://www.tencent.com/zh-cn/index.html" target="_blank">联系腾讯</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+
