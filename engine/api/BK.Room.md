@@ -254,6 +254,46 @@ listener | function | 监听函数 | 形如 function func(frameDataArray)
 	    }
 	};
 	
+#### queryFrameData(beginFrame, count, callback)
+ > 查询指定帧的帧数据
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+beginFrame | number | 要查询的帧数据的起始帧id | 
+count | number | 要查询的帧数据的帧数 | 
+callback | function | 回调函数 | 形如 function func(frameDataArray)
+
+其中监听函数中frameDataArray为一个二维数组。
+第一维 代表当前推送有n帧
+第二维 代表当前帧中有m个用户的操作
+
+
+返回值：无
+
+例子：
+	
+	game. queryFrameData(beginFrame, count, function (frameDataArray) {
+	    var frameCount = frameDataArray.length;
+	    for (var index = 0; index < frameDataArray.length; index++) {
+	        var playersOpt  =frameDataArray[index];
+	        
+	        if(playersOpt){
+	            for (var i = 0; i < playersOpt.length; i++) {
+	                var player = playersOpt[i];
+					   var openId = player.openId;   //用户openid
+						var itemId = player.itemId;   // 用户使用的道具id
+						var buff =  player.dataBuffer.;// BK.Buffer对象。用户发送的自定义对象.
+						
+						//此处的dataBuffer即是 sendSyncOpt例子中所说的 ope。此处使用readUint8Buffer后，取出的值便是 1111
+						 var  cmd = player.dataBuffer.readUint8Buffer();
+	            }
+	        }
+	    }
+	};
+	
+
 
 #### sendBroadcastData(buff)
 >向房间内所有玩家发送广播消息
@@ -443,89 +483,6 @@ callBack | function | 回调函数 | 形如 function func(statusCode)
 返回值：无
 
 
-####  setDisconnectNetCallBack(callback)
->监听网络断线
-
-参数：
-
-参数  | 类型 |名称 | 备注
-------------- | ------------- | -------------| -------------
-callback | function | 断线回调
-
-返回值：
-无
-
-例子：
-
-```
-var room = new BK.Room();
-...
-
-room.setDisconnectNetCallBack(function(){
-	//断线逻辑
-});
-
-```
-
-#### reConnectAndJoinRoom()
->重新连接房间
->
->注意事项：网络断线后，请求重连房间的操作由游戏侧去管理。游戏侧需要控制请求的频率。
->而频率不可过于频繁，如1秒钟发起1000次重连请求。
-
-
-参数：
-无
-
-返回值：
-无
-
-
-例子：
-
-```
-
-var room = new BK.Room();
-...
-
-room.setDisconnectNetCallBack(function(){
-	//请求重连。切记请求重连频率不可以过于频繁
-	room.reConnectAndJoinRoom()
-});
-
-```
-
-#### setReJoinRoomCallBack(callback)
->监听重连结果
->
->
->调用BK.Room.reConnectAndJoinRoom()后，重连结果回调
->
-
-参数：
-
-参数  | 类型 |名称 | 备注
-------------- | ------------- | -------------| -------------
-callback | function | 重连成功回调 | 具体function类型如下例子。statueCode为number类型，具体错误码在本页最下方
-
-返回值：
-无
-
-例子：
-
-```
-var room = new BK.Room();
-...
-room.setReJoinRoomCallBack(function(statueCode){
-	//断线重连结果
-});
-room.setDisconnectNetCallBack(function(){
-	//请求重连。切记请求重连频率不可以过于频繁
-	room.reConnectAndJoinRoom()
-});
-
-```
-
 ## 后台错误码
 错误码  | 说明 
 ------------- | ------------- |
@@ -574,4 +531,4 @@ room.setDisconnectNetCallBack(function(){
 4001| 上行消息转发失败|
 
 ##例子
-位置：script/Demo/net/frameSync_demo.js
+位置：script/Demo/net/frameSync_demo.js**
