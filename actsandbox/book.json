@@ -1,8 +1,9 @@
 {
     "root": "./",
-    "title": "厘米游戏游戏脚本化指南",
+    "title": "厘米游戏文档-游戏脚本化指南",
     "language": "zh-hans",
     "description": "接入指南文档",
+    "section": "actsandbox",
     "plugins": [
         "-sharing",
         "-fontsettings",

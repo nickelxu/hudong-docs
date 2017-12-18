@@ -1,8 +1,9 @@
 {
     "root": "./",
-    "title": "厘米游戏接入指南",
+    "title": "厘米游戏文档-引擎接入指南",
     "language": "zh-hans",
     "description": "接入指南文档",
+    "section": "engine",
     "plugins": [
         "-sharing",
         "-fontsettings",

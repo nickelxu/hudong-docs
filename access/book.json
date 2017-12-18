@@ -1,8 +1,9 @@
 {
     "root": "./",
-    "title": "厘米游戏接入流程",
+    "title": "厘米游戏文档-接入流程",
     "language": "zh-hans",
     "description": "接入流程",
+    "section": "access",
     "plugins": [
         "-sharing",
         "-fontsettings",
