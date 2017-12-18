@@ -16,9 +16,7 @@ Bitbucket是一个不开源的git，我们通过bitbucket来维护引擎代码�
 
 1.	管理员QQ号；
 2.	appid（一串以2开头的9位数字，可以联系内部号联系人或者SNG内容平台部平台产品中心基础产品组获得）；
-3.	puin（获取方法可以参见 http://119.29.134.111/mqq/pubAccount.html )
-
-需要特别提醒的是，我们不是服务号的部门，我们不接受关于服务号疑问的解答。
+3.	puin（获取方法可以参见 [手机QQ接入流程-公众号](https://hudong.qq.com/docs/engine/mqq/pubAccount.html) )
 
 ### 我们为什么会在注册过程中注册一个服务号？
 用于后期维护与管理玩家。
