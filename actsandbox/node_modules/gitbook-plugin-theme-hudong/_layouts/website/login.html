@@ -1,0 +1,15 @@
+{% if userInfo %}
+<div class="login">
+    <a href="javascript:void(0)" class="user-img avatar">
+        <img src="{{ userInfo.basic_info.icon }}" alt="{{ userInfo.basic_info.name }}" />
+    </a>
+    <div class="login-out out">
+        <a href="javascript:void(0)">退出</a>
+    </div>
+</div>
+{% else %}
+<div class="no-login btn_login">
+    <a href="javascript:void(0)">
+        <div class="qq-w"></div>登录</a>
+</div>
+{% endif %}
