@@ -177,5 +177,8 @@ url | string |待打开的连接|
  */
 BK.MQQ.Webview.open("http://www.qq.com");
 ```
+
+
+
 ##例子
 查看 script/demo/mqq/mqq_demo.js  与 script/demo/mqq/sso_demo.js 

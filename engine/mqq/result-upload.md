@@ -14,14 +14,8 @@
 
 
 ```
-var data = {
-    "from" : "ios",       //描述###请求来源或场景 h5.xxx.yyy/ios.xxx.yyy/android.xxx.yyy 用于后台统计
-    "openId":"4558665DATRGFGFS455",   //上报用户的openId
-    "gameId":1,           //游戏ID
-    "version":"2.0",      //游戏版本
-    "roomId" : 123,       //房间ID
-    //具体的得分数据数组。数组中每个元素为一个用户的得分
-　　"gData":[
+//具体的得分数据数组。数组中每个元素为一个用户的得分
+var data = [
 　　     {
             //第一个用户的得分
 　　         "openId":"4558665DATRGFGFS455",
@@ -53,7 +47,6 @@ var data = {
            //第n个用户的得分 ...
 　　     },
     ]
-};
 
 BK.QQ.scoreUpload(data,function(err,cmd,data){
 //errCode ，0表示成功其他为异常
