@@ -32,7 +32,6 @@
     * [2.24 BK.ClipRectNode 裁剪节点](api/BK.ClipRectNode.md)
     * [2.25 BK.ImageSelector 图片选择器](api/BK.ImageSelector.md)
     * [2.26 BK.Shader 着色器](api/BK.Shader.md)
-    * [2.27 BK.QQAVManager 多人音视频](api/BK.QQAVManager.md)
     * [2.28 Q&A](api/dev-q&a.md)
 * [3.UI系统](ui/ui.md)
     * [3.1 图集](ui/ui-spritesheet.md)
