@@ -8,6 +8,7 @@
         "-sharing",
         "-fontsettings",
         "-theme-default",
+        "highlight",
         "search",
         "lunr",
         "toggle-chapters",
