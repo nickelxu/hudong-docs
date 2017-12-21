@@ -22,7 +22,7 @@ Bitbucket是一个不开源的git，我们通过bitbucket来维护引擎代码�
 
 1.	管理员QQ号；
 2.	appid（一串以2开头的9位数字，可以联系内部号联系人获得）；
-3.	puin（获取方法可以参见 [手机QQ接入流程-公众号](//hudong.qq.com/docs/engine/mqq/pubAccount.html) )
+3.	puin（获取方法可以参见 [手机QQ接入流程-公众号](https://hudong.qq.com/docs/engine/mqq/pubAccount.html) )
 
 ### 我为什么需要一个服务号？
 服务号在我们的游戏开发过程中具有非常重要的作用。
