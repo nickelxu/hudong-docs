@@ -274,24 +274,29 @@ callback | function | 回调函数 | 形如 function func(frameDataArray)
 
 例子：
 	
-	game. queryFrameData(beginFrame, count, function (frameDataArray) {
-	    var frameCount = frameDataArray.length;
-	    for (var index = 0; index < frameDataArray.length; index++) {
-	        var playersOpt  =frameDataArray[index];
-	        
-	        if(playersOpt){
-	            for (var i = 0; i < playersOpt.length; i++) {
-	                var player = playersOpt[i];
-					   var openId = player.openId;   //用户openid
-						var itemId = player.itemId;   // 用户使用的道具id
-						var buff =  player.dataBuffer.;// BK.Buffer对象。用户发送的自定义对象.
-						
-						//此处的dataBuffer即是 sendSyncOpt例子中所说的 ope。此处使用readUint8Buffer后，取出的值便是 1111
-						 var  cmd = player.dataBuffer.readUint8Buffer();
-	            }
-	        }
+	game.queryFrameData(beginFrame, count, function (errCode,frameDataArray) {
+		if(errCode != 0){
+			//错误返回
+		}else{
+			//正常返回
+		    var frameCount = frameDataArray.length;
+		    for (var index = 0; index < frameDataArray.length; index++) {
+		        var playersOpt  =frameDataArray[index];
+		        
+		        if(playersOpt){
+		            for (var i = 0; i < playersOpt.length; i++) {
+		                var player = playersOpt[i];
+						   var openId = player.openId;   //用户openid
+							var itemId = player.itemId;   // 用户使用的道具id
+							var buff =  player.dataBuffer.;// BK.Buffer对象。用户发送的自定义对象.
+							
+							//此处的dataBuffer即是 sendSyncOpt例子中所说的 ope。此处使用readUint8Buffer后，取出的值便是 1111
+							 var  cmd = player.dataBuffer.readUint8Buffer();
+		            }
+		        }
+		    }
 	    }
-	};
+	});
 	
 
 
