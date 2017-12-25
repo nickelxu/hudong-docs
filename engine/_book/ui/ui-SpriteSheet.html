@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1.开发入门与概况 · 厘米游戏文档-引擎接入指南</title>
+        <title>3.2 图集 · 厘米游戏文档-引擎接入指南</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="safari_debug.html" />
+    <link rel="next" href="ui-iphonex.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="ui-touch.html" />
     
 
     </head>
@@ -139,9 +139,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="dev_info.html">
+        <li class="chapter " data-level="1.2" data-path="../introduce/dev_info.html">
             
-                <a href="dev_info.html">
+                <a href="../introduce/dev_info.html">
             
                     
                     1.开发入门与概况
@@ -153,9 +153,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="safari_debug.html">
+        <li class="chapter " data-level="1.2.1" data-path="../introduce/safari_debug.html">
             
-                <a href="safari_debug.html">
+                <a href="../introduce/safari_debug.html">
             
                     
                     1.1 Safari远程调试
@@ -560,9 +560,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../ui/ui.html">
+        <li class="chapter " data-level="1.4" data-path="ui.html">
             
-                <a href="../ui/ui.html">
+                <a href="ui.html">
             
                     
                     3.UI系统
@@ -574,9 +574,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../ui/ui-touch.html">
+        <li class="chapter " data-level="1.4.1" data-path="ui-touch.html">
             
-                <a href="../ui/ui-touch.html">
+                <a href="ui-touch.html">
             
                     
                     3.1 触摸事件
@@ -587,9 +587,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../ui/ui-SpriteSheet.html">
+        <li class="chapter active" data-level="1.4.2" data-path="ui-SpriteSheet.html">
             
-                <a href="../ui/ui-SpriteSheet.html">
+                <a href="ui-SpriteSheet.html">
             
                     
                     3.2 图集
@@ -600,9 +600,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../ui/ui-iphonex.html">
+        <li class="chapter " data-level="1.4.3" data-path="ui-iphonex.html">
             
-                <a href="../ui/ui-iphonex.html">
+                <a href="ui-iphonex.html">
             
                     
                     3.3 iPhoneX适配
@@ -861,7 +861,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1.开发入门与概况</a>
+        <a href=".." >3.2 图集</a>
     </h1>
 </div>
 
@@ -876,95 +876,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5F00;&#x53D1;&#x6982;&#x51B5;">&#x5F00;&#x53D1;&#x6982;&#x51B5;</h2>
-<font color="#ff0000">&#x5982;&#x9047;ios11&#x7684;&#x6A21;&#x62DF;&#x5668;&#x5361;&#x987F;&#xFF0C;&#x5EFA;&#x8BAE;&#x5C06;&#x6A21;&#x62DF;&#x5668;&#x7248;&#x672C;&#x964D;&#x7EA7;&#x5230;10.3.1</font>
-
-<h3 id="helloworld&#x7A0B;&#x5E8F;">Helloworld&#x7A0B;&#x5E8F;</h3>
-<p>&#x5F00;&#x95E8;&#x89C1;&#x5C71;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;helloworld&#x7A0B;&#x5E8F;&#x6765;&#x5B66;&#x4E60;&#x4E0B;bricks&#x5F15;&#x64CE;&#x3002;</p>
-<p>&#x4FEE;&#x6539;PublicBrickEngineGame/PublicBrickEngineGame/Res/main.js &#x4E3A;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x6784;&#x5EFA;&#x3002;</p>
-<p>&#x4E0B;&#x9762;&#x4F8B;&#x5B50;&#x662F;&#x7B2C;&#x4E00;&#x6B65;&#x751F;&#x6210;&#x7EB9;&#x7406;&#x5BF9;&#x8C61;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B65;&#x4F7F;&#x7528;&#x7EB9;&#x7406;&#x5BF9;&#x8C61;&#x751F;&#x6210;&#x7CBE;&#x7075;&#x5B9E;&#x4F8B;&#xFF0C;&#x7B2C;&#x4E09;&#x6B65;&#x5C06;&#x7CBE;&#x7075;&#x5BF9;&#x8C61;&#x52A0;&#x5165;&#x5230;&#x6E32;&#x67D3;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x3002;</p>
-<pre><code>//1.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EB9;&#x7406;
-var tex = new BK.Texture(&apos;GameRes://texture/test.png&apos;);  
-//2.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7CBE;&#x7075;&#x5BF9;&#x8C61; 
-var  sp = new BK.Sprite(100,100, tex,0,1,1,1);
-//3.&#x52A0;&#x5165;&#x5230;&#x6839;&#x8282;&#x70B9;
-BK.Director.root.addChild(sp);
-</code></pre><h3 id="&#x63A5;&#x53E3;&#x547D;&#x540D;">&#x63A5;&#x53E3;&#x547D;&#x540D;</h3>
-<p>brick&#x5F15;&#x64CE;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x63A5;&#x53E3;&#x5747;&#x4E3A;BK&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;
-&#x5982; BK.Director&#xFF0C;BK.Sprite&#x7B49;</p>
-<h3 id="&#x811A;&#x672C;&#x52A0;&#x8F7D;&#x6D41;&#x7A0B;">&#x811A;&#x672C;&#x52A0;&#x8F7D;&#x6D41;&#x7A0B;</h3>
-<p>&#x5F15;&#x64CE;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4F1A;&#x52A0;&#x8F7D;brick.js&#x4E0E;game.js&#x811A;&#x672C;&#xFF0C;&#x8FD0;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x52A0;&#x8F7D;&#x5F00;&#x53D1;&#x8005;&#x7F16;&#x5199;&#x5165;&#x53E3;&#x811A;&#x672C;main.js&#x3002;</p>
-<p>&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#xFF0C;&#x65E0;&#x9700;&#x5173;&#x5FC3;brick.js&#x4E0E;game.js&#x7684;&#x52A0;&#x8F7D;&#x903B;&#x8F91;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x6E38;&#x620F;&#x6253;&#x5305;&#x65F6;&#xFF0C;&#x4E5F;&#x53EA;&#x9700;&#x6253;&#x5305;&#x5F15;&#x7528;&#x5230;&#x7684;&#x811A;&#x672C;&#x4E0E;&#x8D44;&#x6E90;&#x3002;</p>
-<p>&#x5DE5;&#x7A0B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x7684;&#x7EC4;&#x4EF6;&#x4E0E;&#x7C7B;&#x5E93;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x82E5;&#x9700;&#x5F15;&#x7528;&#x9700;&#x4E3B;&#x52A8;&#x8C03;&#x7528;<code>BK.Script.loadlib</code>&#x8FDB;&#x884C;&#x52A0;&#x8F7D;&#xFF0C;<strong>&#x5F15;&#x64CE;&#x9664;&#x4E86;&#x52A0;&#x8F7D;brick.js&#x4E0E;game.js&#x5916;&#x4E0D;&#x4F1A;&#x52A0;&#x8F7D;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;</strong>&#x3002;</p>
-<p><img src="img/load_script_flow.png" alt=""></p>
-<h3 id="&#x5168;&#x5C40;&#x53D8;&#x91CF;gamestatusinfo">&#x5168;&#x5C40;&#x53D8;&#x91CF;GameStatusInfo</h3>
-<p>&#x6E38;&#x620F;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x5F15;&#x64CE;&#x4F1A;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x5199;&#x5165;&#x540D;&#x4E3A;GameStatusInfo&#x7684;&#x6709;&#x5173;&#x6E38;&#x620F;&#x7684;&#x5168;&#x5C40;&#x53C2;&#x6570;</p>
-<pre><code>GameStatusInfo = {
-    &quot;svrIp&quot; : &quot;14.17.42.125&quot;,       //&#x6E38;&#x620F;&#x63A8;&#x8350;ip&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x5FFD;&#x7565;
-    &quot;gameVersion&quot; : &quot;408.2&quot;,   //&#x6E38;&#x620F;&#x7248;&#x672C;&#x53F7;
-    &quot;isMaster&quot; : 1,                    //&#x662F;&#x5426;&#x623F;&#x4E3B;&#xFF0C;1&#x623F;&#x4E3B;&#xFF0C;0&#x53C2;&#x52A0;&#x8005;
-    &quot;dressPath&quot; : [                //&#x5398;&#x7C73;&#x79C0;&#x8863;&#x670D;&#x8DEF;&#x5F84;
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/1\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/1\/playRes\/dress&quot;
-                   },
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/2\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/2\/playRes\/dress&quot;
-                   },
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/3\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/3\/playRes\/dress&quot;
-                   },
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/4\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/4\/playRes\/dress&quot;
-                   },
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/5\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/5\/playRes\/dress&quot;
-                   },
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/6\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/6\/playRes\/dress&quot;
-                   },
-                   {
-                   &quot;atlas&quot; : &quot;\/Clothes\/7\/playRes\/dress&quot;,
-                   &quot;json&quot; : &quot;\/Clothes\/7\/playRes\/dress&quot;
-                   }
-                   ],
-    &quot;gameId&quot; : 3,          //&#x6E38;&#x620F;id
-    &quot;networkType&quot; : 0,  //&#x7F51;&#x7EDC;&#x7C7B;&#x578B; 1 &#x7535;&#x4FE1; &#xFF0C;2 &#x8054;&#x901A; &#xFF0C;3 &#x79FB;&#x52A8;  0: wifi&#x6216;&#x672A;&#x77E5;
-    &quot;roomId&quot; : &quot;0&quot;,          //&#x623F;&#x95F4;&#x53F7;
-    &quot;platform&quot; : &quot;ios&quot;,    //&#x5E73;&#x53F0;&#x7C7B;&#x578B;
-    &quot;openId&quot; : &quot;72ED98114FE0D68FD23650B303B8AD80&quot;,  //&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x6807;&#x8BC6;
-    &quot;spriteDesignHeight&quot; : 368,   //&#x5398;&#x7C73;&#x79C0;&#x5C0F;&#x4EBA;spine&#x52A8;&#x753B;&#x7684;&#x8BBE;&#x8BA1;&#x9AD8;&#x5EA6;
-    &quot;QQVer&quot; : &quot;7.1.0.0&quot;,        //&#x624B;&#x673A;qq&#x7248;&#x672C;
-    &quot;isFirstPlay&quot; : 1,            //&#x662F;&#x5426;&#x7B2C;&#x4E00;&#x6B21;&#x73A9;
-    &quot;skltPath&quot; : {            //&#x5398;&#x7C73;&#x79C0;&#x5C0F;&#x4EBA;spine&#x9AA8;&#x9ABC;
-        &quot;atlas&quot; : &quot;\/Role\/0\/playRes\/role&quot;,
-        &quot;json&quot; : &quot;\/Role\/0\/playRes\/role&quot;
-    }
-</code></pre><h3 id="&#x8D44;&#x6E90;&#x8DEF;&#x5F84;">&#x8D44;&#x6E90;&#x8DEF;&#x5F84;</h3>
-<p>&#x811A;&#x672C;&#x4E2D;&#x8BBF;&#x95EE;&#x811A;&#x672C;&#x6216;&#x8005;&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x65F6;&#xFF0C;&#x9700;&#x4EE5;&#x524D;&#x7F00;+&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
-<p>&#x6E38;&#x620F;&#x4E2D;&#x4EC5;&#x6709;&#x4E24;&#x79CD;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#xFF0C;&#x8D44;&#x6E90;&#x5305;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x624B;Q&#x6839;&#x636E;&#x6E38;&#x620F;ID&#x5206;&#x914D;&#x7684;&#x6C99;&#x76D2;&#x8DEF;&#x5F84;&#x3002;</p>
-<p>&#x8D44;&#x6E90;&#x5305;&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#x4EE5;GameRes://&#x5F00;&#x5934;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#x4E3A;main.js&#x6240;&#x5728;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x53EA;&#x53EF;&#x8BFB;&#x4E0D;&#x53EF;&#x5199;&#x3002;</p>
-<p>&#x6C99;&#x76D2;&#x8DEF;&#x5F84;&#x4EE5;GameSandBox://&#x5F00;&#x5934;&#xFF0C;&#x6587;&#x4EF6;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#x3002;&#x53EF;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6E38;&#x620F;&#x7684;&#x5B58;&#x6863;&#x4FE1;&#x606F;&#x7B49;&#x3002;</p>
-<p>&#x4F8B;&#x5982;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x6E38;&#x620F;&#x5305;:</p>
-<pre><code> |--main.js
-   |--res
-        |--img1.png
-        |--img2.png
-   |--lib
-        |--script1.js
-        |--script2.js
-
- &#x5F53;&#x9700;&#x8981;&#x8BBF;&#x95EE; /lib/script1.js&#xFF0C;&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x4E3A; GameRes://lib/script1.js
-</code></pre><h3 id="&#x9519;&#x8BEF;&#x8C03;&#x8BD5;">&#x9519;&#x8BEF;&#x8C03;&#x8BD5;</h3>
-<p>&#x901A;&#x8FC7;&#x67E5;&#x8BE2;log&#x5173;&#x952E;&#x5B57; &quot;Execute JS Error&quot; &#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x5230;&#x6267;&#x884C;&#x9519;&#x8BEF;&#x7684;&#x884C;&#x6570;&#x548C;&#x5217;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x7684;&#x5177;&#x4F53;&#x4F4D;&#x7F6E;</p>
-<h3 id="&#x5750;&#x6807;&#x7CFB;&#x4E0E;&#x5355;&#x4F4D;">&#x5750;&#x6807;&#x7CFB;&#x4E0E;&#x5355;&#x4F4D;</h3>
-<p>bricks&#x5F15;&#x64CE;&#x4E2D;&#x7684;&#x5750;&#x6807;&#x7CFB;&#x4E0E;opengl&#x7684;&#x5750;&#x6807;&#x7CFB;&#x4E00;&#x81F4;&#x3002;&#x5750;&#x6807;&#x539F;&#x70B9;&#x5728;&#x5C4F;&#x5E55;&#x7684;&#x5DE6;&#x4E0B;&#x89D2;&#xFF0C;x&#x8F74;&#x6B63;&#x65B9;&#x5411;&#x5411;&#x53F3;&#xFF0C;y&#x8F74;&#x6B63;&#x65B9;&#x5411;&#x4E0A;&#x3002; &#x4E14;&#x5F15;&#x64CE;&#x4E2D;&#x6240;&#x6709;&#x6570;&#x503C;&#x5747;&#x4E3A;<strong>&#x5B9E;&#x9645;&#x50CF;&#x7D20;</strong>&#x3002;</p>
-
+                                <h1 id="32-&#x56FE;&#x96C6;">3.2 &#x56FE;&#x96C6;</h1>
+<h2 id="&#x6253;&#x5305;&#x65B9;&#x6CD5;">&#x6253;&#x5305;&#x65B9;&#x6CD5;</h2>
+<p>&#x5F15;&#x64CE;&#x4E2D;&#x4F7F;&#x7528;TexturePacker&#x4F5C;&#x4E3A;&#x6253;&#x5305;&#x5DE5;&#x5177;</p>
+<h3 id="1&#x6DFB;&#x52A0;&#x56FE;&#x7247;&#x6587;&#x4EF6;">1.&#x6DFB;&#x52A0;&#x56FE;&#x7247;&#x6587;&#x4EF6;</h3>
+<p>&#x5C06;&#x5E27;&#x56FE;&#x7247;&#x62D6;&#x62FD;&#x5230;TexturePacker&#x4E2D;
+<img src="img/texturepacker1.png" alt=""></p>
+<h3 id="2&#x8F93;&#x51FA;&#x6587;&#x4EF6;">2.&#x8F93;&#x51FA;&#x6587;&#x4EF6;</h3>
+<p>&#x6B64;&#x5904;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;Data Format&#x5FC5;&#x987B;&#x9009;&#x62E9;JSON Array
+<img src="img/texturepacker2.png" alt="">
+&#x7136;&#x540E;&#x70B9;&#x9009;Public sprite sheet&#x8F93;&#x51FA;&#x6587;&#x4EF6;</p>
+<h3 id="3&#x8C03;&#x7528;&#x52A0;&#x8F7D;">3.&#x8C03;&#x7528;&#x52A0;&#x8F7D;</h3>
+<pre><code>BK.Script.loadlib(&apos;GameRes://script/core/render/animatedSprite.js&apos;);
+</code></pre>
                                 
                                 </section>
                             
@@ -995,7 +919,7 @@ BK.Director.root.addChild(sp);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.开发入门与概况","level":"1.2","depth":1,"next":{"title":"1.1 Safari远程调试","level":"1.2.1","depth":2,"path":"introduce/safari_debug.md","ref":"introduce/safari_debug.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","highlight","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"section":"engine","theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏文档-引擎接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"introduce/dev_info.md","mtime":"2017-12-21T10:02:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-25T02:19:56.761Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.2 图集","level":"1.4.2","depth":2,"next":{"title":"3.3 iPhoneX适配","level":"1.4.3","depth":2,"path":"ui/ui-iphonex.md","ref":"ui/ui-iphonex.md","articles":[]},"previous":{"title":"3.1 触摸事件","level":"1.4.1","depth":2,"path":"ui/ui-touch.md","ref":"ui/ui-touch.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","highlight","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"section":"engine","theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏文档-引擎接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"ui/ui-SpriteSheet.md","mtime":"2017-12-25T01:48:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-25T02:19:56.761Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

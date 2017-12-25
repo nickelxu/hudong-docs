@@ -1,4 +1,4 @@
-# 3.2 iPhoneX适配
+# 3.3 iPhoneX适配
 
 为兼容新出的iPhoneX的设备，开发者需要单独对iPhoneX设备进行视觉兼容
 
