@@ -891,19 +891,49 @@
 <p><img src="img/share2.png" alt=""></p>
 <p>&#x5206;&#x4EAB;&#x81F3;&#x624B;Q&#x540E;&#x5176;&#x4ED6;&#x73A9;&#x5BB6;&#x70B9;&#x51FB;&#x6C14;&#x6CE1;&#x5373;&#x53EF;&#x8FDB;&#x5165;&#x6E38;&#x620F;</p>
 <h2 id="&#x5206;&#x4EAB;&#x6E38;&#x620F;&#x81F3;&#x624B;q">&#x5206;&#x4EAB;&#x6E38;&#x620F;&#x81F3;&#x624B;Q</h2>
-<p>&#x5176;&#x4E2D;&#x6E38;&#x620F;&#x4FA7;&#x81EA;&#x5DF1;&#x63D0;&#x4F9B;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;detailUrl&#x3001;icon&#x56FE;&#x7247;&#x94FE;&#x63A5;picUrl&#x3002;</p>
-<pre><code>var data = {
-   title: &quot;&#x5C0F;&#x6E38;&#x620F;&#x6218;&#x7EE9;&quot;,  //&#x6807;&#x9898;
-   summary: &quot;&#x6211;&#x5728;&#x672C;&#x6B21;&#x597D;&#x53CB;PK&#x6BD4;&#x8D5B;&#x4E2D;&#x53D6;&#x5F97;&#x7B2C;&#x4E00;&#x540D;&#xFF0C;&#x5FEB;&#x6765;&#x6311;&#x6218;&#x6211;&#x5427;&quot;, //&#x6587;&#x6848;
-   detailUrl: &quot;http://ad.html&quot;,          //&#x8DF3;&#x8F6C;url &#xFF08;&#x6E38;&#x620F;&#x65B9;&#x63D0;&#x4F9B;&#xFF09;
-   picUrl: &quot;http://f.xxx.com/icon.png&quot;,  //&#x5206;&#x4EAB;icon&#xFF08;&#x6E38;&#x620F;&#x65B9;&#x63D0;&#x4F9B;&#xFF09;   
-   gameId: GameStatusInfo.gameId,        //&#x6E38;&#x620F;id
-   roomId: 123456789,                    //&#x623F;&#x95F4;id    
-   gameVersion: &quot;&#x6E38;&#x620F;&#x7248;&#x672C;&#x53F7;&quot;,              //&#x6E38;&#x620F;&#x7248;&#x672C;&#x53F7;
-   openId: GameStatusInfo.openId,        //openId
-   cmd: cmd,
-};
-BK.QQ.shareToMQQ(data);
+<p>&#x4F7F;&#x7528;&#x51FD;&#x6570; BK.QQ.shareToMQQ(title, summary, detailUrl, picUrl) &#x5206;&#x4EAB;&#x6E38;&#x620F;&#x81F3;&#x624B;Q</p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>&#x6807;&#x9898;</td>
+<td></td>
+</tr>
+<tr>
+<td>summary</td>
+<td>string</td>
+<td>&#x5206;&#x4EAB;&#x5185;&#x5BB9;</td>
+<td></td>
+</tr>
+<tr>
+<td>detailUrl</td>
+<td>string</td>
+<td>&#x8DF3;&#x8F6C;&#x8BE6;&#x60C5;url</td>
+<td>&#x6E38;&#x620F;&#x65B9;&#x63D0;&#x4F9B; </td>
+</tr>
+<tr>
+<td>picUrl</td>
+<td>string</td>
+<td>&#x56FE;&#x7247;url</td>
+<td>&#x6E38;&#x620F;&#x65B9;&#x63D0;&#x4F9B;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8FD4;&#x56DE;&#x503C;:&#x65E0;</p>
+<p>&#x4EE5;&#x8FEA;&#x65AF;&#x5C3C;&#x8FC7;&#x9A6C;&#x8DEF;&#x4E2D;&#x7684;&#x5206;&#x4EAB;&#x4E3A;&#x4F8B;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x6570;&#x5BF9;&#x5E94;&#x7684;&#x663E;&#x793A;&#x5982;&#x4E0B;&#xFF0C;&#x70B9;&#x51FB;&#x540E;&#xFF0C;&#x5C06;&#x8DF3;&#x8F6C;&#x81F3; detailUrl&#x5BF9;&#x5E94;&#x7684;&#x5730;&#x5740;
+<img src="img/bk.qq.sharetomqq.png" alt=""></p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>BK.QQ.shareToMQQ(&quot;&#x8FEA;&#x65AF;&#x5C3C;&#x8FC7;&#x9A6C;&#x8DEF;&#x6218;&#x7EE9;&quot;,&quot;&#x6211;&#x83B7;&#x5F97;&#x4E86;&#x7B2C;1&#x540D;&#xFF0C;&#x5FEB;&#x6765;&#x6311;&#x6218;&#x6211;&quot;,&quot;www.xxx.com&quot;,&quot;xxx.com/xx.png&quot;);
 </code></pre>
                                 
                                 </section>
@@ -935,7 +965,7 @@ BK.QQ.shareToMQQ(data);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.5 分享与邀请","level":"1.6.5","depth":2,"next":{"title":"5.6 道具商城和游戏首页","level":"1.6.6","depth":2,"path":"mqq/shop.md","ref":"mqq/shop.md","articles":[]},"previous":{"title":"5.4 获取厘米秀形象数据","level":"1.6.4","depth":2,"path":"mqq/cmshow-dress.md","ref":"mqq/cmshow-dress.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","highlight","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"section":"engine","theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏文档-引擎接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"mqq/share-invite.md","mtime":"2017-12-21T10:02:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-25T02:19:56.761Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.5 分享与邀请","level":"1.6.5","depth":2,"next":{"title":"5.6 道具商城和游戏首页","level":"1.6.6","depth":2,"path":"mqq/shop.md","ref":"mqq/shop.md","articles":[]},"previous":{"title":"5.4 获取厘米秀形象数据","level":"1.6.4","depth":2,"path":"mqq/cmshow-dress.md","ref":"mqq/cmshow-dress.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","highlight","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"section":"engine","theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏文档-引擎接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"mqq/share-invite.md","mtime":"2018-01-05T05:18:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-05T05:21:40.507Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
