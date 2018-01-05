@@ -25,19 +25,24 @@ BK.QQ.inviteFriend(wording)
 
 ##分享游戏至手Q
 
-其中游戏侧自己提供跳转链接detailUrl、icon图片链接picUrl。
+使用函数 BK.QQ.shareToMQQ(title, summary, detailUrl, picUrl) 分享游戏至手Q
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+title | string | 标题 | 
+summary | string | 分享内容 | 
+detailUrl | string | 跳转详情url | 游戏方提供 
+picUrl | string |  图片url | 游戏方提供
+
+返回值:无
+
+以迪斯尼过马路中的分享为例，具体参数对应的显示如下，点击后，将跳转至 detailUrl对应的地址
+![](./img/bk.qq.sharetomqq.png)
+
+例子：
 
 ```
-var data = {
-   title: "小游戏战绩",  //标题
-   summary: "我在本次好友PK比赛中取得第一名，快来挑战我吧", //文案
-   detailUrl: "http://ad.html",          //跳转url （游戏方提供）
-   picUrl: "http://f.xxx.com/icon.png",  //分享icon（游戏方提供）   
-   gameId: GameStatusInfo.gameId,        //游戏id
-   roomId: 123456789,                    //房间id	
-   gameVersion: "游戏版本号",              //游戏版本号
-   openId: GameStatusInfo.openId,        //openId
-   cmd: cmd,
-};
-BK.QQ.shareToMQQ(data);
+BK.QQ.shareToMQQ("迪斯尼过马路战绩","我获得了第1名，快来挑战我","www.xxx.com","xxx.com/xx.png");
 ```
