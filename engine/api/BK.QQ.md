@@ -437,6 +437,10 @@ BK.QQ.scoreUpload(scoreData,arkData,function(err,cmd,data){
 #### shareToMQQ(title, summary, detailUrl, picUrl)
 > 分享游戏至手Q
 > 
+> 需要注意的是，此函数并非邀请好友进入游戏，仅是将游戏detailUrl分享出来。
+> 
+> 其中detailUrl需游戏方自己提供，建议是该款游戏的介绍页
+
 
 参数：
 

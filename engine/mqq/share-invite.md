@@ -1,7 +1,10 @@
 # 5.5 分享与邀请
 
-## 发送游戏邀请链接至手Q/微信
-<font color=#ff0000>前置条件：调用接口时需预先加载protocol.js</font>
+## 邀请他人加入房间
+<font color=#ff0000>前置条件：调用接口时需预先加载protocol.js
+且需du
+</font>
+
 
 #### 1. 调用以下代码,其中wording为文案
 
@@ -23,9 +26,11 @@ BK.QQ.inviteFriend(wording)
 
 分享至手Q后其他玩家点击气泡即可进入游戏
 
-##分享游戏至手Q
+##分享游戏游戏主页
 
-使用函数 BK.QQ.shareToMQQ(title, summary, detailUrl, picUrl) 分享游戏至手Q
+使用函数 BK.QQ.shareToMQQ(title, summary, detailUrl, picUrl) 分享游戏至手Q。 
+
+需要注意的是，此函数并非邀请好友进入游戏，仅是将游戏detailUrl分享出来。其中detailUrl需游戏方自己提供，建议是该款游戏的介绍页
 
 参数：
 
