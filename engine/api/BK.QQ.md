@@ -498,3 +498,27 @@ BK.QQ.getCmshowDressInfo(GameStatusInfo.openId,function(errCode,cmd,data){
 });
 ```
 
+### getUserCurrencyInfo(currencyType,callback)
+>查询用户货币余额 
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+currencyType | number | 货币类型 | 1- 请求获取游戏点券 2-请求获取游戏二级货币（暂不可用）
+callback | Function | 回调 | 具体参数如下例子
+
+例子：
+
+```
+BK.QQ.getUserCurrencyInfo(1,function(errCode,cmd,data){
+	if(errCode == 0){
+		for(var i = 0 ; i < data.data.curreInfo.length; i++){
+			var curr = data.data.curreInfo[i];
+			var type = curr.curreType  //3- 游戏点券 目前只有一个3值
+			var bal  = curr.balance    //用户拥有的该货币数量
+		}
+	}
+});
+```
+
