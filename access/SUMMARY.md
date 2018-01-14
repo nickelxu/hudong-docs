@@ -1,8 +1,10 @@
 # Summary
 
-* [简介](README.md)
-* [开始制作游戏](howToStart.md)
-* [开发与管理游戏](howToManageGame.md)
-* [运营游戏](howToOperateGame.md)
-* [政策规范](rules.md)
+* [游戏平台介绍](README.md)
+* [最小demo](demo.md)
+* [游戏管理流程](manageGame/README.md)
+    * [游戏开始制作前的准备](manageGame/prepareWork.md)
+    * [游戏制作过程中需要提交的材料](manageGame/resources.md)
+    * [游戏迭代与更新](manageGame/updataGame.md)
+* [商业化](makeMoney.md)
 * [设计规范](designRules.md)
