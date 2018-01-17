@@ -50,4 +50,5 @@
     * [5.4 获取厘米秀形象数据](mqq/cmshow-dress.md)
     * [5.5 分享与邀请](mqq/share-invite.md)
     * [5.6 道具商城和游戏首页](mqq/shop.md)
+    * [5.7 头像与昵称](mqq/nickAndIcon.md)
 
