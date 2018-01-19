@@ -34,6 +34,7 @@ brick引擎中所有的接口均为BK对象的属性
 
 ### 全局变量GameStatusInfo
 游戏启动后，引擎会为开发者写入名为GameStatusInfo的有关游戏的全局参数
+
 ```
 GameStatusInfo = {
     "svrIp" : "14.17.42.125",       //游戏推荐ip。开发者可忽略
@@ -104,8 +105,14 @@ GameStatusInfo = {
 	 
 	 当需要访问 /lib/script1.js，使用路径为 GameRes://lib/script1.js
 	 
+### 加载文件
+bricks引擎不支持AMD和CommonJS加载方式。加载其他js文件如下
 
-###错误调试
+```
+BK.Script.loadlib("GameRes://lib/script1.js")
+```
+
+### 错误调试
 
 通过查询log关键字 "Execute JS Error" 可以查询到执行错误的行数和列数，以及文件的具体位置
 

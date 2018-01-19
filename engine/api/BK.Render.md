@@ -41,3 +41,35 @@ duration | number |帧间隔|
 例子：
 
  	BK.Render.commit();                  
+
+#### renderToTexture(node)
+
+> 渲染单个节点成纹理
+
+
+参数 ：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+node | BK.Node及其子类 | 渲染的节点|
+
+
+返回值：
+
+| 类型 |名称 | 备注
+ ------------- | -------------| -------------
+ BK.Texture | 输出的纹理|
+ 
+ 例子：
+
+```
+var node = new BK.Node();
+...
+node.addChild(xx);
+
+var tex = BK.Render.renderToTexture(); 
+
+var sp = new BK.Sprite(100, 100, tex, 0, 1, 1, 1);
+
+BK.Director.root.addChild(sp);
+```
