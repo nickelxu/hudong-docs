@@ -6,7 +6,7 @@
 | getActConf             | 查询活动配置信息 | hudong.getActConf() | 无 |
 | getActDetail           | 查询用户活动匹配结果 | hudong.getActDetail() | 无|
 | exchangeGift           | 兑换奖品 | hudong.exchangeGift({pkgid: ***})| pkgid：兑换id|
-| getPkginfo             | 查询领奖结果 | hudong.getPkgInfo() | 无|
+| getPkgInfo             | 查询领奖结果 | hudong.getPkgInfo() | 无|
 
 ###前端调用示例
 hudong为全局对象，以下为查询活动配置信息示例
