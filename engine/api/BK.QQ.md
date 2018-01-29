@@ -354,7 +354,7 @@ BK.QQ.getRoomUserScoreInfo(data,function(errCode,cmd,data){
 });
 ```
 
-#### scoreUpload(scoreData,arkData,callback) 
+#### scoreUpload(scoreData,callback,arkData) 
 > 成绩上报
 > 
 > 使用场景：玩家中途退出游戏，玩家最终完成游戏，均需要主动上报成绩。
@@ -365,8 +365,8 @@ BK.QQ.getRoomUserScoreInfo(data,function(errCode,cmd,data){
 参数  | 类型 |名称 | 备注
 ------------- | ------------- | -------------| -------------
 scoreData | Object | 请求参数 | 具体属性如下例子
-arkData | Object | ark控制参数 | 手Q 7.3.5新增支持定制化结果气泡界面。如不需要定制，填null/undefined
 callback | Function | 回调函数 | 具体错误码可在 <a href:https://hudong.qq.com/docs/engine/api/BK.MQQ.ErrorCode.html>这里</a>查看
+arkData | Object | ark控制参数 | 手Q 7.3.5新增支持定制化结果气泡界面。如不需要定制，填null/undefined
 
 返回值：无
 
@@ -425,10 +425,10 @@ var arkData = {
         }
         ]
 }
-BK.QQ.scoreUpload(scoreData,arkData,function(err,cmd,data){
+BK.QQ.scoreUpload(scoreData,function(err,cmd,data){
     //errCode ，0表示成功其他为异常
     //data = {}
-});
+},arkData);
 ```
 
 
