@@ -35,5 +35,5 @@
         }
     });
 
-    BK.MQQ.SsoRequest.send(data,"apollo_aio_game.get_fri_base_info");
+    BK.MQQ.SsoRequest.send(“,"apollo_aio_game.get_fri_base_info");
 ```
