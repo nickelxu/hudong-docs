@@ -522,3 +522,93 @@ BK.QQ.getUserCurrencyInfo(1,function(errCode,cmd,data){
 });
 ```
 
+### listenGameEventEnterBackground
+
+> 监听游戏退到后台事件
+> 
+> 手Q进入后台后回调，如按home键退到后台
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+obj | object | 事件绑定的对象| 
+callback | Function | 回调 | 具体参数如下例子
+
+
+例子：
+
+```
+var obj = {};
+BK.QQ.listenGameEventEnterBackground(obj,function(){
+	//
+})
+```
+
+### listenGameEventEnterForeground
+
+> 监听游戏回到前台
+
+ 
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+obj | object | 事件绑定的对象| 
+callback | Function | 回调 | 具体参数如下例子
+
+
+例子：
+
+```
+var obj = {};
+BK.QQ.listenGameEventEnterForeground(obj,function(){
+	//
+})
+```
+
+### listenGameEventMaximize
+
+> 监听游戏界面最大化
+> 
+> 场景：用户缩小游戏后，再次点游戏栏回到游戏
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+obj | object | 事件绑定的对象| 
+callback | Function | 回调 | 具体参数如下例子
+
+
+例子：
+
+```
+var obj = {};
+BK.QQ.listenGameEventMaximize(obj,function(){
+	//
+})
+```
+
+### listenGameEventMinimize
+
+> 监听游戏界面最小化
+> 
+> 场景：用户点击缩小游戏
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+obj | object | 事件绑定的对象| 
+callback | Function | 回调 | 具体参数如下例子
+
+
+例子：
+
+```
+var obj = {};
+BK.QQ.listenGameEventMinimize(obj,function(){
+	//
+})
+```
