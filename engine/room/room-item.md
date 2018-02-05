@@ -131,7 +131,42 @@ BK.QQ.buyGameItems(data,function(errCode,cmd,data){
  
 ## 消耗道具
 
-游戏中消耗道具，需要以帧同步的方式发送至游戏后台后，进行校验，消耗成功后，游戏后台也以帧同步的方式推送至房间内的所有玩家
+支持游戏进行时和游戏外消耗道具。
+
+### 1.游戏进行外消耗道具
+直接调用如下，传入需要消耗的道具列表已经对应的数量，则可以使用道具
+
+```     
+  var itemlist = [
+{
+    "id":1,    //道具id
+    "num":1,   //数量
+    "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
+},                
+{
+    "id":2,    //道具id
+    "num":1,   //数量
+    "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
+}
+]
+BK.QQ.ConsumeItems(function(errCode,succList,failList){
+if (errCode == 0) {
+    for(var i = 0 ; i<succList.length; i++ ){
+        //消耗成功的itemid
+        var itemId = succList[i];
+    }
+    for(var i = 0 ; i<failList.length; i++ ){
+        //消耗失败的item
+        var faldItemInfo = failList[i];
+        var ret = faldItemInfo.ret; //失败返回码
+        var id = faldItemInfo.id; //道具ID
+    }
+}
+})
+```
+
+### 2.游戏进行时消耗道具。
+需要以帧同步的方式发送至游戏后台后，进行校验，消耗成功后，游戏后台也以帧同步的方式推送至房间内的所有玩家
 
 
 完整流程代码请看frameSync_demo.js，此处仅列出消耗代码

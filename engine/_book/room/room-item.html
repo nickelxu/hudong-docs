@@ -1004,7 +1004,37 @@ BK.QQ.buyGameItems(data,function(errCode,cmd,data){
 });
 </code></pre><p>&#x9053;&#x5177;&#x76F8;&#x5173;&#x9519;&#x8BEF;&#x7801;&#x8BF7;&#x67E5;&#x9605; 2.20.1 &#x9519;&#x8BEF;&#x7801;</p>
 <h2 id="&#x6D88;&#x8017;&#x9053;&#x5177;">&#x6D88;&#x8017;&#x9053;&#x5177;</h2>
-<p>&#x6E38;&#x620F;&#x4E2D;&#x6D88;&#x8017;&#x9053;&#x5177;&#xFF0C;&#x9700;&#x8981;&#x4EE5;&#x5E27;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x81F3;&#x6E38;&#x620F;&#x540E;&#x53F0;&#x540E;&#xFF0C;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x6D88;&#x8017;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6E38;&#x620F;&#x540E;&#x53F0;&#x4E5F;&#x4EE5;&#x5E27;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x63A8;&#x9001;&#x81F3;&#x623F;&#x95F4;&#x5185;&#x7684;&#x6240;&#x6709;&#x73A9;&#x5BB6;</p>
+<p>&#x652F;&#x6301;&#x6E38;&#x620F;&#x8FDB;&#x884C;&#x65F6;&#x548C;&#x6E38;&#x620F;&#x5916;&#x6D88;&#x8017;&#x9053;&#x5177;&#x3002;</p>
+<h3 id="1&#x6E38;&#x620F;&#x8FDB;&#x884C;&#x5916;&#x6D88;&#x8017;&#x9053;&#x5177;">1.&#x6E38;&#x620F;&#x8FDB;&#x884C;&#x5916;&#x6D88;&#x8017;&#x9053;&#x5177;</h3>
+<p>&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5982;&#x4E0B;&#xFF0C;&#x4F20;&#x5165;&#x9700;&#x8981;&#x6D88;&#x8017;&#x7684;&#x9053;&#x5177;&#x5217;&#x8868;&#x5DF2;&#x7ECF;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9053;&#x5177;</p>
+<pre><code>  var itemlist = [
+{
+    &quot;id&quot;:1,    //&#x9053;&#x5177;id
+    &quot;num&quot;:1,   //&#x6570;&#x91CF;
+    &quot;seq&quot;:&quot;12312&quot;//&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x5F53;&#x524D;&#x6D88;&#x8017;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x81EA;&#x5B9A;&#x4E49;
+},                
+{
+    &quot;id&quot;:2,    //&#x9053;&#x5177;id
+    &quot;num&quot;:1,   //&#x6570;&#x91CF;
+    &quot;seq&quot;:&quot;12312&quot;//&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x5F53;&#x524D;&#x6D88;&#x8017;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x81EA;&#x5B9A;&#x4E49;
+}
+]
+BK.QQ.ConsumeItems(function(errCode,succList,failList){
+if (errCode == 0) {
+    for(var i = 0 ; i&lt;succList.length; i++ ){
+        //&#x6D88;&#x8017;&#x6210;&#x529F;&#x7684;itemid
+        var itemId = succList[i];
+    }
+    for(var i = 0 ; i&lt;failList.length; i++ ){
+        //&#x6D88;&#x8017;&#x5931;&#x8D25;&#x7684;item
+        var faldItemInfo = failList[i];
+        var ret = faldItemInfo.ret; //&#x5931;&#x8D25;&#x8FD4;&#x56DE;&#x7801;
+        var id = faldItemInfo.id; //&#x9053;&#x5177;ID
+    }
+}
+})
+</code></pre><h3 id="2&#x6E38;&#x620F;&#x8FDB;&#x884C;&#x65F6;&#x6D88;&#x8017;&#x9053;&#x5177;&#x3002;">2.&#x6E38;&#x620F;&#x8FDB;&#x884C;&#x65F6;&#x6D88;&#x8017;&#x9053;&#x5177;&#x3002;</h3>
+<p>&#x9700;&#x8981;&#x4EE5;&#x5E27;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#x81F3;&#x6E38;&#x620F;&#x540E;&#x53F0;&#x540E;&#xFF0C;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x6D88;&#x8017;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6E38;&#x620F;&#x540E;&#x53F0;&#x4E5F;&#x4EE5;&#x5E27;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x63A8;&#x9001;&#x81F3;&#x623F;&#x95F4;&#x5185;&#x7684;&#x6240;&#x6709;&#x73A9;&#x5BB6;</p>
 <p>&#x5B8C;&#x6574;&#x6D41;&#x7A0B;&#x4EE3;&#x7801;&#x8BF7;&#x770B;frameSync_demo.js&#xFF0C;&#x6B64;&#x5904;&#x4EC5;&#x5217;&#x51FA;&#x6D88;&#x8017;&#x4EE3;&#x7801;</p>
 <p>&#x4E0B;&#x4F8B;&#x4E3A;&#x5411;&#x540E;&#x53F0;&#x53D1;&#x9001;&#x6D88;&#x8017;&#x9053;&#x5177;&#x5E27;&#x540C;&#x6B65;&#x6D88;&#x606F;</p>
 <p><img src="img/item1.png" alt="">
@@ -1041,7 +1071,7 @@ BK.QQ.buyGameItems(data,function(errCode,cmd,data){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.3 道具","level":"1.5.3","depth":2,"next":{"title":"4.4 Q&A","level":"1.5.4","depth":2,"path":"room/room-q&a.md","ref":"room/room-q&a.md","articles":[]},"previous":{"title":"4.2 通信协议","level":"1.5.2","depth":2,"path":"room/room-protocol.md","ref":"room/room-protocol.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","highlight","search","lunr","toggle-chapters","theme-hudong","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"livereload":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"section":"engine","theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏文档-引擎接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"room/room-item.md","mtime":"2017-12-21T10:02:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T07:21:05.072Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.3 道具","level":"1.5.3","depth":2,"next":{"title":"4.4 Q&A","level":"1.5.4","depth":2,"path":"room/room-q&a.md","ref":"room/room-q&a.md","articles":[]},"previous":{"title":"4.2 通信协议","level":"1.5.2","depth":2,"path":"room/room-protocol.md","ref":"room/room-protocol.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-theme-default","highlight","search","lunr","toggle-chapters","theme-hudong"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"toggle-chapters":{},"theme-hudong":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","showLevel":false,"favicon":"https://hudong.qq.com/favicon.ico"}}},"section":"engine","theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"厘米游戏文档-引擎接入指南","language":"zh-hans","gitbook":"*","description":"接入指南文档"},"file":{"path":"room/room-item.md","mtime":"2018-02-05T08:53:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T08:54:36.737Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1084,10 +1114,6 @@ BK.QQ.buyGameItems(data,function(errCode,cmd,data){
     
         
         <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
 
