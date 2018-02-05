@@ -615,7 +615,7 @@ BK.QQ.listenGameEventMinimize(obj,function(){
 
 
 
-#### SendGameMsg()
+#### sendGameMsg()
 >开放api
 >
 >注意用法：
@@ -638,7 +638,7 @@ BK.QQ.listenGameEventMinimize(obj,function(){
 	
 
 
-#### ShareToArk(summary,picUrl)
+#### shareToArk(summary,picUrl)
 >开放api
 分享无状态ark消息
 
@@ -654,3 +654,49 @@ picUrl| String | 图片路径 | 图片资源路径
 
 	//加入房间成功后
 	BK.QQ.ShareToArk("快来挑战我吧","icon.png") 
+	
+	
+#### consumeItems(summary,picUrl)
+
+>开放api
+分享无状态ark消息
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+itemlist |Array| 消耗的道具数组 |
+callback| function |回调 |
+返回值：无
+
+例子
+
+```     
+var itemlist = [
+	{
+	    "id":1,    //道具id
+	    "num":1,   //数量
+	    "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
+	},                
+	{
+	    "id":2,    //道具id
+	    "num":1,   //数量
+	    "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
+	}
+]
+BK.QQ.consumeItems(itemlist,function(errCode,succList,failList){
+if (errCode == 0) {
+    for(var i = 0 ; i<succList.length; i++ ){
+        //消耗成功的item
+	    var succItemInfo = succList[i];
+       var id = succItemInfo.id; //道具ID
+    }
+    for(var i = 0 ; i<failList.length; i++ ){
+        //消耗失败的item
+        var faldItemInfo = failList[i];
+        var ret = faldItemInfo.ret; //失败返回码
+        var id = faldItemInfo.id; //道具ID
+    }
+}
+})
+```

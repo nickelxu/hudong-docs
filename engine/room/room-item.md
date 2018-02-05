@@ -149,11 +149,13 @@ BK.QQ.buyGameItems(data,function(errCode,cmd,data){
     "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
 }
 ]
-BK.QQ.ConsumeItems(function(errCode,succList,failList){
+BK.QQ.consumeItems(itemlist,function(errCode,succList,failList){
 if (errCode == 0) {
     for(var i = 0 ; i<succList.length; i++ ){
         //消耗成功的itemid
-        var itemId = succList[i];
+         var succItemInfo = succList[i];
+        var id = succItemInfo.id; //道具ID
+       
     }
     for(var i = 0 ; i<failList.length; i++ ){
         //消耗失败的item
