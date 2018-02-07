@@ -31,7 +31,10 @@
     * [2.24 BK.ClipRectNode 裁剪节点](api/BK.ClipRectNode.md)
     * [2.25 BK.ImageSelector 图片选择器](api/BK.ImageSelector.md)
     * [2.26 BK.Shader 着色器](api/BK.Shader.md)
-    * [2.28 Q&A](api/dev-q&a.md)
+    * [2.27 BK.QQAVManager 音视频管理](api/BK.QQAVManager.md)
+    * [2.28 BK.QAVView 音视频展示组件](api/BK.QAVView.md)
+    * [2.29 BK.AVCamera.md 摄像头展示组件](api/BK.AVCamera.md)
+    * [2.30 Q&A](api/dev-q&a.md)
 * [3.UI系统](ui/ui.md)
     * [3.1 触摸事件](ui/ui-touch.md)
     * [3.2 图集](ui/ui-SpriteSheet.md)
@@ -52,4 +55,5 @@
     * [5.6 道具商城和游戏首页](mqq/shop.md)
     * [5.7 头像与昵称](mqq/nickAndIcon.md)
     * [5.8 支付](mqq/pay.md)
+* [6.多人音视频](live/live.md)
 
