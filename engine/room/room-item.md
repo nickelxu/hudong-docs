@@ -134,19 +134,20 @@ BK.QQ.buyGameItems(data,function(errCode,cmd,data){
 支持游戏进行时和游戏外消耗道具。
 
 ### 1.游戏进行外消耗道具
-直接调用如下，传入需要消耗的道具列表已经对应的数量，则可以使用道具
+
+>用法：传入需要消耗的道具列表已经对应的数量，则可以使用道具
+>
+>消耗成功后，后台回吐消耗成功、失败的道具列表。如果消耗成功，则顺带返回一个流水号seq，用于标识此次消耗，此序列号可以用来进行回滚操作
 
 ```     
   var itemlist = [
 {
     "id":1,    //道具id
     "num":1,   //数量
-    "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
 },                
 {
     "id":2,    //道具id
     "num":1,   //数量
-    "seq":"12312"//用于标识当前消耗的序列号。开发者可自定义
 }
 ]
 BK.QQ.consumeItems(itemlist,function(errCode,succList,failList){
@@ -155,6 +156,7 @@ if (errCode == 0) {
         //消耗成功的itemid
          var succItemInfo = succList[i];
         var id = succItemInfo.id; //道具ID
+        var seq = succItemInfo.seq; //用于标识当前消耗的流水号
        
     }
     for(var i = 0 ; i<failList.length; i++ ){
@@ -180,3 +182,39 @@ if (errCode == 0) {
 
 ###注意点：
 <font color=#ff0000>一帧中仅仅能消耗一个道具</font>
+
+## 道具回滚
+>当因网络、游戏逻辑需要等原因需要将已消耗的道具进行回滚，恢复到未消耗状态，可以使用本接口。
+>
+>用法:传入对应消耗的道具id消耗时对应的流水号seq，即可回滚某次消耗
+
+
+```     
+var itemlist = [
+	{
+	    "id":1,    //道具id
+	    "num":1,   //数量
+	    "seq":"12312"//消耗的流水号
+	},                
+	{
+	    "id":2,    //道具id
+	    "num":1,   //数量
+	    "seq":"12312"//消耗的流水号
+	}
+]
+BK.QQ.rollbackGameItems(itemlist,function(errCode,succList,failList){
+	if (errCode == 0) {
+	    for(var i = 0 ; i<succList.length; i++ ){
+	        //回滚成功的itemid
+         	 var succItemInfo = succList[i];
+	        var id = succItemInfo.id; //道具ID
+	    }
+	    for(var i = 0 ; i<failList.length; i++ ){
+	        //回滚失败的item
+	        var faldItemInfo = failList[i];
+	        var ret = faldItemInfo.ret; //失败返回码
+	        var id = faldItemInfo.id; //道具ID
+	    }
+	}
+})
+```   
