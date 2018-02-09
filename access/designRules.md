@@ -27,9 +27,6 @@
 ![](./img/arkRules.png)
 在hudong.qq.com上面上线的游戏，只能上线到735及以后；
 
-
-
-
 ### 游戏首页中需要提供的素材：
 1. 游戏首页的banner图；
 ![](./img/gameIndexBanner.png)

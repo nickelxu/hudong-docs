@@ -14,20 +14,20 @@
 
 ### 3. 创建游戏
 在认证通过之后，进入游戏管理页面，在游戏管理页面可以创建游戏。
-![](../img/createGamePage.png)
+![](./img/createGamePage.png)
 
 点击创建游戏，并在跳转到的页面中填写相关的信息，点击提交。
-![](../img/createGameInfo.png)
+![](./img/createGameInfo.png)
 
 之后会游戏管理页面的左边出现了刚才添加的游戏。
-![](../img/gameManagePage.png)
+![](./img/gameManagePage.png)
 
 现在，一个游戏就已经创建好了，此时，您已经生成了一个gameID，同时，我们的后台也增加了一条关于您刚刚创建的游戏的记录。
 
 ### 4. 创建游戏版本
 您可以在创建游戏之后获取gameID之后，紧接着创建游戏版本，也可以先行开发游戏，在本demo中，我们直接创建游戏版本。
 点击“创建游戏版本”，进入游戏版本创建页
-![](../img/createGameVersion.png)
+![](./img/createGameVersion.png)
 
 进入游戏创建页面之后，填写相关的字段，相关的字段填写规则可以如下：
 
