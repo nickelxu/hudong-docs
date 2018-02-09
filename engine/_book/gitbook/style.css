@@ -2624,7 +2624,7 @@ table {
   }
 }
 .book-header {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "microsoft yahei", Helvetica, Arial, sans-serif;
   overflow: visible;
   height: 50px;
   padding: 0px 8px;
@@ -2802,7 +2802,7 @@ table {
   width: 33%;
 }
 .book-summary {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "microsoft yahei", Helvetica, Arial, sans-serif;
   position: absolute;
   top: 0px;
   left: -300px;
@@ -3877,7 +3877,7 @@ html {
 body {
   text-rendering: optimizeLegibility;
   font-smoothing: antialiased;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "microsoft yahei", Helvetica, Arial, sans-serif;
   font-size: 14px;
   letter-spacing: .2px;
   text-size-adjust: 100%;
