@@ -656,7 +656,7 @@ picUrl| String | 图片路径 | 图片资源路径
 	BK.QQ.ShareToArk("快来挑战我吧","icon.png") 
 	
 	
-#### consumeItems(summary,picUrl)
+#### consumeItems(itemlist,callback)
 
 >开放api
 分享无状态ark消息
@@ -700,3 +700,51 @@ if (errCode == 0) {
 }
 })
 ```
+
+
+## rollbackGameItems(itemlist,callback)
+>道具回滚
+>
+>当因网络、游戏逻辑需要等原因需要将已消耗的道具进行回滚，恢复到未消耗状态，可以使用本接口。
+>
+>用法:传入对应消耗的道具id消耗时对应的流水号seq，即可回滚某次消耗
+
+参数：
+
+参数  | 类型 |名称 | 备注
+------------- | ------------- | -------------| -------------
+itemlist |Array| 消耗的道具数组 |
+callback| function |回调 |
+返回值：无
+
+例子：
+
+```     
+var itemlist = [
+	{
+	    "id":1,    //道具id
+	    "num":1,   //数量
+	    "seq":"12312"//消耗的流水号
+	},                
+	{
+	    "id":2,    //道具id
+	    "num":1,   //数量
+	    "seq":"12312"//消耗的流水号
+	}
+]
+BK.QQ.rollbackGameItems(itemlist,function(errCode,succList,failList){
+	if (errCode == 0) {
+	    for(var i = 0 ; i<succList.length; i++ ){
+	        //回滚成功的itemid
+         	 var succItemInfo = succList[i];
+	        var id = succItemInfo.id; //道具ID
+	    }
+	    for(var i = 0 ; i<failList.length; i++ ){
+	        //回滚失败的item
+	        var faldItemInfo = failList[i];
+	        var ret = faldItemInfo.ret; //失败返回码
+	        var id = faldItemInfo.id; //道具ID
+	    }
+	}
+})
+```   

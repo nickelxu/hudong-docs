@@ -9,9 +9,13 @@
 
 1.购买[腾讯云互动直播服务](https://cloud.tencent.com/document/product/268)
 
-2.将云服务的appid告知厘米秀团队。厘米秀游戏后台会将该appid与游戏对应的gameid进行匹配。
+2.将云服务的appid、流控参数告知厘米秀团队。厘米秀游戏后台会将该appid与游戏对应的gameid进行匹配。
 
+[AppId以及流控参数查询连接](https://console.qcloud.com/ilvb)
 ![](./appid.jpg)
+
+![](./da19xE1AREeUMUX.jpg)
+![](./alGAD0H5SyWKM2g.jpg)
 
 3.配置完成后，在对应的游戏即可调用音视频接口。
 
