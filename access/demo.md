@@ -40,8 +40,8 @@
 | 单局最大时长 | 是 | 单局游戏可能的最大时间长度 | 默认180s | 单局游戏时长最多900s |
 | 是否帧同步 | 是 | 请参见[通信协议](http://hudong.qq.com/docs/engine/room/room-protocol.html ) | 使用 | |
 | 帧同步时间间隔 | 是 | 两帧之间的时间间隔 | 1000ms | 最小间隔100ms，最大间隔1000ms |
-| 内容素材包 | 是 | 游戏部分配置信息和游戏部分图片素材 | 无 | 可以参考《游戏制作过程中需要提交的材料》自己生成游戏包，也可以使用[内容素材包demo](https://share.weiyun.com/45c6ffc1bf14a8180933b8e9e95dc449) |
-| 游戏包 | 是 | 请参见[打包规则](http://hudong.qq.com/docs/engine/mqq/package.html) | 无 | 可以参考使用[游戏demo包](https://share.weiyun.com/9f358d456278e142d121d241974f4c4d )|
+| 内容素材包 | 是 | 游戏部分配置信息和游戏部分图片素材 | 无 | 可以参考《游戏制作过程中需要提交的材料》自己生成游戏包，也可以使用[内容素材包demo](https://share.weiyun.com/9d4c1c192fdecfbb6456e26f6c430982) |
+| 游戏包 | 是 | 请参见[打包规则](http://hudong.qq.com/docs/engine/mqq/package.html) | 无 | 可以参考使用[游戏demo包](https://share.weiyun.com/a667cf62904a64bc6b2d7654abde06c6)|
 | 最低手Q支持版本 | 是 | 最低能够支持的手Q版本，最低选择735版本 | 7.3.5 | 为了支持最新特性，建议上架至当前外网手Q版本 |
 | 提交人 | 是 | 开发者团队内部管控作用 | 无 |  |
 | 版本备注 | 否 | 说明版本的主要功能，开发者团队内部管控作用 | 无 | | |
