@@ -1,31 +1,12 @@
 {
-  "_from": "file:../gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
-  "_id": "gitbook-plugin-theme-hudong@0.0.2",
-  "_inBundle": false,
-  "_integrity": "sha512-hTa4etMam2gzVsHKP4+W+THxzPQYmJ7TMvoaMK8T1dy1VzTFxpu0JCIGe4ZvpEI5KDC7JJZkncWi/8rNZf4qBw==",
-  "_location": "/gitbook-plugin-theme-hudong",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "file",
-    "where": "/Users/rianma/work/code/cmgame-docs/access",
-    "raw": "gitbook-plugin-theme-hudong@file:../gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
-    "name": "gitbook-plugin-theme-hudong",
-    "escapedName": "gitbook-plugin-theme-hudong",
-    "rawSpec": "file:../gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
-    "saveSpec": "file:../gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
-    "fetchSpec": "/Users/rianma/work/code/cmgame-docs/gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "/Users/rianma/work/code/cmgame-docs/gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
-  "_spec": "gitbook-plugin-theme-hudong@file:../gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
-  "_where": "/Users/rianma/work/code/cmgame-docs/access",
-  "bundleDependencies": false,
-  "dependencies": {},
-  "deprecated": false,
+  "name": "gitbook-plugin-theme-hudong",
+  "version": "0.0.2",
   "description": "厘米游戏文档主题定制",
+  "main": "./index.js",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "13.1.0",
     "eslint": "3.6.1",
@@ -43,8 +24,10 @@
     "uglify-js": "2.7.3",
     "webpack": "^3.10.0"
   },
-  "engines": {
-    "gitbook": ">=3.0.0"
+  "scripts": {
+    "prepare": "./src/build.sh",
+    "build": "./src/build.sh",
+    "bundle": "node ./scripts/bundle.js"
   },
   "gitbook": {
     "properties": {
@@ -89,13 +72,5 @@
         }
       }
     }
-  },
-  "main": "./index.js",
-  "name": "gitbook-plugin-theme-hudong",
-  "scripts": {
-    "build": "./src/build.sh",
-    "bundle": "node ./scripts/bundle.js",
-    "prepare": "./src/build.sh"
-  },
-  "version": "0.0.2"
+  }
 }
