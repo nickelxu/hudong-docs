@@ -60,13 +60,13 @@
 | 0    | 开始游戏   | 会发送消息     | 需要提供“开始游戏”模式对应的normalBkg_btn_0.png和playing_btn_0.png两张图片   |
 | 1    | 开始游戏   | 不会发送消息   | 需要提供playing_btn_1.png共一张图片                                          |
 | 2    | 挑战记录   | 不发消息       | 需要提供“挑战记录”模式对应的normalBkg_btn_2.png和playing_btn_2.png两张图片   |
-| 6    | 陌生人匹配 | 不会发送消息   | 需要提供“陌生人匹配”模式对应的normalBkg_btn_3.png和playing_btn_3.png两张图片 |
+| 6    | 陌生人匹配 | 不会发送消息   | 需要提供“陌生人匹配”模式对应的normalBkg_btn_6.png和playing_btn_6.png两张图片 |
 
 
 #### config.json 示例
 
 ```js
-"gameBtn": [3,0],
+"gameBtn": [6,0],
 "bigCoverBgColor": "#3B65DD",
 "needOpenkey": 0,
 "appId": "",
