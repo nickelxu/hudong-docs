@@ -47,7 +47,7 @@
 
 * gameBtn选择[0]的按钮组合，需要提供normalBkg_btn_0.png和playing_btn_0.png共两张图片;
 
-* gameBtn选择[6,0]的按钮组合的话，需要提供normalBkg_btn_6.png，playing_btn_6.png，normalBkg_btn_0.png，playing_btn_6.png共四张图片;
+* gameBtn选择[6,0]的按钮组合的话，需要提供normalBkg_btn_6.png，playing_btn_6.png，normalBkg_btn_0.png，playing_btn_0.png共四张图片;
 
 * gameBtn选择[2,0]的按钮组合的话，需要提供normalBkg_btn_2.png，playing_btn_2.png，normalBkg_btn_0.png，playing_btn_0.png共四张图片；
 
@@ -91,8 +91,8 @@
 | `playing_btn_1.png` | 否 | gameMode 1 对应的游戏进行中的按钮样式（返回按钮） | 590 * 70 | 小于5K |
 | `normalBkg_btn_2.png` | 否 | gameMode 2 对应的开始游戏之前的按钮样式 | 参见设计规范 | 小于5K |
 | `playing_btn_2.png` | 否 | gameMode 2 对应的游戏进行中的按钮样式 | 参见设计规范 | 小于5K |
-| `normalBkg_btn_6.png` | 否 | gameMode 3 对应的开始游戏之前的按钮样式 | 参见设计规范 | 小于5K |
-| `playing_btn_6.png` | 否 | gameMode 3 对应的游戏进行中的按钮样式 | 参见设计规范 | 小于5K |
+| `normalBkg_btn_6.png` | 否 | gameMode 6 对应的开始游戏之前的按钮样式 | 参见设计规范 | 小于5K |
+| `playing_btn_6.png` | 否 | gameMode 6 对应的游戏进行中的按钮样式 | 参见设计规范 | 小于5K |
 
 
 ### 游戏包文件说明
