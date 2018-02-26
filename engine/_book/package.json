@@ -1,0 +1,17 @@
+{
+  "name": "engine",
+  "version": "1.0.0",
+  "description": "厘米游戏开放平台文档-游戏引擎",
+  "dependencies": {
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-lunr": "^1.2.0",
+    "gitbook-plugin-search": "^2.2.1",
+    "gitbook-plugin-theme-hudong": "file:../gitbook-plugin-theme-hudong/gitbook-plugin-theme-hudong-0.0.2.tgz",
+    "gitbook-plugin-toggle-chapters": "^0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rianma"
+}
