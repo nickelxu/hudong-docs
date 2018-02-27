@@ -39,6 +39,7 @@
     * [3.1 触摸事件](ui/ui-touch.md)
     * [3.2 图集](ui/ui-SpriteSheet.md)
     * [3.3 iPhoneX适配](ui/ui-iphonex.md)
+    * [3.4 输入框](ui/edit.md)
 * [4.房间管理简介](room/room.md)
     * [4.1 房间流程](room/room-flow.md)
     * [4.2 通信协议](room/room-protocol.md)
