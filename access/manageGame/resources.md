@@ -47,26 +47,26 @@
 
 * gameBtn选择[0]的按钮组合，需要提供normalBkg_btn_0.png和playing_btn_0.png共两张图片;
 
-* gameBtn选择[6,0]的按钮组合的话，需要提供normalBkg_btn_6.png，playing_btn_6.png，normalBkg_btn_0.png，playing_btn_6.png共四张图片;
+* gameBtn选择[6,0]的按钮组合的话，需要提供normalBkg_btn_6.png，playing_btn_6.png，normalBkg_btn_0.png，playing_btn_0.png共四张图片;
 
 * gameBtn选择[2,0]的按钮组合的话，需要提供normalBkg_btn_2.png，playing_btn_2.png，normalBkg_btn_0.png，playing_btn_0.png共四张图片；
 
 * homeButtonAction选择[1],需要提供playing_btn_1.png共一张图片。
 
 其中，各个按钮的含义如下：
- 
-| mode |  按钮含义  | 是否会发送消息  |                                     备注                                      |
-| ---- | ---------- | --------------| ----------------------------------------------------------------------------  |
-| 0    | 开始游戏   | 会发送消息      | 需要提供“开始游戏”模式对应的normalBkg_btn_0.png和playing_btn_0.png两张图片       |
-| 1    | 开始游戏   | 不会发送消息   | 需要提供playing_btn_1.png共一张图片                                             |
-| 2    | 挑战记录   | 不发消息       | 需要提供“挑战记录”模式对应的normalBkg_btn_2.png和playing_btn_2.png两张图片        |
-| 6    | 陌生人匹配 | 不会发送消息   | 需要提供“陌生人匹配”模式对应的normalBkg_btn_3.png和playing_btn_3.png两张图片      |
+
+| mode |  按钮含义  | 是否会发送消息 |                                     备注                                     |
+| ---- | ---------- | -------------- | ---------------------------------------------------------------------------- |
+| 0    | 开始游戏   | 会发送消息     | 需要提供“开始游戏”模式对应的normalBkg_btn_0.png和playing_btn_0.png两张图片   |
+| 1    | 开始游戏   | 不会发送消息   | 需要提供playing_btn_1.png共一张图片                                          |
+| 2    | 挑战记录   | 不发消息       | 需要提供“挑战记录”模式对应的normalBkg_btn_2.png和playing_btn_2.png两张图片   |
+| 6    | 陌生人匹配 | 不会发送消息   | 需要提供“陌生人匹配”模式对应的normalBkg_btn_6.png和playing_btn_6.png两张图片 |
 
 
 #### config.json 示例
 
 ```js
-"gameBtn": [3,0],
+"gameBtn": [6,0],
 "bigCoverBgColor": "#3B65DD",
 "needOpenkey": 0,
 "appId": "",
@@ -91,8 +91,8 @@
 | `playing_btn_1.png` | 否 | gameMode 1 对应的游戏进行中的按钮样式（返回按钮） | 590 * 70 | 小于5K |
 | `normalBkg_btn_2.png` | 否 | gameMode 2 对应的开始游戏之前的按钮样式 | 参见设计规范 | 小于5K |
 | `playing_btn_2.png` | 否 | gameMode 2 对应的游戏进行中的按钮样式 | 参见设计规范 | 小于5K |
-| `normalBkg_btn_6.png` | 否 | gameMode 3 对应的开始游戏之前的按钮样式 | 参见设计规范 | 小于5K |
-| `playing_btn_6.png` | 否 | gameMode 3 对应的游戏进行中的按钮样式 | 参见设计规范 | 小于5K |
+| `normalBkg_btn_6.png` | 否 | gameMode 6 对应的开始游戏之前的按钮样式 | 参见设计规范 | 小于5K |
+| `playing_btn_6.png` | 否 | gameMode 6 对应的游戏进行中的按钮样式 | 参见设计规范 | 小于5K |
 
 
 ### 游戏包文件说明
