@@ -1,7 +1,7 @@
 # Summary
 
-* [游戏平台介绍](README.md)
-* [游戏管理流程](mdDocs/flowChart.md)
+* [游戏平台简介](README.md)
+* [游戏上架流程](mdDocs/flowChart.md)
     * [游戏上架](mdDocs/submitGame.md)
     * [道具上架](mdDocs/submitItem.md)
     * [活动上架](mdDocs/submitActivity.md)

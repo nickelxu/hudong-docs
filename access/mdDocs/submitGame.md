@@ -3,7 +3,7 @@
 ## 1. 获取邀请码
 请发送邮件至 hudong@tencent.com 申请邀请码。
 
-非常抱歉的是，现阶段邀请码并不是申请即可获得的，为保证游戏品质，我们会对游戏厂商和提案综合评估之后，决定是否发放邀请码。如果您有意向申请邀请码，请发送您公司的介绍与您接下来希望做的游戏提案至 hudong.qq.com 申请邀请码，我们会在每周二组织团队评审，决定是否发放邀请码。
+非常抱歉的是，现阶段邀请码并不是申请即可获得的，为保证游戏品质，我们会对游戏厂商和提案综合评估之后，决定是否发放邀请码。如果您有意向申请邀请码，请发送您公司的介绍与您接下来希望做的游戏提案至 hudong.qq.com 申请邀请码，我们会在每周一组织团队评审，决定是否发放邀请码。
 
 ## 2. 注册并等待认证审核
 1. 登录 https://ssl.zc.qq.com/v3/index-chs.html 注册一个新的QQ号码
@@ -89,6 +89,7 @@ Bitbucket是一个不开源的git，我们通过bitbucket来维护引擎代码�
 
 
 游戏素材包主要包括部分图片素材和一个config.json的文件，图片素材主要用于手Q聊天窗口需要展示的图片，厘米游戏自定义游戏首页中的配置，config.json主要用于涉及游戏的配置项。
+需要特别说明的是，使用Mac打包往往会产生报错，请使用windows系统打包内容素材包
 
 #### config.json 说明
 
@@ -110,7 +111,7 @@ Bitbucket是一个不开源的git，我们通过bitbucket来维护引擎代码�
 
 * gameBtn选择[2,0]的按钮组合的话，需要提供normalBkg_btn_2.png，playing_btn_2.png，normalBkg_btn_0.png，playing_btn_0.png共四张图片；
 
-* homeButtonAction选择[1],需要提供playing_btn_1.png共一张图片。
+* homeButtonAction选择[8],需要提供playing_btn_8.png共一张图片。
 
 其中，各个按钮的含义如下：
 
@@ -129,7 +130,7 @@ Bitbucket是一个不开源的git，我们通过bitbucket来维护引擎代码�
 "bigCoverBgColor": "#3B65DD",
 "needOpenkey": 0,
 "appId": "",
-"homeButtonAction": [1],
+"homeButtonAction": [8],
 ```
 
 #### 图片素材清单
